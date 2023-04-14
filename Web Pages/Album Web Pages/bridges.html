@@ -1,0 +1,2820 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <title>Bridges | TS Fan Club</title>
+        <link href="../../styles/style.css" rel="stylesheet">
+        <!--Favicon Stuff-->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../Favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../Favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../Favicon/favicon-16x16.png">
+        <link rel="manifest" href="../../Favicon/site.webmanifest">
+        <link rel="mask-icon" href="../../Favicon/safari-pinned-tab.svg" color="#35185a">
+        <meta name="msapplication-TileColor" content="#35185a">
+        <meta name="theme-color" content="#ffffff">
+        <!--/Favicon Stuff-->
+        <!--Important Font Information-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/deec24d314.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <header>
+    <div class="topnav">
+        <a class="underline-animation" href="../Album Web Pages/ts1.html">Taylor Swift</a>
+        <a class="underline-animation" href="../Album Web Pages/ts2.html">Fearless</a>
+        <a class="underline-animation" href="../Album Web Pages/ts3.html">Speak Now</a>
+        <a class="underline-animation" href="../Album Web Pages/ts4.html">Red</a>
+        <a class="underline-animation" href="../Album Web Pages/ts5.html">1989</a>
+        <div class="dropdown">
+            <button class="album-dropbtn dropbtn"><i class="fa-solid fa-caret-down"></i></button>
+            <div class="dropdown-content">
+                <a href="../Album Web Pages/ts1.html">Taylor Swift</a>
+                <a href="../Album Web Pages/ts2.html">Fearless</a>
+                <a href="../Album Web Pages/ts3.html">Speak Now</a>
+                <a href="../Album Web Pages/ts4.html">Red</a>
+                <a href="../Album Web Pages/ts5.html">1989</a>
+                <a href="../Album Web Pages/ts6.html">reputation</a>
+                <a href="../Album Web Pages/ts7.html">Lover</a>
+                <a href="../Album Web Pages/ts8.html">folklore</a>
+                <a href="../Album Web Pages/ts9.html">evermore</a>
+                <a href="../Album Web Pages/ts10.html">Midnights</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"><i class="fa-solid fa-globe"></i></button>
+            <div class="dropdown-content">
+                <a href="../Album Web Pages/singles.html"><button class="header-footer-icon"><i class="fa-solid fa-tree"></i></button></a><span class="hide">Singles</span>
+                <a href="../Album Web Pages/unreleased.html"><button class="header-footer-icon"><i class="fa-solid fa-key"></i></button></a><span class="hide">Unreleased</span>
+                <a href="../Album Web Pages/bridges.html"><button class="header-footer-icon"><i class="fa-solid fa-bridge"></i></button></a><span class="hide">Bridges</span>
+                <a href="../Tours/tours.html"><button class="header-footer-icon"><i class="fa-solid fa-microphone"></i></i></button></a><span class="hide">Tours</span>
+            </div>
+        </div>
+        <a href="../../index.html"><img class="ts-icon" src="../../Favicon/android-chrome-512x512.png" alt="TS Fan Club Icon"></a>
+        <a class="header-footer-icon youtube" href="https://youtube.com/taylorswift" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <button class="header-footer-icon" onclick="darkMode()"><i class="fa-solid fa-circle-half-stroke"></i></button>
+        <a class="underline-animation" href="../Album Web Pages/ts6.html">reputation</a>
+        <a class="underline-animation" href="../Album Web Pages/ts7.html">Lover</a>
+        <a class="underline-animation" href="../Album Web Pages/ts8.html">folklore</a>
+        <a class="underline-animation" href="../Album Web Pages/ts9.html">evermore</a>
+        <a class="underline-animation" href="../Album Web Pages/ts10.html">Midnights</a>
+    </div>
+    </header>
+    
+    <div class="main">
+        <div class="bridges-background">
+            <main>
+            <h1><em><u><b>Bridges <i class="fa-solid fa-bridge"></i></b></u></em></h1>
+            </main>
+        </div>
+    <article>
+        <h2>About <i class="fa-solid fa-rocket"></i></h2>
+        <p>
+            Taylor Swift is the god of bridges,<br>
+            So here's all her bridges in one place!<br>
+            Thank me later :)<br>
+            Also, which one's your favourite?
+        </p>
+        <br>
+        <small>
+            Click this button to open up a video where Taylor addresses bridges!
+        </small><br>
+        <button id="playButton" class="play-button" onclick="toggleVideo()"><i class="fa fa-play"></i></button>
+        <div class="stars-container"></div>
+        <video id="bridges-video" width="640" height="360" style="display:none;">
+        <source src="../../Video/I LOVE A BRIDGE.mp4" type="video/mp4">
+        </video>
+    </article>
+    <style>
+.play-button {
+  font-size: 32px;
+  background: transparent;
+  position: relative;
+  color: gold;
+}
+
+    </style>
+    <br>
+    <article>
+            <h2><i class="fa-solid fa-bridge"></i></h2>
+            <button class="sort-button" id="alphabet-button"><i class="fa-solid fa-arrow-down-a-z"></i></button>
+            <button class="sort-button" id="alphabet-backwards-button" onclick="sortParagraphs(true)"><i class="fa-solid fa-arrow-down-z-a"></i></button>
+            <button class="sort-button" id="shuffle-button"><i class="fa-solid fa-shuffle"></i></button>
+        <div id="paragraphs">
+            <p>
+                And I'm back for the first time since then<br>
+                I'm standin' on your street<br>
+                And there's a letter left on your doorstep<br>
+                And the first thing that you'll read is:<br>
+                "When you think Tim McGraw<br>
+                I hope you think my favorite song<br>
+                Someday you'll turn your radio on<br>
+                I hope it takes you back to that place"<br>
+                <small><a href="../Song Web Pages/Taylor Swift/1) Tim McGraw.html">- Tim McGraw</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/1) Taylor Swift/1) Tim McGraw.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <br>
+            <p>
+                And if you're missing me, you'd better keep it to yourself<br>
+                'Cause coming back around here would be bad for your health<br>
+                <small><a href="../Song Web Pages/Taylor Swift/2) Picture To Burn.html">- Picture To Burn</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/1) Taylor Swift/2) Picture To Burn.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                So I drive home alone<br>
+                As I turn off the light<br>
+                I'll put his picture down and maybe get some sleep tonight<br>
+                <small><a href="../Song Web Pages/Taylor Swift/3) Teardrops On My Guitar.html">- Teardrops On My Guitar</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/1) Taylor Swift/3) Teardrops On My Guitar.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Maybe I'm just a girl on a mission<br>
+                But I'm ready to fly<br>
+                <small><a href="../Song Web Pages/Taylor Swift/4) A Place In This World.html">- A Place In This World</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/1) Taylor Swift/4) A Place In This World.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                You never did give a damn thing, honey, but I cried, cried for you<br>
+                And I know you wouldn't have told nobody if I died, died for you<br>
+                (Died for you)<br>
+                <small><a href="../Song Web Pages/Taylor Swift/5) Cold As You.html">- Cold As You</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/1) Taylor Swift/5) Cold As You.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                If you and I are a story<br>
+                That never gets told<br>
+                If what you are is a daydream<br>
+                I'll never get to hold, at least you'll know<br>
+                <small><a href="../Song Web Pages/Taylor Swift/8) Stay Beautiful.html">- Stay Beautiful</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/1) Taylor Swift/8) Stay Beautiful.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I can't resist<br>
+                Before you go, tell me this<br>
+                Was it worth it?<br>
+                Was she worth this?<br>
+                No, no<br>
+                No, no, no, no<br>
+                <small><a href="../Song Web Pages/Taylor Swift/9) Should've Said No.html">- Should've Said No</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/1) Taylor Swift/9) Should've Said No.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                A few years had gone and come around<br>
+                We were sitting at our favorite spot in town<br>
+                And you looked at me, got down on one knee<br>
+                <small><a href="../Song Web Pages/Taylor Swift/10) Mary's Song.html">- Mary's Song</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/1) Taylor Swift/10) Mary's Song.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I've heard every album, listened to the radio<br>
+                Waited for somethin' to come along<br>
+                That was as good as our song<br>
+                <small><a href="../Song Web Pages/Taylor Swift/11) Our Song.html">- Our Song</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/1) Taylor Swift/11) Our Song.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                When I'm with anybody else<br>
+                It's so hard to be myself<br>
+                And only you can tell<br>
+                <small><a href="../Song Web Pages/Taylor Swift/12) I'm Only Me When I'm With You.html">- I'm Only Me When I'm With You</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/1) Taylor Swift/12) I'm Only Me When I'm With You.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Like shadows in a faded light<br>
+                Oh, we're invisible<br>
+                I just wanna open your eyes<br>
+                And make you realize<br>
+                <small><a href="../Song Web Pages/Taylor Swift/13) Invisible.html">- Invisible</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/1) Taylor Swift/13) Invisible.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                It's not unbroken anymore (It's not unbroken anymore)<br>
+                How do I get it back the way it was before?<br>
+                <small><a href="../Song Web Pages/Taylor Swift/14) A Perfectly Good Heart.html">- A Perfectly Good Heart</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/1) Taylor Swift/14) A Perfectly Good Heart.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                So I drive home alone<br>
+                As I turn off the light<br>
+                I'll put his picture down and maybe get some sleep tonight<br>
+                <small><a href="../Song Web Pages/Taylor Swift/15) Teardrops On My Guitar (Pop Version).html">- Teardrops On My Guitar (Pop Version)</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/1) Taylor Swift/15) Teardrops On My Guitar (Pop Version).mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Well, you stood there with me in the doorway<br>
+                My hands shake, I'm not usually this way but<br>
+                You pull me in and I'm a little more brave<br>
+                It's the first kiss, it's flawless, really something<br>
+                It's fearless<br>
+                Oh, yeah<br>
+                <small><a href="../Song Web Pages/Fearless/1) Fearless.html">- Fearless</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/1) Fearless.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                When all you wanted was to be wanted<br>
+                Wish you could go back and tell yourself what you know now<br>
+                Back then, I swore I was gonna marry him someday<br>
+                But I realized some bigger dreams of mine<br>
+                And Abigail gave everything she had<br>
+                To a boy who changed his mind<br>
+                And we both cried<br>
+                <small><a href="../Song Web Pages/Fearless/2) Fifteen.html">- Fifteen</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/2) Fifteen.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And I got tired of waiting<br>
+                Wondering if you were ever coming around<br>
+                My faith in you was fading<br>
+                When I met you on the outskirts of town<br>
+                <small><a href="../Song Web Pages/Fearless/3) Love Story.html">- Love Story</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/3) Love Story.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                They're dimming the street lights, you're perfect for me<br>
+                Why aren't you here tonight?<br>
+                I'm waiting alone now, so come on and come out<br>
+                And pull me near and shine, shine, shine<br>
+                Hey Stephen, I could give you fifty reasons<br>
+                Why I should be the one you choose<br>
+                All those other girls, well, they're beautiful<br>
+                But would they write a song for you? (Ha-ha-ha)<br>
+                <small><a href="../Song Web Pages/Fearless/4) Hey Stephen.html">- Hey Stephen</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/4) Hey Stephen.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And there you are on your knees<br>
+                Beggin' for forgiveness, beggin' for me<br>
+                Just like I always wanted<br>
+                But I'm so sorry<br>
+                <small><a href="../Song Web Pages/Fearless/5) White Horse.html">- White Horse</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/5) White Horse.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Oh, I remember you driving to my house<br>
+                In the middle of the night<br>
+                I'm the one who makes you laugh<br>
+                When you know you're 'bout to cry<br>
+                I know your favorite songs<br>
+                And you tell me 'bout your dreams<br>
+                Think I know where you belong<br>
+                Think I know it's with me<br>
+                <small><a href="../Song Web Pages/Fearless/6) You Belong With Me.html">- You Belong With Me</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/6) You Belong With Me.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                It's 2 A.M., feeling like I just lost a friend<br>
+                Hope you know it's not easy, easy for me<br>
+                It's 2 A.M., feeling like I just lost a friend<br>
+                Hope you know this ain't easy, easy for me<br>
+                <small><a href="../Song Web Pages/Fearless/7) Breathe.html">- Breathe</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/7) Breathe.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Why do you have to make me feel small<br>
+                So you can feel whole inside?<br>
+                Why do you have to put down my dreams<br>
+                So you're the only thing on my mind?<br>
+                <small><a href="../Song Web Pages/Fearless/8) Tell Me Why.html">- Tell Me Why</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/8) Tell Me Why.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                You had me crawling for you, honey<br>
+                And it never would've gone away, no<br>
+                You used to shine so bright, but I watched all of it fade<br>
+                <small><a href="../Song Web Pages/Fearless/9) You're Not Sorry.html">- You're Not Sorry</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/9) You're Not Sorry.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                He can't see the smile I'm faking<br>
+                And my heart's not breaking<br>
+                'Cause I'm not feeling anything at all<br>
+                And you were wild and crazy<br>
+                Just so frustrating<br>
+                Intoxicating, complicated<br>
+                Got away by some mistake, and now<br>
+                <small><a href="../Song Web Pages/Fearless/10) The Way I Loved You.html">- The Way I Loved You</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/10) The Way I Loved You.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Oh, back up, baby, back up<br>
+                Did you forget everything?<br>
+                Back up, baby, back up<br>
+                Did you forget everything?<br>
+                <small><a href="../Song Web Pages/Fearless/11) Forever & Always.html">- Forever & Always</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/11) Forever & Always.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I have an excellent father<br>
+                His strength is making me stronger<br>
+                God smiles on my little brother<br>
+                Inside and out, he's better than I am<br>
+                I grew up in a pretty house and I had space to run and I<br>
+                Had the best days with you<br>
+                <small><a href="../Song Web Pages/Fearless/12 The Best Day.html">- The Best Day</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/12) The Best Day.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Tonight, we'll stand, get off our knees<br>
+                Fight for what we've worked for all these years<br>
+                And the battle was long, it's the fight of our lives<br>
+                But we'll stand up champions tonight<br>
+                <small><a href="../Song Web Pages/Fearless/13) Change.html">- Change</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/13) Change.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                The bottom's gonna drop out from under our feet<br>
+                I'll catch you, I'll catch you<br>
+                When people say things that bring you to your knees<br>
+                I'll catch you<br>
+                The time is gonna come when you're so mad you could cry<br>
+                But I'll hold you through the night until you smile<br>
+                <small><a href="../Song Web Pages/Fearless/14) Jump Then Fall.html">- Jump Then Fall</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/14) Jump Then Fall.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I'm caught up in you<br>
+                Oh-oh, oh, oh-oh<br>
+                But you're untouchable, burning brighter than the sun<br>
+                Now that you're close, I feel like coming undone<br>
+                <small><a href="../Song Web Pages/Fearless/15) Untouchable.html">- Untouchable</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/15) Untouchable.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Oh, oh-oh, oh-oh-oh<br>
+                Oh-oh-oh, oh-oh-oh<br>
+                Back up, baby, back up<br>
+                Did you forget everything?<br>
+                Back up, baby, back up<br>
+                Did you forget everything?<br>
+                Back up, baby, back up<br>
+                Please, back up, oh, back up<br>
+                Back up, baby, back up<br>
+                <small><a href="../Song Web Pages/Fearless/16) Forever & Always (Piano Version).html">- Forever & Always (Piano Version)</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/16) Forever & Always (Piano Version).mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I've watched you so long, screamed your name<br>
+                I don't know what else I can say<br>
+                <small><a href="../Song Web Pages/Fearless/17) Come In With The Rain.html">- Come In With The Rain</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/17) Come In With The Rain.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                You played in bars, you play guitar<br>
+                I'm invisible and everyone knows who you are<br>
+                And you'll never see, you sing me to sleep<br>
+                Every night from the radio<br>
+                <small><a href="../Song Web Pages/Fearless/18) Superstar.html">- Superstar</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/18) Superstar.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And I'll scream out the window<br>
+                I can't even look at you<br>
+                I don't need you but I do, I do, I do<br>
+                I say, "There's nothing you can say<br>
+                To make this right again, I mean it, I mean it"<br>
+                But what I mean is<br>
+                <small><a href="../Song Web Pages/Fearless/19) The Other Side Of The Door.html">- The Other Side Of The Door</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/19) The Other Side Of The Door.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Time slows down<br>
+                Whenever you're around<br>
+                I can feel my heart<br>
+                It's beating in my chest<br>
+                Did you feel it?<br>
+                I can't put this down<br>
+                <small><a href="../Song Web Pages/Fearless/20) Today Was A Fairytale.html">- Today Was A Fairytale</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/20) Today Was A Fairytale.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I lived, and I learned<br>
+                And found out what it was to turn around<br>
+                And see that we<br>
+                Were never really meant to be<br>
+                So I lied, and I cried<br>
+                And I watched a part of myself die<br>
+                'Cause no amount of freedom gets you clean<br>
+                I've still got you all over me<br>
+                <small><a href="../Song Web Pages/Fearless/21) You All Over Me.html">- You All Over Me</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/21) You All Over Me.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And it's really such a shame<br>
+                It's such a shame<br>
+                'Cause I was Miss "Here to stay"<br>
+                Now I'm Miss "Gonna be alright someday"<br>
+                And someday maybe you'll miss me<br>
+                But by then, you'll be Mr. "Too late"<br>
+                <small><a href="../Song Web Pages/Fearless/22) Mr. Perfectly Fine.html">- Mr. Perfectly Fine</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/22) Mr. Perfectly Fine.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Oh, I hate those voices telling me I'm not in love anymore<br>
+                But they don't give me choices and that's what these tears are for<br>
+                'Cause we were happy<br>
+                We were happy<br>
+                <small><a href="../Song Web Pages/Fearless/23) We Were Happy.html">- We Were Happy</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/23) We Were Happy.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And you said, "Honestly<br>
+                When you were gone<br>
+                Did you ever think of me?"<br>
+                And I said<br>
+                <small><a href="../Song Web Pages/Fearless/24) That's When.html">- That's When</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/24) That's When.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                So I'll walk out of here tonight<br>
+                Try to go on with my life<br>
+                And you can say we're still friends<br>
+                (But I don't wanna pretend)<br>
+                So if I see you again<br>
+                <small><a href="../Song Web Pages/Fearless/25) Don't You.html">- Don't You</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/25) Don't You.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And there's so much that I can't touch<br>
+                You're all I want but it's not enough this time<br>
+                And all the pages are just slipping through my hands<br>
+                And I'm so scared of how this ends<br>
+                <small><a href="../Song Web Pages/Fearless/26) Bye Bye Baby.html">- Bye Bye Baby</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/26) Bye Bye Baby.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                If you're out there, if you're somewhere, if you're moving on<br>
+                I've been waiting for you every day since you've been gone<br>
+                I just want it back the way it was before<br>
+                And I just want to see you back at my front door<br>
+                <small><a href="../Song Web Pages/Fearless/27) If This Was A Movie.html">- If This Was A Movie</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/2) Fearless/27) If This Was A Movie.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And I remember that fight, 2:30AM<br>
+                As everything was slipping right out of our hands<br>
+                I ran out crying and you followed me out into the street<br>
+                Braced myself for the goodbye<br>
+                'Cause that's all I've ever known<br>
+                Then you took me by surprise<br>
+                You said, "I'll never leave you alone"<br>
+                <small><a href="../Song Web Pages/Speak Now/1) Mine.html">- Mine</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/3) Speak Now/1) Mine.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I run my fingers through your hair and watch the lights go wild<br>
+                Just keep on keepin' your eyes on me, it's just wrong enough to make it feel right<br>
+                And lead me up the staircase, won't you whisper soft and slow?<br>
+                I'm captivated by you, baby, like a firework show<br>
+                <small><a href="../Song Web Pages/Speak Now/2) Sparks Fly.html">- Sparks Fly</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/3) Speak Now/2) Sparks Fly.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I miss your tan skin, your sweet smile<br>
+                So good to me, so right<br>
+                And how you held me in your arms that September night<br>
+                The first time you ever saw me cry<br>
+                Maybe this is wishful thinking<br>
+                Probably mindless dreaming<br>
+                But if we loved again, I swear I'd love you right<br>
+                I'd go back in time and change it, but I can't<br>
+                So, if the chain is on your door, I understand<br>
+                <small><a href="../Song Web Pages/Speak Now/3) Back To December.html">- Back To December</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/3) Speak Now/3) Back To December.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I hear the preacher say<br>
+                "Speak now or forever hold your peace"<br>
+                There's the silence, there's my last chance<br>
+                I stand up with shaky hands, all eyes on me<br>
+                Horrified looks from everyone in the room<br>
+                But I'm only lookin' at you<br>
+                <small><a href="../Song Web Pages/Speak Now/4) Speak Now.html">- Speak Now</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/3) Speak Now/4) Speak Now.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                You are an expert at sorry and keeping lines blurry<br>
+                Never impressed by me acing your tests<br>
+                All the girls that you've run dry have tired lifeless eyes<br>
+                'Cause you burned them out<br>
+                But I took your matches before fire could catch me<br>
+                So don't look now<br>
+                I'm shining like fireworks over your sad empty town<br>
+                Oh, oh<br>
+                <small><a href="../Song Web Pages/Speak Now/5) Dear John.html">- Dear John</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/3) Speak Now/5) Dear John.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And I can see you years from now in a bar<br>
+                Talking over a football game<br>
+                With that same big, loud opinion<br>
+                But nobody's listening<br>
+                Washed up and ranting about the same old bitter things<br>
+                Drunk and grumblin' on about how I can't sing<br>
+                But all you are is mean<br>
+                <small><a href="../Song Web Pages/Speak Now/6) Mean.html">- Mean</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/3) Speak Now/6) Mean.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Take pictures in your mind of your childhood room<br>
+                Memorize what it sounded like when your dad gets home<br>
+                Remember the footsteps, remember the words said<br>
+                And all your little brother's favorite songs<br>
+                I just realized everything I have is someday gonna be gone<br>
+                So here I am in my new apartment<br>
+                In a big city, they just dropped me off<br>
+                It's so much colder than I thought it would be<br>
+                So I tuck myself in and turn my nightlight on<br>
+                Wish I'd never grown up<br>
+                I wish I'd never grown up<br>
+                <small><a href="../Song Web Pages/Speak Now/7) Never Grow Up.html">- Never Grow Up</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/3) Speak Now/7) Never Grow Up.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                This is looking like a contest<br>
+                Of who can act like they care less<br>
+                But I liked it better when you were on my side<br>
+                The battle's in your hands now<br>
+                But I would lay my armor down<br>
+                If you said you'd rather love than fight<br>
+                <small><a href="../Song Web Pages/Speak Now/8) The Story Of Us.html">- The Story Of Us</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/3) Speak Now/8) The Story Of Us.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                This is me praying that<br>
+                This was the very first page<br>
+                Not where the storyline ends<br>
+                My thoughts will echo your name<br>
+                Until I see you again<br>
+                These are the words I held back<br>
+                As I was leaving too soon<br>
+                I was enchanted to meet you<br>
+                Please don't be in love with someone else<br>
+                Please don't have somebody waiting on you<br>
+                Please don't be in love with someone else (Ooh)<br>
+                Please don't have somebody waiting on you (Ooh, oh)<br>
+                <small><a href="../Song Web Pages/Speak Now/9) Enchanted.html">- Enchanted</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/3) Speak Now/9) Enchanted.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I'm just another thing for you to roll your eyes at, honey<br>
+                You might have him, but haven't you heard?<br>
+                I'm just another thing for you to roll your eyes at, honey<br>
+                You might have him, but I always get the last word<br>
+                Woah, woah-ah-oh<br>
+                <small><a href="../Song Web Pages/Speak Now/10) Better Than Revenge.html">- Better Than Revenge</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/3) Speak Now/10) Better Than Revenge.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Time turns flames to embers<br>
+                You'll have new Septembers<br>
+                Every one of us has messed up, too, ooh<br>
+                Minds change like the weather<br>
+                I hope you remember<br>
+                Today is never too late to be brand new, oh<br>
+                <small><a href="../Song Web Pages/Speak Now/11) Innocent.html">- Innocent</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/3) Speak Now/11) Innocent.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I know, I know<br>
+                I just know<br>
+                You're not gone<br>
+                You can't be gone, no<br>
+                <small><a href="../Song Web Pages/Speak Now/12) Haunted.html">- Haunted</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/3) Speak Now/12) Haunted.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                So I'll watch your life in pictures like I used to watch you sleep<br>
+                And I feel you forget me like I used to feel you breathe<br>
+                And I'll keep up with our old friends<br>
+                Just to ask them how you are<br>
+                Hope it's nice where you are<br>
+                And I hope the sun shines and it's a beautiful day<br>
+                And something reminds you, you wish you had stayed<br>
+                You can plan for a change in the weather and time<br>
+                But I never planned on you changing your mind<br>
+                <small><a href="../Song Web Pages/Speak Now/13) Last Kiss.html">- Last Kiss</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/3) Speak Now/13) Last Kiss.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Hold on to spinning around<br>
+                Confetti falls to the ground<br>
+                May these memories break our fall<br>
+                Will you take a moment? Promise me this<br>
+                That you'll stand by me forever<br>
+                But if, God forbid, fate should step in<br>
+                And force us into a goodbye<br>
+                If you have children some day<br>
+                When they point to the pictures<br>
+                Please tell 'em my name<br>
+                Tell 'em how the crowds went wild<br>
+                Tell 'em how I hope they shine<br>
+                Long live the walls we crashed through<br>
+                I had the time of my life with you<br>
+                <small><a href="../Song Web Pages/Speak Now/14) Long Live.html">- Long Live</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/3) Speak Now/14) Long Live.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And it's not theirs to speculate if it's wrong and<br>
+                Your hands are tough, but they are where mine belong and<br>
+                I'll fight their doubt and give you faith with this song for you<br>
+                'Cause I love the gap between your teeth<br>
+                And I love the riddles that you speak<br>
+                And any snide remarks from my father about your tattoos<br>
+                Will be ignored, 'cause my heart is yours<br>
+                <small><a href="../Song Web Pages/Speak Now/15) Ours.html">- Ours</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/3) Speak Now/15) Ours.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And I watch you fly around the world<br>
+                And I hope you don't save some other girl<br>
+                Don't forget, don't forget about me<br>
+                I'm far away, but I never let you go<br>
+                I'm love-struck and looking out the window<br>
+                Don't forget, don't forget where I'll be<br>
+                <small><a href="../Song Web Pages/Speak Now/17) Superman.html">- Superman</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/3) Speak Now/17) Superman.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I miss your tan skin, your sweet smile<br>
+                So good to me, so right<br>
+                And how you held me in your arms that September night<br>
+                The first time you ever saw me cry<br>
+                Maybe this is wishful thinking<br>
+                Probably mindless dreaming<br>
+                But if we loved again, I swear I'd love you right<br>
+                I'd go back in time and change it, but I can't<br>
+                So if the chain is on your door, I understand<br>
+                <small><a href="../Song Web Pages/Speak Now/18) Back To December (Acoustic Version).html">- Back To December (Acoustic Version)</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/3) Speak Now/18) Back To December (Acoustic Version).mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I know, I know<br>
+                I just know<br>
+                You're not gone<br>
+                You can't be gone, no<br>
+                <small><a href="../Song Web Pages/Speak Now/19) Haunted (Acoustic Version).html">- Haunted (Acoustic Version)</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/3) Speak Now/19) Haunted (Acoustic Version).mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                This is a state of grace<br>
+                This is the worthwhile fight<br>
+                Love is a ruthless game<br>
+                Unless you play it good and right<br>
+                These are the hands of fate<br>
+                You're my Achilles heel<br>
+                This is the golden age<br>
+                Of something good and right and real<br>
+                <small><a href="../Song Web Pages/Red/1) State Of Grace.html">- State Of Grace</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/1) State Of Grace.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Remembering him comes in flashbacks and echoes<br>
+                Tell myself it's time now, gotta let go<br>
+                But moving on from him is impossible<br>
+                When I still see it all in my head<br>
+                In burning red<br>
+                <small><a href="../Song Web Pages/Red/2) Red.html">- Red</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/2) Red.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                [Bridge 1]<br>
+                Two headlights shine through the sleepless night<br>
+                And I will get you a, get you alone<br>
+                Your name has echoed through my mind<br>
+                And I just think you should, think you should know<br>
+                That nothing safe is worth the drive<br>
+                And I would follow you, follow you home<br>
+                I'll follow you, follow you home<br>
+                [Bridge 2]<br>
+                Two headlights shine through the sleepless night<br>
+                And I will get you a, get you alone<br>
+                Your name has echoed through my mind<br>
+                And I just think you should, think you should know<br>
+                That nothing safe is worth the drive<br>
+                And I will follow you, follow you home<br>
+                I'll follow you, follow you home<br>
+                I'll follow you, follow you home<br>
+                I'll follow you, follow you home<br>
+                <small><a href="../Song Web Pages/Red/3) Treacherous.html">- Treacherous</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/3) Treacherous [Bridge 1].mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/3) Treacherous [Bridge 2].mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And the saddest fear<br>
+                Comes creeping in<br>
+                That you never loved me<br>
+                Or her, or anyone, or anything<br>
+                Yeah, oh-oh<br>
+                <small><a href="../Song Web Pages/Red/4) I Knew You Were Trouble.html">- I Knew You Were Trouble</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/4) I Knew You Were Trouble.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And maybe we got lost in translation<br>
+                Maybe I asked for too much<br>
+                But maybe this thing was a masterpiece<br>
+                'Til you tore it all up<br>
+                Running scared, I was there<br>
+                I remember it all too well<br>
+                And you call me up again<br>
+                Just to break me like a promise<br>
+                So casually cruel in the name of being honest<br>
+                I'm a crumpled up piece of paper lying here<br>
+                'Cause I remember it all, all, all<br>
+                Too well<br>
+                <small><a href="../Song Web Pages/Red/5) All Too Well.html">- All Too Well</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/5) All Too Well.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Ooh, oh<br>
+                Yeah, hey, yeah<br>
+                <small><a href="../Song Web Pages/Red/6) 22.html">- 22</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/6) 22.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Oh, we made quite a mess, babe<br>
+                It's probably better off this way<br>
+                And I confess, baby<br>
+                In my dreams, you're touching my face<br>
+                And asking me if I wanna try again with you<br>
+                And I almost do<br>
+                <small><a href="../Song Web Pages/Red/7) I Almost Do.html">- I Almost Do</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/7) I Almost Do.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I used to think that we were forever, ever<br>
+                And I used to say, "Never say never"<br>
+                <em>Ugh, so he calls me up and he's like, "I still love you"<br>
+                And I'm, like, I'm just, I mean, this is exhausting, you know?<br>
+                Like, we are never getting back together<br>
+                Like, ever</em><br>
+                <small><a href="../Song Web Pages/Red/8) We Are Never Ever Getting Back Together.html">- We Are Never Ever Getting Back Together</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/8) We Are Never Getting Back Together.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                You took the time to memorize me<br>
+                My fears, my hopes, and dreams<br>
+                I just like hanging out with you all the time<br>
+                All those times that you didn't leave<br>
+                It's been occurring to me<br>
+                I'd like to hang out with you for my whole life<br>
+                <small><a href="../Song Web Pages/Red/9) Stay Stay Stay.html">- Stay Stay Stay</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/9) Stay Stay Stay.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                This is the last time you tell me I've got it wrong<br>
+                This is the last time I say, "It's been you all along"<br>
+                This is the last time I let you in my door<br>
+                This is the last time, I won't hurt you anymore<br>
+                Oh-ho, oh-ho, oh-ho, oh-ho<br>
+                Oh-ho, oh-ho, oh-ho, oh-ho<br>
+                <small><a href="../Song Web Pages/Red/10) The Last Time.html">- The Last Time</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/10) The Last Time.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Tonight I'm gonna dance<br>
+                For all that we've been through<br>
+                But I don't wanna dance<br>
+                If I'm not dancing with you<br>
+                Tonight I'm gonna dance<br>
+                Like you were in this room<br>
+                But I don't wanna dance<br>
+                If I'm not dancing with you<br>
+                <small><a href="../Song Web Pages/Red/11) Holy Ground.html">- Holy Ground</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/11) Holy Ground.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Distance, timing<br>
+                Breakdown, fighting<br>
+                Silence, the train runs off its tracks<br>
+                Kiss me, try to fix it<br>
+                Could you just try to listen?<br>
+                Hang up, give up<br>
+                And for the life of us, we can't get back<br>
+                <small><a href="../Song Web Pages/Red/12) Sad Beautiful Tragic.html">- Sad Beautiful Tragic</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/12) Sad Beautiful Tragic.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Come back and tell me why<br>
+                I'm feeling like I've missed you all this time<br>
+                And meet me there tonight<br>
+                And let me know that it's not all in my mind<br>
+                <small><a href="../Song Web Pages/Red/14) Everything Has Changed.html">- Everything Has Changed</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/14) Everything Has Changed.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Ooh-ooh, he's talking crazy<br>
+                Ooh-ooh, dancing with me<br>
+                Ooh-ooh, we could get married<br>
+                Have ten kids and teach them how to dream<br>
+                <small><a href="../Song Web Pages/Red/15) Starlight.html">- Starlight</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/15) Starlight.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And we walked down the block to my car<br>
+                And I almost brought him up<br>
+                But you start to talk about the movies<br>
+                That your family watches every single Christmas<br>
+                And I want to talk about that<br>
+                And for the first time, what's past is past<br>
+                <small><a href="../Song Web Pages/Red/16) Begin Again.html">- Begin Again</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/16) Begin Again.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                What do you say<br>
+                When tears are streaming down your face<br>
+                In front of everyone you know?<br>
+                And what do you do<br>
+                When the one who means the most to you<br>
+                Is the one who didn't show?<br>
+                <small><a href="../Song Web Pages/Red/17) The Moment I Knew.html">- The Moment I Knew</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/17) The Moment I Knew.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                This is falling in love in the cruelest way<br>
+                This is falling for you when you are worlds away<br>
+                In New York, be here<br>
+                But you're in London, and I break down<br>
+                'Cause it's not fair that you're not around<br>
+                <small><a href="../Song Web Pages/Red/18) Come Back...Be Here.html">- Come Back...Be Here</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/18) Come Back...Be Here.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Call a cab, lose my number<br>
+                You're about to lose your girl<br>
+                Call a cab, lose my number<br>
+                Let's consider this lesson learned<br>
+                <small><a href="../Song Web Pages/Red/19) Girl At Home.html">- Girl At Home</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/19) Girl At Home.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                This is a state of grace<br>
+                This is the worthwhile fight<br>
+                Love is a ruthless game<br>
+                Unless you play it good and right<br>
+                These are the hands of fate<br>
+                You're my Achilles heel<br>
+                This is the golden age of something good and right and real<br>
+                <small><a href="../Song Web Pages/Red/20) State Of Grace (Acoustic Version).html">- State Of Grace (Acoustic Version)</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/20) State Of Grace (Acoustic Version).mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                What if I'm standing in your closet trying to talk to you?<br>
+                And what if I kept the hand-me-downs you won't grow into?<br>
+                And what if I really thought some miracle would see us through?<br>
+                What if the miracle was even getting one moment with you?<br>
+                <small><a href="../Song Web Pages/Red/21) Ronan.html">- Ronan</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/21) Ronan.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I hold onto this pride because these days it's all I have<br>
+                And I gave to you my best<br>
+                And we both know you can't say that<br>
+                I wish you were a better man<br>
+                I wonder what we would've become<br>
+                If you were a better man<br>
+                We might still be in love<br>
+                If you were a better man<br>
+                You would've been the one<br>
+                If you were a better man<br>
+                Yeah, yeah<br>
+                <small><a href="../Song Web Pages/Red/22) Better Man.html">- Better Man</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/22) Better Man.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I know someday I'm gonna meet her, it's a fever dream<br>
+                The kind of radiance you only have at seventeen<br>
+                She'll know the way and then she'll say she got the map from me<br>
+                I'll say I'm happy for her, then I'll cry myself to sleep<br>
+                Oh, woah, oh (Oh)<br>
+                Oh, woah, oh, woah, oh (Oh)<br>
+                <small><a href="../Song Web Pages/Red/23) Nothing New.html">- Nothing New</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/23) Nothing New.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Since you admitted it, I keep picturing<br>
+                Her lips on your neck, I can't unsee it<br>
+                I hate that because of you, I can't love you, babe<br>
+                <small><a href="../Song Web Pages/Red/24) Babe.html">- Babe</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/24) Babe.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                How is it in London? (London)<br>
+                Where were you while I'm wonderin' (Wonderin')<br>
+                If I'll ever see you again?<br>
+                You could be the one that I love, mm<br>
+                And now I'm standin' here, hopin' it gets to you<br>
+                <small><a href="../Song Web Pages/Red/25) Message In A Bottle.html">- Message In A Bottle</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/25) Message In A Bottle.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Oh, block it all out<br>
+                The voices so loud, sayin'<br>
+                "Why did you let her go?"<br>
+                Does it make you feel sad<br>
+                That the love that you're lookin' for<br>
+                Is the love that you had?<br>
+                <small><a href="../Song Web Pages/Red/26) I Bet You Think About Me.html">- I Bet You Think About Me</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/26) I Bet You Think About Me.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                If I was standing there in your apartment<br>
+                I'd take that bomb in your head and disarm it<br>
+                I'd say I love you even at your darkest and<br>
+                Please don't go<br>
+                <small><a href="../Song Web Pages/Red/27) Forever Winter.html">- Forever Winter</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/27) Forever Winter.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                There's been this hole in my heart<br>
+                This thing was a shot in the dark<br>
+                Say you'll never let 'em tear us apart<br>
+                And I'll hold onto you while we run (And we run, and we run, and we run)<br>
+                <small><a href="../Song Web Pages/Red/28) Run.html">- Run</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/28) Run.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I remember the night at the hotel<br>
+                I was ridin' in the car when we both fell<br>
+                I'm the one on the phone as you whisper<br>
+                "Do you know how much I miss you?"<br>
+                <small><a href="../Song Web Pages/Red/29) The Very First Night.html">- The Very First Night</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/29) The Very First Night.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Well, maybe we got lost in translation, maybe I asked for too much<br>
+                But maybe this thing was a masterpiece 'til you tore it all up<br>
+                Runnin' scared, I was there<br>
+                I remember it all too well<br>
+                And you call me up again just to break me like a promise<br>
+                So casually cruel in the name of bein' honest<br>
+                I'm a crumpled-up piece of paper lyin' here<br>
+                'Cause I remember it all, all, all<br>
+                <small><a href="../Song Web Pages/Red/30) All Too Well (10 Minute Version).html">- All Too Well (10 Minute Version)</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/30) All Too Well (10 Minute Version).mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Ooh, ooh<br>
+                Ooh, ooh<br>
+                Oh (Oh)<br>
+                Oh (Oh)<br>
+                Ooh, ooh<br>
+                Ooh, ooh<br>
+                Oh<br>
+                Oh<br>
+                <small><a href="../Song Web Pages/Red/31) Safe & Sound.html">- Safe & Sound</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/31) Safe & Sound.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Keep your feet ready, heartbeat steady<br>
+                Keep your eyes open<br>
+                Keep your aim locked, the night goes dark<br>
+                Keep your eyes open<br>
+                (Keep your eyes open)<br>
+                (Keep your eyes open)<br>
+                (Keep your eyes open)<br>
+                (Keep your eyes open)<br>
+                <small><a href="../Song Web Pages/Red/32) Eyes Open.html">- Eyes Open</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/4) Red/32) Eyes Open.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Like any great love, it keeps you guessing<br>
+                Like any real love, it's ever-changing<br>
+                Like any true love, it drives you crazy<br>
+                But you know you wouldn't change anything, anything, anything<br>
+                <small><a href="../Song Web Pages/1989/1) Welcome To New York.html">- Welcome To New York</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/5) 1989/1) Welcome To New York.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Boys only want love if it's torture<br>
+                Don't say I didn't, say I didn't warn ya<br>
+                Boys only want love if it's torture<br>
+                Don't say I didn't, say I didn't warn ya<br>
+                <small><a href="../Song Web Pages/1989/2) Blank Space.html">- Blank Space</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/5) 1989/2) Blank Space.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Take me home (Ah-ah-ah-ah-ah)<br>
+                Just take me home (Ah-ah-ah-ah-ah)<br>
+                Yeah, just take me home (Ah-ah-ah-ah-ah)<br>
+                Oh-oh, woah-oh, oh (Out of style)<br>
+                <small><a href="../Song Web Pages/1989/3) Style.html">- Style</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/5) 1989/3) Style.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Remember when you hit the brakes too soon?<br>
+                Twenty stitches in the hospital room<br>
+                When you started crying, baby, I did too<br>
+                But when the sun came up, I was looking at you<br>
+                Remember when we couldn't take the heat?<br>
+                I walked out, I said, "I'm setting you free"<br>
+                But the monsters turned out to be just trees<br>
+                When the sun came up, you were looking at me<br>
+                You were looking at me, ooh<br>
+                You were looking at me<br>
+                (Are we out of the woods yet? Are we out of the woods yet?)<br>
+                (Are we out of the woods yet? Are we out of the woods?)<br>
+                I remember<br>
+                (Are we in the clear yet? Are we in the clear yet?)<br>
+                (Are we in the clear yet, in the clear yet? Good)<br>
+                Oh, I remember<br>
+                <small><a href="../Song Web Pages/1989/4) Out Of The Woods.html">- Out Of The Woods</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/5) 1989/4) Out Of The Woods.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Let me remind you<br>
+                This was what you wanted (Oh, oh, oh-oh-oh)<br>
+                You ended it<br>
+                You were all I wanted (Oh, oh, oh-oh-oh)<br>
+                But not like this<br>
+                Not like this<br>
+                Not like this<br>
+                Oh, all you had to do was...<br>
+                <small><a href="../Song Web Pages/1989/5) All You Had To Do Was Stay.html">- All You Had To Do Was Stay</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/5) 1989/5) All You Had To Do Was Stay.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                My ex-man brought his new girlfriend<br>
+                She's like, "Oh my God!" But I'm just gonna shake<br>
+                And to the fella over there with the hella good hair<br>
+                Won't you come on over, baby?<br>
+                We can shake, shake, shake<br>
+                Yeah, oh, oh, oh<br>
+                <small><a href="../Song Web Pages/1989/6) Shake It Off.html">- Shake It Off</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/5) 1989/6) Shake It Off.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                You always knew how to push my buttons<br>
+                You give me everything and nothing<br>
+                This mad, mad love makes you come running<br>
+                To stand back where you stood<br>
+                I wish you would, I wish you would<br>
+                (I wish you would, I wish you would)<br>
+                I wish you would, I wish you would<br>
+                (I wish you would, I wish you would)<br>
+                (I wish, I wish, I)<br>
+                <small><a href="../Song Web Pages/1989/7) I Wish You Would.html">- I Wish You Would</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/5) 1989/7) I Wish You Would.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Band-aids don't fix bullet holes<br>
+                You say sorry just for show<br>
+                If you live like that, you live with ghosts<br>
+                Band-aids don't fix bullet holes<br>
+                You say sorry just for show<br>
+                If you live like that, you live with ghosts<br>
+                If you love like that, blood runs cold<br>
+                <small><a href="../Song Web Pages/1989/8) Bad Blood.html">- Bad Blood</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/5) 1989/8) Bad Blood.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                You'll see me in hindsight<br>
+                Tangled up with you all night<br>
+                Burnin' it down<br>
+                Someday, when you leave me<br>
+                I bet these memories<br>
+                Follow you around<br>
+                You'll see me in hindsight<br>
+                Tangled up with you all night<br>
+                Burnin' (Burnin') it (It) down (Down)<br>
+                Someday, when you leave me<br>
+                I bet these memories<br>
+                Follow (Follow) you (You) around<br>
+                (Follow you around)<br>
+                <small><a href="../Song Web Pages/1989/9) Wildest Dreams.html">- Wildest Dreams</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/5) 1989/9) Wildest Dreams.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And you know<br>
+                Oh, oh, oh, oh, oh, oh, oh, oh, oh, oh<br>
+                That I don't want you to go, oh, oh<br>
+                <small><a href="../Song Web Pages/1989/10) How You Get The Girl.html">- How You Get You Girl</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/5) 1989/10) How You Get The Girl.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Your kiss, my cheek, I watched you leave<br>
+                Your smile, my ghost, I fell to my knees<br>
+                When you're young, you just run<br>
+                But you come back to what you need<br>
+                <small><a href="../Song Web Pages/1989/11) This Love.html">- This Love</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/5) 1989/11) This Love.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                They are the hunters, we are the foxes, and we run<br>
+                Just grab my hand and don't ever drop it, my love<br>
+                <small><a href="../Song Web Pages/1989/12) I Know Places.html">- I Know Places</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/5) 1989/12) I Know Places.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Ten months sober, I must admit<br>
+                Just because you're clean don't mean you don't miss it<br>
+                Ten months older, I won't give in<br>
+                Now that I'm clean, I'm never gonna risk it<br>
+                <small><a href="../Song Web Pages/1989/13) Clean.html">- Clean</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/5) 1989/13) Clean.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I reached for you, but you were gone<br>
+                I knew I had to go back home<br>
+                You searched the world for somethin' else<br>
+                To make you feel like what we had<br>
+                And in the end, in Wonderland, we both went mad<br>
+                <small><a href="../Song Web Pages/1989/14) Wonderland.html">- Wonderland</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/5) 1989/14) Wonderland.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And so it goes<br>
+                You two are dancing in a snow globe, 'round and 'round<br>
+                And he keeps a picture of you in his office downtown<br>
+                And you understand now<br>
+                Why they lost their minds and fought the wars<br>
+                And why I've spent my whole life trying to put it into words<br>
+                <small><a href="../Song Web Pages/1989/15) You Are In Love.html">- You Are In Love</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/5) 1989/15) You Are In Love.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Please, take my hand and<br>
+                Please, take me dancing and<br>
+                Please, leave me stranded<br>
+                It's so romantic (It's so romantic)<br>
+                (Ah, ah, ah, ah, ah, ah)<br>
+                <small><a href="../Song Web Pages/1989/16) New Romantics.html">- New Romantics</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/5) 1989/16) New Romantics.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                They're burning all the witches even if you aren't one<br>
+                They got their pitchforks and proof, their receipts and reasons<br>
+                They're burning all the witches even if you aren't one<br>
+                So light me up (Light me up), light me up (Light me up)<br>
+                Light me up, go ahead and light me up (Light me up)<br>
+                Light me up (Light me up), light me up (Light me up)<br>
+                Light me up (Light me up), light me up<br>
+                <small><a href="../Song Web Pages/reputation/3) I Did Something Bad.html">- I Did Something Bad</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/6) reputation/3) I Did Something Bad.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I get so high, oh<br>
+                Every time you're, every time you're lovin' me<br>
+                You're lovin' me<br>
+                Trip of my life, oh<br>
+                Every time you're, every time you're touchin' me<br>
+                You're touchin' me<br>
+                Every time you're, every time you're lovin' me<br>
+                <small><a href="../Song Web Pages/reputation/4) Don't Blame Me.html">- Don't Blame Me</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/6) reputation/4) Don't Blame Me.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Sometimes, I wonder, when you sleep<br>
+                Are you ever dreaming of me?<br>
+                Sometimes, when I look into your eyes<br>
+                I pretend you're mine all the damn time<br>
+                <small><a href="../Song Web Pages/reputation/5) Delicate.html">- Delicate</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/6) reputation/5) Delicate.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I don't trust nobody and nobody trusts me<br>
+                I'll be the actress starring in your bad dreams<br>
+                I don't trust nobody and nobody trusts me<br>
+                I'll be the actress starring in your bad dreams<br>
+                I don't trust nobody and nobody trusts me<br>
+                I'll be the actress starring in your bad dreams<br>
+                I don't trust nobody and nobody trusts me<br>
+                I'll be the actress starring in your bad dreams<br>
+                (Ooh, look what you made me do<br>
+                Look what you made me do<br>
+                Look what you just made me do<br>
+                Look what you just made me—<br>
+                Ooh, look what you made me do<br>
+                Look what you made me do<br>
+                Look what you just made me—)<br>
+                "I'm sorry, the old Taylor can't come to the phone right now<br>
+                "Why? Oh, 'cause she's dead!" (Oh)<br>
+                <small><a href="../Song Web Pages/reputation/6) Look What You Made Me Do.html">- Look What You Made Me Do</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/6) reputation/6) Look What You Made Me Do.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                You did a number on me<br>
+                But, honestly, baby, who's counting?<br>
+                I did a number on you<br>
+                But, honestly, baby, who's counting?<br>
+                You did a number on me<br>
+                But, honestly, baby, who's counting?<br>
+                Who's counting? (One, two, three)<br>
+                <small><a href="../Song Web Pages/reputation/7) So It Goes....html">- So It Goes...</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/6) reputation/7) So It Goes....mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                You make me so happy it turns back to sad<br>
+                There's nothing I hate more than what I can't have<br>
+                And you are so gorgeous it makes me so mad (Mmh)<br>
+                You make me so happy it turns back to sad (Yeah)<br>
+                There's nothing I hate more than what I can't have and<br>
+                Guess I'll just stumble on home to my cats (Yeugh) alone<br>
+                Unless, you wanna come along? (Oh)<br>
+                <small><a href="../Song Web Pages/reputation/8) Gorgeous.html">- Gorgeous</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/6) reputation/8) Gorgeous.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                We were jet-set, Bonnie and Clyde (Oh-oh)<br>
+                Until I switched to the other side, to the other side<br>
+                It's no surprise I turned you in (Oh-oh)<br>
+                'Cause us traitors never win<br>
+                <small><a href="../Song Web Pages/reputation/9) Getaway Car.html">- Getaway Car</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/6) reputation/9) Getaway Car.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Is this the end of all the endings?<br>
+                My broken bones are mending<br>
+                With all these nights we're spending<br>
+                Up on the roof with a school girl crush<br>
+                Drinking beer out of plastic cups<br>
+                Say you fancy me, not fancy stuff<br>
+                Baby, all at once, this is enough<br>
+                <small><a href="../Song Web Pages/reputation/10) King Of My Heart.html">- King Of My Heart</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/6) reputation/10) King Of My Heart.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I'd kiss you as the lights went out<br>
+                Swaying as the room burned down<br>
+                I'd hold you as the water rushes in<br>
+                If I could dance with you again<br>
+                I'd kiss you as the lights went out<br>
+                Swaying as the room burned down<br>
+                I'd hold you as the water rushes in<br>
+                If I could dance with you again (Again)<br>
+                <small><a href="../Song Web Pages/reputation/11) Dancing With Our Hands Tied.html">- Dancing With Our Hands Tied</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/6) reputation/11) Dancing With Our Hands Tied.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Flashback when you met me, your buzzcut and my hair bleached<br>
+                Even in my worst times, you could see the best in me<br>
+                Flashback to my mistakes, my rebounds, my earthquakes<br>
+                Even in my worst lies, you saw the truth in me<br>
+                And I woke up just in time, now I wake up by your side<br>
+                My one and only, my lifeline<br>
+                I woke up just in time, now I wake up by your side<br>
+                My hands shake, I can't explain this<br>
+                Ah, ha, ha, ha-ah<br>
+                <small><a href="../Song Web Pages/reputation/12) Dress.html">- Dress</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/6) reputation/12) Dress.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Here's a toast to my real friends<br>
+                They don't care about the he-said, she-said<br>
+                And here's to my baby<br>
+                He ain't reading what they call me lately<br>
+                And here's to my mama<br>
+                Had to listen to all this drama<br>
+                And here's to you<br>
+                'Cause forgiveness is a nice thing to do<br>
+                Haha, I can't even say it with a straight face<br>
+                <small><a href="../Song Web Pages/reputation/13) This Is Why We Can't Have Nice Things.html">- This Is Why We Can't Have Nice Things</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/6) reputation/13) This Is Why We Can't Have Nice Things.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I want to wear his initial on a chain 'round my neck<br>
+                Chain 'round my neck<br>
+                Not because he owns me<br>
+                But 'cause he really knows me<br>
+                Which is more than they can say, I<br>
+                I recall late November<br>
+                Holding my breath, slowly, I said<br>
+                "You don't need to save me<br>
+                But would you run away with me?"<br>
+                Yes (Would you run away?)<br>
+                <small><a href="../Song Web Pages/reputation/14) Call It What You Want.html">- Call It What You Want</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/6) reputation/14) Call It What You Want.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Please, don't ever become a stranger<br>
+                Whose laugh I could recognize anywhere<br>
+                Please, don't ever become a stranger<br>
+                Whose laugh I could recognize anywhere<br>
+                <small><a href="../Song Web Pages/reputation/15) New Year's Day.html">- New Year's Day</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/6) reputation/15) New Year's Day.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Sent me a clear message<br>
+                Taught me some hard lessons<br>
+                I just forget what they were<br>
+                It's all just a blur<br>
+                <small><a href="../Song Web Pages/Lover/1) I Forgot That You Existed.html">- I Forgot That You Existed</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/7) Lover/1) I Forgot That You Existed.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I'm drunk in the back of the car<br>
+                And I cried like a baby coming home from the bar (Oh)<br>
+                Said, "I'm fine," but it wasn't true<br>
+                I don't wanna keep secrets just to keep you<br>
+                And I snuck in through the garden gate<br>
+                Every night that summer just to seal my fate (Oh)<br>
+                And I scream, "For whatever it's worth<br>
+                I love you, ain't that the worst thing you ever heard?"<br>
+                He looks up, grinning like a devil<br>
+                <small><a href="../Song Web Pages/Lover/2) Cruel Summer.html">- Cruel Summer</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/7) Lover/2) Cruel Summer.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Ladies and gentlemen, will you please stand?<br>
+                With every guitar string scar on my hand<br>
+                I take this magnetic force of a man to be my lover<br>
+                My heart's been borrowed and yours has been blue<br>
+                All's well that ends well to end up with you<br>
+                Swear to be overdramatic and true to my lover<br>
+                And you'll save all your dirtiest jokes for me<br>
+                And at every table, I'll save you a seat, lover<br>
+                <small><a href="../Song Web Pages/Lover/3) Lover.html">- Lover</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/7) Lover/3) Lover.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                What's it like to brag about raking in dollars<br>
+                And getting bitches and models?<br>
+                And it's all good if you're bad<br>
+                And it's okay if you're mad<br>
+                If I was out flashing my dollars<br>
+                I'd be a bitch, not a baller<br>
+                They'd paint me out to be bad<br>
+                So, it's okay that I'm mad<br>
+                <small><a href="../Song Web Pages/Lover/4) The Man.html">- The Man</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/7) Lover/4) The Man.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                'Cause they see right through me<br>
+                They see right through me<br>
+                They see right through<br>
+                Can you see right through me?<br>
+                They see right through<br>
+                They see right through me<br>
+                I see right through me<br>
+                I see right through me<br>
+                <small><a href="../Song Web Pages/Lover/5) The Archer.html">- The Archer</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/7) Lover/5) The Archer.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Lyrical smile, indigo eyes, hand on my thigh<br>
+                We could follow the sparks, I'll drive<br>
+                Lyrical smile, indigo eyes, hand on my thigh<br>
+                We could follow the sparks, I'll drive<br>
+                "So where we gonna go?"<br>
+                I whisper in the dark<br>
+                "Where we gonna go?"<br>
+                I think he knows<br>
+                <small><a href="../Song Web Pages/Lover/6) I Think He Knows.html">- I Think He Knows</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/7) Lover/6) I Think He Knows.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And I don't want you to (Go), I don't really wanna (Fight)<br>
+                'Cause nobody's gonna (Win), I think you should come home<br>
+                And I don't want you to (Go), I don't really wanna (Fight)<br>
+                'Cause nobody's gonna (Win), I think you should come home<br>
+                And I don't want you to (Go), I don't really wanna (Fight)<br>
+                'Cause nobody's gonna (Win), just thought you should know<br>
+                And I'll never let you (Go) 'cause I know this is a (Fight)<br>
+                That someday we're gonna (Win)<br>
+                <small><a href="../Song Web Pages/Lover/7) Miss Americana & The Heartbreak Prince.html">- Miss Americana & The Heartbreak Prince</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/7) Lover/7) Miss Americana & The Heartbreak Prince.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I want to drive away with you<br>
+                I want your complications too<br>
+                I want your dreary Mondays<br>
+                Wrap your arms around me, baby boy<br>
+                I want to drive away with you<br>
+                I want your complications too<br>
+                I want your dreary Mondays<br>
+                Wrap your arms around me, baby boy<br>
+                Uh huh<br>
+                <small><a href="../Song Web Pages/Lover/8) Paper Rings.html">- Paper Rings</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/7) Lover/8) Paper Rings.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                You hold my hand on the street<br>
+                Walk me back to that apartment<br>
+                Years ago, we were just inside<br>
+                Barefoot in the kitchen<br>
+                Sacred new beginnings<br>
+                That became my religion, listen<br>
+                <small><a href="../Song Web Pages/Lover/9) Cornelia Street.html">- Cornelia Street</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/7) Lover/9) Cornelia Street.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                My heart, my hips, my body, my love<br>
+                Tryna find a part of me that you didn't touch<br>
+                Gave up on me like I was a bad drug<br>
+                Now I'm searching for signs in a haunted club<br>
+                Our songs, our films, united we stand<br>
+                Our country, guess it was a lawless land<br>
+                Quiet my fears with the touch of your hand<br>
+                Paper cut stings from our paper-thin plans<br>
+                My time, my wine, my spirit, my trust<br>
+                Tryna find a part of me you didn't take up<br>
+                Gave you so much, but it wasn't enough<br>
+                But I'll be alright, it's just a thousand cuts<br>
+                <small><a href="../Song Web Pages/Lover/10) Death By A Thousand Cuts.html">- Death By A Thousand Cuts</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/7) Lover/10) Death By A Thousand Cuts.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                So please show me Hackney<br>
+                Doesn't have to be Louis V up on Bond Street<br>
+                Just wanna be with you<br>
+                Wanna be with you<br>
+                Stick with me, I'm your queen<br>
+                Like a Tennessee Stella McCartney on the Heath<br>
+                Just wanna be with you (Wanna be with you)<br>
+                Wanna be with you, oh, woah<br>
+                <small><a href="../Song Web Pages/Lover/11) London Boy.html">- London Boy</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/7) Lover/11) London Boy.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And I hate to make this all about me<br>
+                But who am I supposed to talk to?<br>
+                What am I supposed to do<br>
+                If there's no you?<br>
+                <small><a href="../Song Web Pages/Lover/12) Soon You'll Get Better.html">- Soon You'll Get Better</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/7) Lover/12) Soon You'll Get Better.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And we see you over there on the internet<br>
+                Comparing all the girls who are killing it<br>
+                But we figured you out<br>
+                We all know now we all got crowns<br>
+                You need to calm down<br>
+                <small><a href="../Song Web Pages/Lover/14) You Need To Calm Down.html">- You Need To Calm Down</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/7) Lover/14) You Need To Calm Down.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Tell me that you're still mine<br>
+                Tell me that we'll be just fine<br>
+                Even when I lose my mind<br>
+                I need to say<br>
+                Tell me that it's not my fault<br>
+                Tell me that I'm all you want<br>
+                Even when I break your heart<br>
+                I need to say<br>
+                <small><a href="../Song Web Pages/Lover/15) Afterglow.html">- Afterglow</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/7) Lover/15) Afterglow.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Girl, there ain't no "I" in "team"<br>
+                But you know there is a "me"<br>
+                Strike the band up, one, two, three<br>
+                I promise that you'll never find another like me<br>
+                Girl, there ain't no "I" in "team"<br>
+                But you know there is a "me"<br>
+                And you can't spell "awesome" without "me"<br>
+                I promise that you'll never find another like<br>
+                <small><a href="../Song Web Pages/Lover/16) ME!.html">- ME!</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/7) Lover/16) ME!.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And I can still see it all (In my mind)<br>
+                All of you, all of me (Intertwined)<br>
+                I once believed love would be (Black and white)<br>
+                But it's golden (Golden)<br>
+                And I can still see it all (In my head)<br>
+                Back and forth from New York (Sneaking in your bed)<br>
+                I once believed love would be (Burning red)<br>
+                But it's golden<br>
+                Like daylight, like daylight<br>
+                Like daylight, daylight<br>
+                <small><a href="../Song Web Pages/Lover/18) Daylight.html">- Daylight</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/7) Lover/18) Daylight.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Your mother brought you up loyal and kind<br>
+                Teenage love taught you there's good in goodbye<br>
+                Every woman that you knew brought you here<br>
+                I wanna teach you how forever feels like<br>
+                <small><a href="../Song Web Pages/Lover/19) All Of The Girls You Loved Before.html">- All Of The Girls You Loved Before</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/7) Lover"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I, I, I persist and resist the temptation to ask you<br>
+                If one thing had been different<br>
+                Would everything be different today?<br>
+                <small><a href="../Song Web Pages/folklore/1) the 1.html">- the 1</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/8) folklore/1) the 1.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                To kiss in cars and downtown bars<br>
+                Was all we needed<br>
+                You drew stars around my scars<br>
+                But now I'm bleedin'<br>
+                <small><a href="../Song Web Pages/folklore/2) cardigan.html">- cardigan</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/8) folklore/2) cardigan.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                They say she was seen on occasion<br>
+                Pacing the rocks, staring out at the midnight sea<br>
+                And in a feud with her neighbor<br>
+                She stole his dog and dyed it key lime green<br>
+                Fifty years is a long time<br>
+                Holiday House sat quietly on that beach<br>
+                Free of women with madness, their men and bad habits<br>
+                And then it was bought by me<br>
+                <small><a href="../Song Web Pages/folklore/3) the last great american dynasty.html">- the last great american dynasty</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/8) folklore/3) the last great american dynasty.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                So step right out, there is no amount<br>
+                Of crying I can do for you<br>
+                All this time<br>
+                We always walked a very thin line<br>
+                You didn't even hear me out (You didn't even hear me out)<br>
+                You never gave a warning sign (I gave so many signs)<br>
+                All this time<br>
+                I never learned to read your mind (Never learned to read my mind)<br>
+                I couldn't turn things around (You never turned things around)<br>
+                'Cause you never gave a warning sign (I gave so many signs)<br>
+                So many signs, so many signs<br>
+                You didn't even see the signs<br>
+                <small><a href="../Song Web Pages/folklore/4) exile.html">- exile</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/8) folklore/4) exile.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And I can go anywhere I want<br>
+                Anywhere I want, just not home<br>
+                And you can aim for my heart, go for blood<br>
+                But you would still miss me in your bones<br>
+                And I still talk to you (When I'm screaming at the sky)<br>
+                And when you can't sleep at night (You hear my stolen lullabies)<br>
+                <small><a href="../Song Web Pages/folklore/5) my tears ricochet.html">- my tears ricochet</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/8) folklore/5) my tears ricochet.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And they called off the circus, burned the disco down<br>
+                When they sent home the horses and the rodeo clowns<br>
+                I'm still on that tightrope<br>
+                I'm still trying everything to get you laughing at me<br>
+                And I'm still a believer, but I don't know why<br>
+                I've never been a natural, all I do is try, try, try<br>
+                I'm still on that trapeze<br>
+                I'm still trying everything to keep you looking at me<br>
+                <small><a href="../Song Web Pages/folklore/6) mirrorball.html">- mirrorball</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/8) folklore/6) mirrorball.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And I've been meaning to tell you<br>
+                I think your house is haunted<br>
+                Your dad is always mad and that must be why<br>
+                And I think you should come live with me<br>
+                And we can be pirates<br>
+                Then you won't have to cry<br>
+                Or hide in the closet<br>
+                And just like a folk song<br>
+                Our love will be passed on<br>
+                <small><a href="../Song Web Pages/folklore/7) seven.html">- seven</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/8) folklore/7) seven.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Back when we were still changin' for the better<br>
+                Wanting was enough<br>
+                For me, it was enough<br>
+                To live for the hope of it all<br>
+                Cancel plans just in case you'd call<br>
+                And say, "Meet me behind the mall"<br>
+                So much for summer love and saying "us"<br>
+                'Cause you weren't mine to lose<br>
+                You weren't mine to lose, no<br>
+                <small><a href="../Song Web Pages/folklore/8) august.html">- august</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/8) folklore/8) august.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And it's hard to be at a party when I feel like an open wound<br>
+                It's hard to be anywhere these days when all I want is you<br>
+                You're a flashback in a film reel on the one screen in my town<br>
+                <small><a href="../Song Web Pages/folklore/9) this is me trying.html">- this is me trying</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/8) folklore/9) this is me trying.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And you wanna scream<br>
+                Don't call me "kid," don't call me "baby"<br>
+                Look at this godforsaken mess that you made me<br>
+                You showed me colors you know I can't see with anyone else<br>
+                Don't call me "kid," don't call me "baby"<br>
+                Look at this idiotic fool that you made me<br>
+                You taught me a secret language I can't speak with anyone else<br>
+                <small><a href="../Song Web Pages/folklore/10) illicit affairs.html">- illicit affairs</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/8) folklore/10) illicit affairs.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                A string that pulled me<br>
+                Out of all the wrong arms, right into that dive bar<br>
+                Something wrapped all of my past mistakes in barbed wire<br>
+                Chains around my demons<br>
+                Wool to brave the seasons<br>
+                One single thread of gold<br>
+                Tied me to you<br>
+                <small><a href="../Song Web Pages/folklore/11) invisible string.html">- invisible string</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/8) folklore/11) invisible string.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I'm taking my time, taking my time<br>
+                'Cause you took everything from me<br>
+                Watching you climb, watching you climb<br>
+                Over people like me<br>
+                The master of spin has a couple side flings<br>
+                Good wives always know<br>
+                She should be mad, should be scathing like me, but<br>
+                <small><a href="../Song Web Pages/folklore/12) mad woman.html">- mad woman</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/8) folklore/12) mad woman.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Only twenty minutes to sleep<br>
+                But you dream of some epiphany<br>
+                Just one single glimpse of relief<br>
+                To make some sense of what you've seen<br>
+                <small><a href="../Song Web Pages/folklore/13) epiphany.html">- epiphany</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/8) folklore/13) epiphany.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I was walking home on broken cobblestones<br>
+                Just thinking of you when she pulled up like<br>
+                A figment of my worst intentions<br>
+                She said "James, get in, let's drive"<br>
+                Those days turned into nights<br>
+                Slept next to her, but<br>
+                I dreamt of you all summer long<br>
+                <small><a href="../Song Web Pages/folklore/14) betty.html">- betty</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/8) folklore/14) betty.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                You know I left a part of me back in New York<br>
+                You knew the hero died so what's the movie for?<br>
+                You knew it still hurts underneath my scars<br>
+                From when they pulled me apart<br>
+                You knew the password so I let you in the door<br>
+                You knew you won so what's the point of keeping score?<br>
+                You knew it still hurts underneath my scars<br>
+                From when they pulled me apart<br>
+                But what you did was just as dark<br>
+                (Ah, ah, ah)<br>
+                Darling, this was just as hard<br>
+                As when they pulled me apart<br>
+                <small><a href="../Song Web Pages/folklore/16) hoax.html">- hoax</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/8) folklore/16) hoax.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I want auroras and sad prose<br>
+                I want to watch wisteria grow right over my bare feet<br>
+                'Cause I haven't moved in years<br>
+                And I want you right here<br>
+                A red rose grew up out of ice frozen ground<br>
+                With no one around to tweet it<br>
+                While I bathe in cliffside pools<br>
+                With my calamitous love and insurmountable grief<br>
+                <small><a href="../Song Web Pages/folklore/17) the lakes.html">- the lakes</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/8) folklore/17) the lakes.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Life was a willow and it bent right to your wind<br>
+                They count me out time and time again<br>
+                Life was a willow and it bent right to your wind<br>
+                But I come back stronger than a '90s trend<br>
+                <small><a href="../Song Web Pages/evermore/1) willow.html">- willow</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/9) evermore/1) willow.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Your Midas touch on the Chevy door<br>
+                November flush and your flannel cure<br>
+                "This dorm was once a madhouse"<br>
+                I made a joke, "Well, it's made for me"<br>
+                How evergreen, our group of friends<br>
+                Don't think we'll say that word again<br>
+                And soon they'll have the nerve to deck the halls<br>
+                That we once walked through<br>
+                One for the money, two for the show<br>
+                I never was ready so I watch you go<br>
+                Sometimes you just don't know the answer<br>
+                'Til someone's on their knees and asks you<br>
+                "She would've made such a lovely bride<br>
+                What a shame she's fucked in the head," they said<br>
+                But you'll find the real thing instead<br>
+                She'll patch up your tapestry that I shred<br>
+                <small><a href="../Song Web Pages/evermore/2) champagne problems.html">- champagne problems</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/9) evermore/2) champagne problems.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Sleep in half the day just for old times' sake<br>
+                I won't ask you to wait if you don't ask me to stay<br>
+                So I'll go back to L.A. and the so-called friends<br>
+                Who'll write books about me if I ever make it<br>
+                And wonder about the only soul<br>
+                Who can tell which smiles I'm fakin'<br>
+                And the heart I know I'm breakin' is my own<br>
+                To leave the warmest bed I've ever known<br>
+                We could call it even<br>
+                Even though I'm leaving<br>
+                And I'll be yours for the weekend<br>
+                'Tis the damn season<br>
+                <small><a href="../Song Web Pages/evermore/4) 'tis the damn season.html">- 'tis the damn season</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/9) evermore/4) 'tis the damn season.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                While you were out building other worlds, where was I?<br>
+                Where's that man who'd throw blankets over my barbed wire?<br>
+                I made you my temple, my mural, my sky<br>
+                Now I'm begging for footnotes in the story of your life<br>
+                Drawing hearts in the byline<br>
+                Always taking up too much space or time<br>
+                You assume I'm fine, but what would you do if I<br>
+                <small><a href="../Song Web Pages/evermore/5) tolerate it.html">- tolerate it</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/9) evermore/5) tolerate it.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I can't make it go away by making you a villain<br>
+                I guess it's the price I paid for seven years in Heaven<br>
+                And I pulled your body into mine<br>
+                Every goddamn night, now I get fake niceties<br>
+                No one teaches you what to do<br>
+                When a good man hurts you<br>
+                And you know you hurt him too<br>
+                <small><a href="../Song Web Pages/evermore/7) happiness.html">- happiness</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/9) evermore/7) happiness.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Were you waiting at our old spot<br>
+                In the tree line<br>
+                By the gold clock<br>
+                Did I leave you hanging every single day?<br>
+                Were you standing in the hallway<br>
+                With a big cake, happy birthday<br>
+                Did I paint your bluest skies the darkest grey?<br>
+                A universe away<br>
+                And when I got into the accident<br>
+                The sight that flashed before me was your face<br>
+                But when I walked up to the podium, I think that I forgot to say your name<br>
+                <small><a href="../Song Web Pages/evermore/9) coney island.html">- coney island</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/9) evermore/9) coney island.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                So yeah, it's a fire<br>
+                It's a goddamn blaze in the dark<br>
+                And you started it<br>
+                You started it<br>
+                So yeah, it's a war<br>
+                It's the goddamn fight of my life<br>
+                And you started it<br>
+                You started it<br>
+                <small><a href="../Song Web Pages/evermore/10) ivy.html">- ivy</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/9) evermore/10) ivy.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And the skeletons in both our closets<br>
+                Plotted hard to fuck this up<br>
+                And the old men that I've swindled<br>
+                Really did believe I was the one<br>
+                And the ladies lunchin' have their stories about<br>
+                When you passed through town<br>
+                Oh, but that was all before I locked it down<br>
+                <small><a href="../Song Web Pages/evermore/11) cowboy like me.html">- cowboy like me</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/9) evermore/11) cowboy like me.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                No more keepin' score<br>
+                Now I just keep you warm (Keep you warm)<br>
+                No more tug of war<br>
+                Now I just know there's more (Know there's more)<br>
+                No more keepin' score<br>
+                Now I just keep you warm (Keep you warm)<br>
+                And my waves meet your shore<br>
+                Ever and evermore<br>
+                <small><a href="../Song Web Pages/evermore/12) long story short.html">- long story short</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/9) evermore/12) long story short.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                The autumn chill that wakes me up<br>
+                You loved the amber skies so much<br>
+                Long limbs and frozen swims<br>
+                You'd always go past where our feet could touch<br>
+                And I complained the whole way there<br>
+                The car ride back and up the stairs<br>
+                I should've asked you questions<br>
+                I should've asked you how to be<br>
+                Asked you to write it down for me<br>
+                Should've kept every grocery store receipt<br>
+                'Cause every scrap of you would be taken from me<br>
+                Watched as you signed your name Marjorie<br>
+                All your closets of backlogged dreams<br>
+                And how you left them all to me<br>
+                <small><a href="../Song Web Pages/evermore/13) marjorie.html">- marjorie</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/9) evermore/13) marjorie.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I know I'm just a wrinkle in your new life<br>
+                Staying friends would iron it out so nice<br>
+                Guilty, guilty, reaching out across the sea<br>
+                That you put between you and me<br>
+                But it's fake and it's oh so unnecessary<br>
+                <small><a href="../Song Web Pages/evermore/14) closure.html">- closure</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/9) evermore/14) closure.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                [Bridge 1]<br>
+                Can't not think of all the cost<br>
+                And the things that will be lost<br>
+                Oh, can we just get a pause?<br>
+                To be certain, we'll be tall again<br>
+                Whether weather be the frost<br>
+                Or the violence of the dog days<br>
+                I'm on waves, out being tossed<br>
+                Is there a line that I could just go cross?<br>
+                [Bridge 2]<br>
+                And when I was shipwrecked (Can't think of all the cost)<br>
+                I thought of you (All the things that will be lost now)<br>
+                In the cracks of light (Can we just get a pause?)<br>
+                I dreamed of you (To be certain we'll be tall again, if you think of all the costs)<br>
+                It was real enough (Whether weather be the frost)<br>
+                To get me through (Or the violence of the dog days)<br>
+                (Or the violence of the dog days)<br>
+                (Out on waves, being tossed)<br>
+                (I'm on waves, out being tossed)<br>
+                I swear (Is there a line that we can just go cross?)<br>
+                You were there<br>
+                <small><a href="../Song Web Pages/evermore/15) evermore.html">- evermore</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/9) evermore/15) evermore [Bridge 1].mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/9) evermore/15) evermore [Bridge 2].mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                At the restaurant when I was still the one you want<br>
+                Cross-legged in the dim light, everything was just right<br>
+                I, I could feel the mascara run<br>
+                You told me that you met someone<br>
+                Glass shattered on the white cloth<br>
+                Everybody moved on<br>
+                <small><a href="../Song Web Pages/evermore/16) right where you left me.html">- right where you left me</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/9) evermore/16) right where you left me.mp3"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Talk your talk and go viral<br>
+                I just need this love spiral<br>
+                Get it off your chest<br>
+                Get it off my desk (Get it off my desk)<br>
+                Talk your talk and go viral<br>
+                I just need this love spiral<br>
+                Get it off your chest<br>
+                Get it off my desk<br>
+                <small><a href="../Song Web Pages/Midnights/1) Lavender Haze.html">- Lavender Haze</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/10) Midnights"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                And I wake with your memory over me<br>
+                That's a real fucking legacy, legacy (It was maroon)<br>
+                And I wake with your memory over me<br>
+                That's a real fucking legacy to leave<br>
+                <small><a href="../Song Web Pages/Midnights/2) Maroon.html">- Maroon</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/10) Midnights"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I have this dream my daughter-in-law kills me for the money<br>
+                She thinks I left them in the will<br>
+                The family gathers 'round and reads it and then someone screams out<br>
+                "She's laughing up at us from Hell"<br>
+                <small><a href="../Song Web Pages/Midnights/3) Anti-Hero.html">- Anti-Hero</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/10) Midnights"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I (I) can't (Can't) speak, afraid to jinx it<br>
+                I (I) don't (Don't) even dare to wish it<br>
+                But your eyes are flying saucers from another planet<br>
+                Now I'm all for you like Janet<br>
+                Can this be a real thing? Can it?<br>
+                <small><a href="../Song Web Pages/Midnights/4) Snow On The Beach.html">- Snow On The Beach</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/10) Midnights"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                From sprinkler splashes to fireplace ashes<br>
+                I gave my blood, sweat, and tears for this<br>
+                I hosted parties and starved my body<br>
+                Like I'd be saved by a perfect kiss<br>
+                The jokes weren't funny, I took the money<br>
+                My friends from home don't know what to say<br>
+                I looked around in a blood-soaked gown<br>
+                And I saw something they can't take away<br>
+                'Cause there were pages turned with the bridges burned<br>
+                Everything you lose is a step you take<br>
+                So, make the friendship bracelets, take the moment and taste it<br>
+                You've got no reason to be afraid<br>
+                <small><a href="../Song Web Pages/Midnights/5) You're On Your Own, Kid.html">- You're On Your Own, Kid</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/10) Midnights"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Does it feel like everything's just like<br>
+                Second best after that meteor strike?<br>
+                And what's that that I heard? That you're still with her?<br>
+                That's nice, I'm sure that's what's suitable<br>
+                And right, but tonight<br>
+                <small><a href="../Song Web Pages/Midnights/7) Question....html">- Question...?</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/10) Midnights"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Ladies always rise above<br>
+                Ladies know what people want<br>
+                Someone sweet and kind and fun<br>
+                The lady simply had enough<br>
+                <small><a href="../Song Web Pages/Midnights/8) Vigilante Shit.html">- Vigilante Shit</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/10) Midnights"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Sapphire tears on my face<br>
+                Sadness became my whole sky<br>
+                But some guy said my aura's moonstone<br>
+                Just 'cause he was high<br>
+                And we're dancin' all night<br>
+                And you can try to change my mind<br>
+                But you might have to wait in line<br>
+                What's a girl gonna do?<br>
+                A diamond's gotta shine<br>
+                <small><a href="../Song Web Pages/Midnights/9) Bejeweled.html">- Bejeweled</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/10) Midnights"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Ask me what I learned from all those years<br>
+                Ask me what I earned from all those tears<br>
+                Ask me why so many fade, but I'm still here<br>
+                (I'm still here, I'm still here)<br>
+                <small><a href="../Song Web Pages/Midnights/11) Karma.html">- Karma</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/10) Midnights"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                Industry disruptors and soul deconstructors<br>
+                And smooth-talking hucksters out glad-handing each other<br>
+                And the voices that implore, "You should be doing more"<br>
+                To you, I can admit that I'm just too soft for all of it<br>
+                Ooh<br>
+                <small><a href="../Song Web Pages/Midnights/12) Sweet Nothing.html">- Sweet Nothing</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/10) Midnights"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                No one wanted to play with me as a little kid<br>
+                So I've been scheming like a criminal ever since<br>
+                To make them love me and make it seem effortless<br>
+                This is the first time I've felt the need to confess<br>
+                And I swear<br>
+                I'm only cryptic and Machiavellian<br>
+                'Cause I care<br>
+                <small><a href="../Song Web Pages/Midnights/13) Mastermind.html">- Mastermind</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/10) Midnights"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                It turned into something bigger<br>
+                Somewhere in the haze, got a sense I'd been betrayed<br>
+                Your finger on my hairpin triggers<br>
+                Soldier down on that icy ground<br>
+                Looked up at me with honor and truth<br>
+                Broken and blue, so I called off the troops<br>
+                That was the night I nearly lost you<br>
+                I really thought I'd lost you<br>
+                <small><a href="../Song Web Pages/Midnights/14) The Great War.html">- The Great War</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/10) Midnights"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                What could've been, would've been you<br>
+                What could've been, would've been<br>
+                What should've been you<br>
+                What could've been, would've been you<br>
+                (What could've been, would've been you)<br>
+                <small><a href="../Song Web Pages/Midnights/15) Bigger Than The Whole Sky.html">- Bigger Than The Whole Sky</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/10) Midnights"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I wanna brainwash you<br>
+                Into loving me forever<br>
+                I wanna transport you<br>
+                To somewhere the culture's clever<br>
+                Confess my truth<br>
+                In swooping, sloping, cursive letters<br>
+                Let the only flashing lights be the tower at midnight<br>
+                In my mind<br>
+                <small><a href="../Song Web Pages/Midnights/16) Paris.html">- Paris</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/10) Midnights"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                A brief interruption, a slight malfunction<br>
+                I'd go back to wanting dudes who give nothing<br>
+                I thought we had no chance<br>
+                And that's romance, let's dance<br>
+                <small><a href="../Song Web Pages/Midnights/18) Glitch.html">- Glitch</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/10) Midnights"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                God rest my soul<br>
+                I miss who I used to be<br>
+                The tomb won't close<br>
+                Stained glass windows in my mind<br>
+                I regret you all the time<br>
+                I can't let this go<br>
+                I fight with you in my sleep<br>
+                The wound won't close<br>
+                I keep on waiting for a sign<br>
+                I regret you all the time<br>
+                <small><a href="../Song Web Pages/Midnights/19) Would've, Could've, Should've.html">- Would've, Could've, Should've</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/10) Midnights"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                So I wander through these nights<br>
+                I prefer hiding in plain sight<br>
+                My fourth drink in my hand<br>
+                These desperate prayers of a cursed man<br>
+                Spilling out to you for free<br>
+                But darling, darling, please<br>
+                You wouldn't take my word for it if you knew who was talking<br>
+                If you knew where I was walking<br>
+                To a house, not a home, all alone 'cause nobody's there<br>
+                Where I pace in my pen and my friends found friends who care<br>
+                No one sees when you lose when you're playing solitaire<br>
+                <small><a href="../Song Web Pages/Midnights/20) Dear Reader.html">- Dear Reader</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/10) Midnights"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+            <p>
+                I find the artifacts, cried over a hat<br>
+                Cursed the space that I needed<br>
+                I trace the evidence, make it make some sense<br>
+                Why the wound is still bleedin'<br>
+                You were the one that I loved<br>
+                Don't need another metaphor, it's simple enough<br>
+                A wrinkle in time like the crease by your eyes<br>
+                This is why they shouldn't kill off the main guy<br>
+                Dreams of your hair and your stare and sense of belief<br>
+                In the good in the world, you once believed in me<br>
+                And I felt you and I held you for a while<br>
+                Bet I could still melt your world<br>
+                Argumentative, antithetical dream girl<br>
+                <small><a href="../Song Web Pages/Midnights/21) Hits Different.html">- Hits Different</a></small>
+                <span class="audio-player">
+                    <audio src="../../Audio/Bridges/10) Midnights"></audio>
+                    <button class="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                </span>
+            </p>
+        </div>
+        <div>
+            <h2>Songs That Don't Have Bridges <i class="fa-solid fa-circle-xmark"></i></h2>
+            <ul>
+                <a class="no-bridge" href="../Song Web Pages/Taylor Swift/6) The Outside.html">
+                    <li>The Outside</li>
+                </a>
+                <a class="no-bridge" href="../Song Web Pages/Taylor Swift/7) Tied Together With A Smile.html">
+                    <li>Tied Together With A Smile</li>
+                </a>
+                <a class="no-bridge" href="../Song Web Pages/Red/13) The Lucky One.html">
+                    <li>The Lucky One</li>
+                </a>
+                <a class="no-bridge" href="../Song Web Pages/reputation/1) ...Ready For It.html">
+                    <li>...Ready For It?</li>
+                </a>
+                <a class="no-bridge" href="../Song Web Pages/reputation/2) End Game.html">
+                    <li>End Game</li>
+                </a>
+                <a class="no-bridge" href="../Song Web Pages/Lover/13) False God.html">
+                    <li>False God</li>
+                </a>
+                <a class="no-bridge" href="../Song Web Pages/Lover/17) It's Nice To Have A Friend.html">
+                    <li>It's Nice To Have A Friend</li>
+                </a>
+                <a class="no-bridge" href="../Song Web Pages/folklore/15) peace.html">
+                    <li>peace</li>
+                </a>
+                <a class="no-bridge" href="../Song Web Pages/evermore/3) gold rush.html">
+                    <li>gold rush</li>
+                </a>
+                <a class="no-bridge" href="../Song Web Pages/evermore/6) no body, no crime.html">
+                    <li>no body, no crime</li>
+                </a>
+                <a class="no-bridge" href="../Song Web Pages/evermore/6) no body, no crime.html">
+                    <li>dorothea</li>
+                </a>
+                <a class="no-bridge" href="../Song Web Pages/evermore/17) it's time to go.html">
+                    <li>it's time to go</li>
+                </a>
+                <a class="no-bridge" href="../Song Web Pages/Midnights/6) Midnight Rain.html">
+                    <li>Midnight Rain</li>
+                </a>
+                <a class="no-bridge" href="../Song Web Pages/Midnights/10) Labyrinth.html">
+                    <li>Labyrinth</li>
+                </a>
+                <a class="no-bridge" href="../Song Web Pages/Midnights/17) High Infidelity.html">
+                    <li>High Infidelity</li>
+                </a>
+            </ul>
+        </div>
+        <!--<div>
+            <h2>Here's what every bridge played at once sounds like!</h2>
+            <small>Turn down your volume!!</small>
+            <div class="play-button"></div>
+        </div>-->
+        <script>
+            //PARAGRAPH SHUFFLER------------------------------------------------------
+    
+// Get the container element for the paragraphs
+const container = document.getElementById('paragraphs');
+
+// Get an array of all the paragraphs inside the container
+const paragraphs = Array.from(container.getElementsByTagName('p'));
+
+// Store the original order of the paragraphs
+const originalOrder = paragraphs.slice();
+
+// Shuffle the array of paragraphs randomly on load
+shuffleParagraphs();
+
+// Append each paragraph back to the container in the new order
+function shuffleParagraphs() {
+  paragraphs.sort(() => Math.random() - 0.5);
+  paragraphs.forEach((p) => container.appendChild(p));
+}
+
+// Add event listener to the shuffle button
+const shuffleButton = document.getElementById('shuffle-button');
+shuffleButton.addEventListener('click', shuffleParagraphs);
+
+// Add event listener to the sort button
+const sortButton = document.getElementById('alphabet-button');
+sortButton.addEventListener('click', () => {
+  // Remove all paragraphs from the container
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+  // Sort the paragraphs alphabetically by the small tag content
+  paragraphs.sort((a, b) => {
+    const smallA = a.querySelector('small').textContent.trim().toLowerCase();
+    const smallB = b.querySelector('small').textContent.trim().toLowerCase();
+    if (smallA < smallB) return -1;
+    if (smallA > smallB) return 1;
+    return 0;
+  });
+  // Append each paragraph back to the container in the sorted order
+  paragraphs.forEach((p) => container.appendChild(p));
+});
+
+function sortParagraphs(reverse) {
+  // Get the container element for the paragraphs
+  const container = document.getElementById('paragraphs');
+
+  // Get an array of all the paragraphs inside the container
+  const paragraphs = Array.from(container.getElementsByTagName('p'));
+
+  // Store the original order of the paragraphs
+  const originalOrder = paragraphs.slice();
+
+  // Sort the paragraphs in alphabetical order
+  if (reverse) {
+    paragraphs.sort((a, b) => b.querySelector('small').textContent.localeCompare(a.querySelector('small').textContent));
+  } else {
+    paragraphs.sort((a, b) => a.querySelector('small').textContent.localeCompare(b.querySelector('small').textContent));
+  }
+
+  // Append each paragraph back to the container in the new order
+  paragraphs.forEach((p) => container.appendChild(p));
+
+  // Add event listener to the undo button
+  const undoButton = document.getElementById('undo-button');
+  undoButton.addEventListener('click', () => {
+    // Remove all paragraphs from the container
+    while (container.firstChild) {
+      container.removeChild(container.firstChild);
+    }
+    // Append each paragraph back to the container in the original order
+    originalOrder.forEach((p) => container.appendChild(p));
+  });
+}
+
+            //AUDIO--------------------------------------------------
+
+            const audioPlayers = document.querySelectorAll('.audio-player');
+
+            audioPlayers.forEach(function(player) {
+                const audio = player.querySelector('audio');
+                const playPauseBtn = player.querySelector('.play-pause-btn');
+
+            // When the play/pause button is clicked
+            playPauseBtn.addEventListener('click', function() {
+                if (audio.paused) {
+                    audio.play();
+                    playPauseBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                } else {
+                    audio.pause();
+                    playPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+                }
+            });
+
+            // When the audio finishes playing
+            audio.addEventListener('ended', function() {
+            playPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+            });
+        });
+
+            //VIDEO------------------------------------------------------
+            var video = document.getElementById("bridges-video");
+var playButton = document.getElementById("playButton");
+
+// Set up event listeners for the video element
+video.addEventListener('play', function() {
+  playButton.innerHTML = '<i class="fa fa-pause"></i>';
+  video.style.display = "block";
+});
+video.addEventListener('pause', function() {
+  playButton.innerHTML = '<i class="fa fa-play"></i>';
+  video.style.display = "none";
+});
+video.addEventListener('ended', function() {
+  playButton.innerHTML = '<i class="fa fa-play"></i>';
+  video.style.display = "none";
+});
+
+function toggleVideo() {
+  if (video.paused || video.ended) {
+    // Play the video and change the button to show a pause icon
+    video.play();
+    playButton.innerHTML = '<i class="fa fa-pause"></i>';
+    video.style.display = "block";
+  } else {
+    // Pause the video and change the button to show a play icon
+    video.pause();
+    playButton.innerHTML = '<i class="fa fa-play"></i>';
+    video.style.display = "none";
+  }
+}
+        </script>
+    </article>
+    
+    <footer>
+        <div class="socials">
+            <a class="social" href="https://www.facebook.com/TaylorSwift" target="_blank">
+                <button class="header-footer-icon"><i class="fa-brands fa-facebook"></i></a></button>
+            <a class="social" href="https://www.instagram.com/taylorswift/" target="_blank">
+                <button class="header-footer-icon"><i class="fa-brands fa-instagram"></i></a></button>
+            <a class="social" href="https://taylorswift.tumblr.com/" target="_blank">
+                <button class="header-footer-icon"><i class="fa-brands fa-tumblr"></i></a></button>
+            <a class="social" href="https://twitter.com/taylorswift13" target="_blank">
+                <button class="header-footer-icon"><i class="fa-brands fa-twitter"></i></a></button>
+            <a class="social" href="https://www.tiktok.com/@taylorswift" target="_blank">
+                <button class="header-footer-icon"><i class="fa-brands fa-tiktok"></i></a></button>
+            <a class="social" href="https://www.youtube.com/taylorswift" target="_blank">
+                <button class="header-footer-icon"><i class="fa-brands fa-youtube"></i></a></button>
+            <a class="social" href="https://www.snapchat.com/add/taylorswift" target="_blank">
+                <button class="header-footer-icon"><i class="fa-brands fa-snapchat"></i></a></button>
+            <a class="social" href="https://www.reddit.com/r/taylorswift" target="_blank">
+                <button class="header-footer-icon"><i class="fa-brands fa-reddit"></i></a></button>
+            <a class="social" href="https://www.taylorswift.com" target="_blank">
+                <button class="header-footer-icon"><i class="fa-solid fa-bolt"></i></a></button>
+        </div>
+        <div class="copyright">
+            <i class="fa-regular fa-copyright"></i> 2023 Corey Shurdington 
+        </div>
+    </footer>
+    </div>
+    <!--Link to the js document-->
+    <script src="../../Script/script.js"></script>
+    </body>
+</html>

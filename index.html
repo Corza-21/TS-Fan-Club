@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+	<title>TS Fan Club</title>
+      <link href="styles/style.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+      <!--Favicon Stuff-->
+      <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+      <link rel="manifest" href="Favicon/site.webmanifest">
+      <link rel="mask-icon" href="Favicon/safari-pinned-tab.svg" color="#35185a">
+      <meta name="msapplication-TileColor" content="#35185a">
+      <meta name="theme-color" content="#ffffff">
+      <!--/Favicon Stuff-->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <!--Important Font Information-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/deec24d314.js" crossorigin="anonymous"></script>
+   </head>
+   <body>
+      <header>
+         <div class="topnav">
+            <a class="underline-animation" href="Web Pages/Album Web Pages/ts1.html">Taylor Swift</a>
+            <a class="underline-animation" href="Web Pages/Album Web Pages/ts2.html">Fearless</a>
+            <a class="underline-animation" href="Web Pages/Album Web Pages/ts3.html">Speak Now</a>
+            <a class="underline-animation" href="Web Pages/Album Web Pages/ts4.html">Red</a>
+            <a class="underline-animation" href="Web Pages/Album Web Pages/ts5.html">1989</a>
+            <div class="dropdown">
+               <button class="album-dropbtn dropbtn"><i class="fa-solid fa-caret-down"></i></button>
+               <div class="dropdown-content">
+                  <a href="Web Pages/Album Web Pages/ts1.html">Taylor Swift</a>
+                  <a href="Web Pages/Album Web Pages/ts2.html">Fearless</a>
+                  <a href="Web Pages/Album Web Pages/ts3.html">Speak Now</a>
+                  <a href="Web Pages/Album Web Pages/ts4.html">Red</a>
+                  <a href="Web Pages/Album Web Pages/ts5.html">1989</a>
+                  <a href="Web Pages/Album Web Pages/ts6.html">reputation</a>
+                  <a href="Web Pages/Album Web Pages/ts7.html">Lover</a>
+                  <a href="Web Pages/Album Web Pages/ts8.html">folklore</a>
+                  <a href="Web Pages/Album Web Pages/ts9.html">evermore</a>
+                  <a href="Web Pages/Album Web Pages/ts10.html">Midnights</a>
+               </div>
+            </div>
+            <div class="dropdown">
+               <button class="dropbtn"><i class="fa-solid fa-globe"></i></button>
+               <div class="dropdown-content">
+                  <a href="Web Pages/Album Web Pages/singles.html"><button class="header-footer-icon"><i class="fa-solid fa-tree"></i></button></a><span class="hide">Singles</span>
+                  <a href="Web Pages/Album Web Pages/unreleased.html"><button class="header-footer-icon"><i class="fa-solid fa-key"></i></button></a><span class="hide">Unreleased</span>
+                  <a href="Web Pages/Album Web Pages/bridges.html"><button class="header-footer-icon"><i class="fa-solid fa-bridge"></i></button></a><span class="hide">Bridges</span>
+                  <a href="Web Pages/Tours/tours.html"><button class="header-footer-icon"><i class="fa-solid fa-microphone"></i></i></button></a><span class="hide">Tours</span>
+               </div>
+            </div>
+            <a class="header-footer-icon" href="https://taylorswift.com" target="_blank"><i class="fa-solid fa-bolt"></i></a>
+            <a href="index.html"><img class="ts-icon" src="Favicon/android-chrome-512x512.png" alt="TS Fan Club Icon"></a>
+            <a class="header-footer-icon youtube" href="https://youtube.com/taylorswift" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a class="header-footer-icon" onclick="darkMode()"><i class="fa-solid fa-circle-half-stroke"></i></a>
+            <a class="header-footer-icon" onclick="toggleNav()"><i class="fa-solid fa-bars"></i></a>
+            <a class="underline-animation" href="Web Pages/Album Web Pages/ts6.html">reputation</a>
+            <a class="underline-animation" href="Web Pages/Album Web Pages/ts7.html">Lover</a>
+            <a class="underline-animation" href="Web Pages/Album Web Pages/ts8.html">folklore</a>
+            <a class="underline-animation" href="Web Pages/Album Web Pages/ts9.html">evermore</a>
+            <a class="underline-animation" href="Web Pages/Album Web Pages/ts10.html">Midnights</a>
+         </div>
+         </header>
+   
+
+   <!--Full Screen Overlay Navigation Content (I didn't know where else to put it.)-->
+   <div id="myNav" class="overlay">
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+         <a href="#eras" onclick="closeNav()">Eras</a>
+         <a href="#13" onclick="closeNav()">13</a>
+         <a href="#swifties" onclick="closeNav()">Swifties</a>
+         <a href="#whowehate" onclick="closeNav()">Who We Hate</a>
+         <a href="#missamericana" onclick="closeNav()">Miss Americana</a>
+         <a href="#genres" onclick="closeNav()">Genres</a>
+         <a href="#awards" onclick="closeNav()">Awards</a>
+         <a href="#games-quizzes" onclick="closeNav()">Games And Quizzes</a>
+         <a href="#timeline" onclick="closeNav()">Timeline</a>
+      </div>
+   </div>
+   
+   <div class="main">
+      <div class="landing-page parallax">
+         <heading><h1><em><b>Taylor Swift <span class="auto-type"></span></b></em></h1></heading>
+      </div>
+
+
+   <p>This website is beginner friendly so even if you know nothing about her, you can still understand.</p>
+   <div class="parallax image-1"></div>
+   <style>
+      .image-1{
+         background-image: url("Images/Taylor\ Swift\ 1.jpg");
+         min-height: 300px;
+      }
+      </style>
+   <br id="eras"><br>
+   <article id="eras">
+      <h2>Each Taylor Swift album is called an "Era" <i class="fa-solid fa-hourglass-half"></i></h2>
+      <p>There are 10 eras: <i class="fa-solid fa-arrow-down-wide-short"></i>
+         <ul class="albumlist">
+            <li class="ts1"><a href="Web Pages/Album Web Pages/ts1.html">Taylor Swift</a></li>
+            <li class="ts2"><a href="Web Pages/Album Web Pages/ts2.html">Fearless</a></li>
+            <li class="ts3"><a href="Web Pages/Album Web Pages/ts3.html">Speak Now</a></li>
+            <li class="ts4"><a href="Web Pages/Album Web Pages/ts4.html">Red</a></li>
+            <li class="ts5"><a href="Web Pages/Album Web Pages/ts5.html">1989</a></li>
+            <li class="ts6"><a href="Web Pages/Album Web Pages/ts6.html">reputation</a></li>
+            <li class="ts7"><a href="Web Pages/Album Web Pages/ts7.html">Lover</a></li>
+            <li class="ts8"><a href="Web Pages/Album Web Pages/ts8.html">folklore</a></li>
+            <li class="ts9"><a href="Web Pages/Album Web Pages/ts9.html">evermore</a></li>
+            <li class="ts10"><a href="Web Pages/Album Web Pages/ts10.html">Midnights</a></li>
+         </ul>
+         And yes, the capitalisation there was <b>very</b> intentional.<br>
+         Someone on <a href="https://twitter.com/blessedswifty/status/1564367669964718080" target="_blank">Twitter</a> found this <a href="https://youtube.com/clip/UgkxKTTIOeQZBeRbctwTk8t3LbIN8e8DHNWN" target="_blank">easter egg</a> in Taylor Swift's <a href="https://youtu.be/-BjZmE2gtdo?t=115" target="_blank">Lover Music Video</a> and noticed that each section of the "Lover House" represents a different era.
+         <img align="center" class="lover-house" src="Images/Lover House.jpg" alt="Lover House Tweet">
+            Now the Lover House has become synonymous with Taylor Swift's eras.
+      </p>
+   </article>
+   <br id="13"><br>
+   <article>
+      <h2>13</h2>
+      <p>
+         <a href="#13">13</a> is Taylor Swift's lucky number.<br>
+         Wanna know why?<br>
+         WELL<br>
+         <a href="https://youtu.be/sybgScZxs6s" target="_blank">Here's a video</a> if you hate reading.<br>
+         BUT IF YOU ENJOY READING!! HERE'S THE REASON!<br>
+         <ul class="13reasons">
+            <li>She was born on the <a href="#13">13</a>th (December)</li>
+            <li>She turned <a href="#13">13</a> on Friday The <a href="#13">13</a>th</li>
+            <li>Her first album went gold in <a href="#13">13</a> weeks</li>
+            <li>Her first song that ever went number 1 had a <a href="#13">13</a> second intro</li>
+            <li>Every time she's ever won an award at an awards show, she's been seated in row <a href="#13">13</a> or row M (The <a href="#13">13</a>th Letter)</li>
+            <li>A truck goes by and it has a <a href="#13">13</a> on it, that means good luck is to come for that night</li>
+            <li>Her album release of <a href="Web Pages/Album Web Pages/ts10.html">Midnights</a> was on the 21st of October (2 + 1 + 10 = <a href="#13">13</a>).<br><a href="Web Pages/Album Web Pages/ts10.html">Midnights</a> has brought plentiful luck!</li>
+            <img class="midnights" src="Images/Midnights Tweet.jpg" alt="Midnights Tweet">
+            <img class="midnights" src="Images/Billboard Top 10.jpg" alt="Taylor Swift OWNING the billboard top 10">
+         </ul>
+      </p>
+   </article>
+   <br id="swifties"><br>
+   <article>
+      <h2>Swifties</h2>
+      <p>
+         What are Swifties?<br>
+         Well<br>
+         Swifties are the name for Taylor Swift fans.<br>
+         If you are a Taylor Swift fan, you can be considered a Swiftie.<br>
+         The Swifties will quite honestly do anything for Taylor Swift<br>
+         And, I need to emphasise, <a class="no-underline" href="https://www.youtube.com/watch?v=WYTHdRoln6A" target="_blank"><strong>don't mess with the swifties.</strong></a>
+      </p>
+      <p>I don't think I made it clear, the swifties are the reason that <a href="Web Pages/Song Web Pages/Red/30) All Too Well (10 Minute Version).html" target="_blank">All Too Well (10 Minute Version)</a> exists,<br>
+         and we will cancel this man</p>
+      <p>I don't think you have any idea WHAT HE DID</p>
+      <p id="evil">Evil <br><i class="fa-solid fa-arrow-down-long"></i></p>
+      <img class="evilbadman" src="Images/evilbadman.png" alt="Evilbadman">
+   </article>
+   <br id="whowehate"><br>
+   <article>
+      <h2>Who We Hate <i class="fa-solid fa-face-angry"></i></h2>
+      <p>We hate the following:</p>
+      <img class="bad" src="Images/evilbadman2.png" alt="EvilBadMan (ie John Mayer)">
+      <img class="bad" src="Images/evilbadman3.png" alt="EvilBadMan (ie Jake Gylenhaal)">
+      <img class="bad" src="Images/evilbadman4.png" alt="EvilBadMan (ie Scooter Braun)">
+      <img class="bad" src="Images/evilbadman5.png" alt="EvilBadMan (ie Kanye West)">
+      <br><br>
+      <img class="evilbadcompany" src="Images/ticketmaster.png" alt="EvilBadCompany (ie ticketmaster)"><br>
+      <p>This is John Mayer, Jake Gylenhaal, Scooter Braun, and Kanye West, as well as the company ticketmaster.<br>
+         These people and ticketmaster are disgusting and have done unspeakable things.</p>
+         <p>Buuuuuuuuuuut, ticketmaster did something so bad that <em><strong>I don't care</strong></em>, I will speak about it.</p>
+         <a href="Web Pages/whatticketmasterdid.html">What ticketmaster did</a>
+   </article>
+   <br id="missamericana"><br>
+   <article>
+      <h2>Miss Americana <i class="fa-solid fa-film"></i></h2>
+      <img class="MissAmericana" src="Images/Miss Americana.png" alt="Miss Americana Documentary Netflix Poster">
+      <p>Miss Americana is a documentary that follows Taylor Swift over the course of several years of her career.
+         <br>Released on the 31<sup>st</sup> of January 2020, released less than 6 months after she released her album "<a href="Web Pages/Album Web Pages/ts7.html">Lover</a>".
+         <br>It is named after track 7 on <a href="Web Pages/Album Web Pages/ts7.html">Lover</a>: Miss Americana & The Heartbreak Prince.
+         <br>It has been described as an "<em>unvarnished and emotionally revealing look into Taylor Swift's life</em>", it's shows a time where she starts to harness the power of her voice.
+         <br>I truly do recommend it.
+         <br>You can watch it on Netflix <a href="https://www.netflix.com/watch/81028336?trackId=255824129&tctx=0%2C0%2CNAPA%40%40%7Cec870bc6-cc73-4763-9fb6-1cd6b1b7e3cf-3331413_titles%2F1%2F%2Fmiss%20americaan%2F0%2F0%2CNAPA%40%40%7Cec870bc6-cc73-4763-9fb6-1cd6b1b7e3cf-3331413_titles%2F1%2F%2Fmiss%20americaan%2F0%2F0%2Cunknown%2C%2Cec870bc6-cc73-4763-9fb6-1cd6b1b7e3cf-3331413%7C1%2CtitlesResults%2C%2CVideo%3A81028336" target="_blank">here</a>.
+      </p>
+   </article>
+   <br id="genres"><br>
+   <article>
+      <h2>Genres</h2>
+      <p>Over the years, Taylor has been through many different Genres, from the country girl she was in 2006 to the mainstream pop she pulled off in 2014. She can do anything.</p>
+      <p>Her genres are:</p>
+      <ul>
+         <li class="country">Country</li>
+         <li class="pop-country">Pop-Country</li>
+         <li class="pop">Pop</li>
+         <li class="indie">Indie</li>
+      </ul>
+   </article>
+   <br id="awards"><br>
+   <article>
+         <h2>Awards <i class="fa-solid fa-award"></i></h2>
+         <p>She's won a lot of awards! I'll fix this section later!</p>
+         <img class="awards" src="Images/awards.jpg_large" alt="Taylor Swift holding all her grammy awards">
+   </article>
+   <br id="games-quizzes"><br>
+   <article>
+      <h2>Little games! <i class="fa-solid fa-gamepad"></i></h2>
+      <div class="games-container">
+         <div class="box box-1">
+            <button class="games-buttons" id="song-btn">Which Taylor Swift Song Are You?</button>
+            <div class="generated" id="song-result"></div>
+         </div>
+         <div class="box box-2">
+            <button class="games-buttons" id="album-btn">Which Taylor Swift Album Are You?</button>
+            <div class="generated" id="album-result"></div>
+         </div>
+         <div class="box box-3">
+               <h3>Taylor Swift Lyric Generator</h3>
+               <div>
+                  <button class="album-button" data-album="Taylor Swift" data-link="">Taylor Swift</button>
+                  <button class="album-button" data-album="Fearless" data-link="">Fearless</button>
+                  <button class="album-button" data-album="Speak Now" data-link="">Speak Now</button>
+                  <button class="album-button" data-album="Red" data-link="">Red</button>
+                  <button class="album-button" data-album="1989" data-link="">1989</button>
+                  <button class="album-button" data-album="reputation" data-link="">reputation</button>
+                  <button class="album-button" data-album="Lover" data-link="">Lover</button>
+                  <button class="album-button" data-album="folklore" data-link="">folklore</button>
+                  <button class="album-button" data-album="evermore" data-link="">evermore</button>
+                  <button class="album-button" data-album="Midnights" data-link="">Midnights</button>
+               </div>
+               <button class="games-buttons" onclick="generateLyric()">Generate Lyric</button>
+               <!--<div class="generated" id="lyric"></div>-->
+               <div class="generated" id="lyric">
+                  <span class="lyric-text"></span>
+                  <br>
+                  <a class="song-name"></a>
+                  <a class="album-name"></a>
+               </div>
+         </div>
+         <div class="box box-4">
+            <h3>Taylor Swift Quote Generator</h3>
+            <button class="games-buttons" onclick="generateQuote()">Generate Quote</button>
+            <div class="generated" id="quote"></div>
+         </div>
+      </div>
+            <!--<h3>What's Your Favourite Number? (1-100)</h3>
+            <input type="number" id="numberInput" name="numberInput" min="1" max="100">
+            <button class="games-buttons" id="number-btn" onclick="convertNumber()">I am...</button>
+            <div id="numberResult"></div>-->
+      <h2>Polls & Quizzes <i class="fa-solid fa-square-poll-vertical"></i></h2>
+      <section>
+         <h3>Which Taylor Swift Album Is Your Favourite?</h3>
+         <div class="slider-container">
+         <!-- Slider main container -->
+         <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+               <!-- Slides -->
+               <div class="swiper-slide"><img src="Images/Album Covers/ts1.png" alt="Taylor Swift Album Cover" data-value="option1"></div>
+               <div class="swiper-slide"><img src="Images/Album Covers/ts2.png" alt="Fearless Album Cover" data-value="option2"></div>
+               <div class="swiper-slide"><img src="Images/Album Covers/ts3.png" alt="Speak Now Album Cover" data-value="option3"></div>
+               <div class="swiper-slide"><img src="Images/Album Covers/ts4.png" alt="Red Album Cover" data-value="option4"></div>
+               <div class="swiper-slide"><img src="Images/Album Covers/ts5.png" alt="1989 Album Cover" data-value="option5"></div>
+               <div class="swiper-slide"><img src="Images/Album Covers/ts6.png" alt="reputation Album Cover" data-value="option6"></div>
+               <div class="swiper-slide"><img src="Images/Album Covers/ts7.png" alt="Lover Album Cover" data-value="option7"></div>
+               <div class="swiper-slide"><img src="Images/Album Covers/ts8.png" alt="folklore Album Cover" data-value="option8"></div>
+               <div class="swiper-slide"><img src="Images/Album Covers/ts9.png" alt="evermore Album Cover" data-value="option9"></div>
+               <div class="swiper-slide"><img src="Images/Album Covers/ts10.png" alt="Midnights Album Cover" data-value="option10"></div>
+            </div>
+            <!--Dots-->
+            <div class="swiper-pagination"></div>
+            <!--Nav Buttons-->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            </div>
+         </div>
+         <form class="poll-form">
+            <div class="youSelected"></div>
+            <div class="poll-submit">
+               <button href="#" class="games-buttons">Submit</button>
+            </div>
+         </form>
+      </section>
+      <section>
+         <div class="app">
+            <h3>Taylor Swift Quiz</h3>
+            <div class="quiz">
+               <h2 id="question">Question goes here</h2>
+               <div id="answer-buttons"></div>
+            </div>
+            <button id="next-btn">Next</button>
+         </div>
+      </section>
+   </article>
+   <br id="timeline"><br>
+   <article>
+      <h2>Timeline <i class="fa-solid fa-timeline"></i></h2>
+      <div class="timeline-container">
+         <div class="center-line">
+            <a href="#timeline" class="scroll-icon"><i class="fa-solid fa-caret-up"></i></a>
+         </div>
+         <div class="row row-1">
+            <section>
+               <img class="icon" src="Images/Album Covers/ts1.png" alt="Taylor Swift Album Cover">
+               <div class="details">
+                  <span class="title">Taylor Swift (Debut)</span>
+               </div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita molestias sunt quo laborum, repudiandae unde pariatur similique sed? Molestiae architecto sapiente, impedit ipsum error enim provident cumque excepturi optio.</p>
+               <div class="bottom">
+                  <small><i>October 24 2006</i></small>
+               </div>
+            </section>   
+         </div>
+         <div class="row row-2">
+            <section>
+               <img class="icon" src="Images/Album Covers/ts2-old.png" alt="Fearless Album Cover">
+               <div class="details">
+                  <span class="title">Fearless</span>
+               </div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita molestias sunt quo laborum, repudiandae unde pariatur similique sed? Molestiae architecto sapiente, impedit ipsum error enim provident cumque excepturi optio.</p>
+               <div class="bottom">
+                  <small><i>November 11 2008</i></small>
+               </div>
+            </section>   
+         </div>
+         <div class="row row-1">
+            <section>
+               <img class="icon" src="Images/Tour Images/fearless-timeline-image.jpeg" alt="Taylor Swift on the Fearless Tour">
+               <div class="details">
+                  <span class="title">Fearless Tour</span>
+               </div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita molestias sunt quo laborum, repudiandae unde pariatur similique sed? Molestiae architecto sapiente, impedit ipsum error enim provident cumque excepturi optio.</p>
+               <div class="bottom">
+                  <small><i>23 April 2009 - 10 July 2010</i></small>
+               </div>
+            </section>   
+         </div>
+         <div class="row row-2">
+            <section>
+               <img class="icon" src="Images/Album Covers/ts3.png" alt="Speak Now Album Cover">
+               <div class="details">
+                  <span class="title">Speak Now</span>
+               </div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita molestias sunt quo laborum, repudiandae unde pariatur similique sed? Molestiae architecto sapiente, impedit ipsum error enim provident cumque excepturi optio.</p>
+               <div class="bottom">
+                  <small><i>25 October 2010</i></small>
+               </div>
+            </section>   
+         </div>
+         <div class="row row-1">
+            <section>
+               <img class="icon" src="Images/Tour Images/speak-now-timeline-image.jpeg" alt="Taylor Swift on the Speak Now World Tour">
+               <div class="details">
+                  <span class="title">Speak Now World Tour</span>
+               </div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita molestias sunt quo laborum, repudiandae unde pariatur similique sed? Molestiae architecto sapiente, impedit ipsum error enim provident cumque excepturi optio.</p>
+               <div class="bottom">
+                  <small><i>9 February 2011 - 18 March 2012</i></small>
+               </div>
+            </section>   
+         </div>
+         <div class="row row-2">
+            <section>
+               <img class="icon" src="Images/Album Covers/ts4-old.png" alt="Red Album Cover">
+               <div class="details">
+                  <span class="title">Red</span>
+               </div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita molestias sunt quo laborum, repudiandae unde pariatur similique sed? Molestiae architecto sapiente, impedit ipsum error enim provident cumque excepturi optio.</p>
+               <div class="bottom">
+                  <small><i>October 22 2012/i></small>
+               </div>
+            </section>   
+         </div>
+         <div class="row row-1">
+            <section>
+               <img class="icon" src="Images/Tour Images/red-timeline-image.jpeg" alt="Taylor Swift on the Red Tour">
+               <div class="details">
+                  <span class="title">Red Tour</span>
+               </div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita molestias sunt quo laborum, repudiandae unde pariatur similique sed? Molestiae architecto sapiente, impedit ipsum error enim provident cumque excepturi optio.</p>
+               <div class="bottom">
+                  <small><i>13 March 2013 - 12 June 2014</i></small>
+               </div>
+            </section>   
+         </div>
+         <div class="row row-2">
+            <section>
+               <img class="icon" src="Images/Album Covers/ts5.png" alt="1989 Album Cover">
+               <div class="details">
+                  <span class="title">1989</span>
+               </div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita molestias sunt quo laborum, repudiandae unde pariatur similique sed? Molestiae architecto sapiente, impedit ipsum error enim provident cumque excepturi optio.</p>
+               <div class="bottom">
+                  <small><i>October 27 2014</i></small>
+               </div>
+            </section>   
+         </div>
+         <div class="row row-1">
+            <section>
+               <img class="icon" src="Images/Tour Images/1989-timeline-image.jpeg" alt="Taylor Swift on the 1989 World Tour">
+               <div class="details">
+                  <span class="title">1989 World Tour</span>
+               </div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita molestias sunt quo laborum, repudiandae unde pariatur similique sed? Molestiae architecto sapiente, impedit ipsum error enim provident cumque excepturi optio.</p>
+               <div class="bottom">
+                  <small><i>5 May 2015 - 12 December 2015</i></small>
+               </div>
+            </section>   
+         </div>
+         <div class="row row-2">
+            <section>
+               <img class="icon" src="Images/Album Covers/ts6.png" alt="reputation Album Cover">
+               <div class="details">
+                  <span class="title">reputation</span>
+               </div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita molestias sunt quo laborum, repudiandae unde pariatur similique sed? Molestiae architecto sapiente, impedit ipsum error enim provident cumque excepturi optio.</p>
+               <div class="bottom">
+                  <small><i>November 10 2017</i></small>
+               </div>
+            </section>   
+         </div>
+         <div class="row row-1">
+            <section>
+               <img class="icon" src="Images/Tour Images/reputation-timeline-image.jpeg" alt="Taylor Swift on the Reputation Stadium Tour">
+               <div class="details">
+                  <span class="title">Reputation Stadium Tour</span>
+               </div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita molestias sunt quo laborum, repudiandae unde pariatur similique sed? Molestiae architecto sapiente, impedit ipsum error enim provident cumque excepturi optio.</p>
+               <div class="bottom">
+                  <small><i>8 May 2018 - 21 Nov 2018</i></small>
+               </div>
+            </section>   
+         </div>
+         <div class="row row-2">
+            <section>
+               <img class="icon" src="Images/Album Covers/ts7.png" alt="Lover Album Cover">
+               <div class="details">
+                  <span class="title">Lover</span>
+               </div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita molestias sunt quo laborum, repudiandae unde pariatur similique sed? Molestiae architecto sapiente, impedit ipsum error enim provident cumque excepturi optio.</p>
+               <div class="bottom">
+                  <small><i>August 23 2019</i></small>
+               </div>
+            </section>   
+         </div>
+         <div class="row row-1">
+            <section>
+               <img class="icon" src="Images/Album Covers/ts8.png" alt="folklore Album Cover">
+               <div class="details">
+                  <span class="title">folklore</span>
+               </div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita molestias sunt quo laborum, repudiandae unde pariatur similique sed? Molestiae architecto sapiente, impedit ipsum error enim provident cumque excepturi optio.</p>
+               <div class="bottom">
+                  <small><i>July 24 2020</i></small>
+               </div>
+            </section>   
+         </div>
+         <div class="row row-2">
+            <section>
+               <img class="icon" src="Images/Album Covers/ts9.png" alt="evermore Album Cover">
+               <div class="details">
+                  <span class="title">evermore</span>
+               </div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita molestias sunt quo laborum, repudiandae unde pariatur similique sed? Molestiae architecto sapiente, impedit ipsum error enim provident cumque excepturi optio.</p>
+               <div class="bottom">
+                  <small><i>December 11 2020</i></small>
+               </div>
+            </section>   
+         </div>
+         <div class="row row-1">
+            <section>
+               <img class="icon" src="Images/Album Covers/ts2.png" alt="Fearless (Taylor's Version) Album Cover">
+               <div class="details">
+                  <span class="title">Fearless (Taylor's Version)</span>
+               </div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita molestias sunt quo laborum, repudiandae unde pariatur similique sed? Molestiae architecto sapiente, impedit ipsum error enim provident cumque excepturi optio.</p>
+               <div class="bottom">
+                  <small><i>April 9 2021</i></small>
+               </div>
+            </section>   
+         </div>
+         <div class="row row-2">
+            <section>
+               <img class="icon" src="Images/Album Covers/ts4.png" alt="Red (Taylor's Version) Album Cover">
+               <div class="details">
+                  <span class="title">Red (Taylor's Version)</span>
+               </div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita molestias sunt quo laborum, repudiandae unde pariatur similique sed? Molestiae architecto sapiente, impedit ipsum error enim provident cumque excepturi optio.</p>
+               <div class="bottom">
+                  <small><i>November 12 2021</i></small>
+               </div>
+            </section>   
+         </div>
+         <div class="row row-1">
+            <section>
+               <img class="icon" src="Images/Album Covers/ts10.png" alt="Midnights Album Cover">
+               <div class="details">
+                  <span class="title">Midnights</span>
+               </div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita molestias sunt quo laborum, repudiandae unde pariatur similique sed? Molestiae architecto sapiente, impedit ipsum error enim provident cumque excepturi optio.</p>
+               <div class="bottom">
+                  <small><i>October 21 2022</i></small>
+               </div>
+            </section>   
+         </div>
+         <div class="row row-2">
+            <section>
+               <img class="icon" src="Images/Tour Images/eras-timeline-image.jpeg" alt="Taylor Swift on the Eras Tour">
+               <div class="details">
+                  <span class="title">Eras Tour</span>
+               </div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita molestias sunt quo laborum, repudiandae unde pariatur similique sed? Molestiae architecto sapiente, impedit ipsum error enim provident cumque excepturi optio.</p>
+               <div class="bottom">
+                  <small><i>March 18 2023 - Present</i></small>
+               </div>
+            </section>   
+         </div>
+      </div>
+   </article>
+
+
+   <footer>
+      <div class="socials">
+         <a class="social" href="https://www.facebook.com/TaylorSwift" target="_blank">
+            <button class="header-footer-icon"><i class="fa-brands fa-facebook"></i></a></button>
+         <a class="social" href="https://www.instagram.com/taylorswift/" target="_blank">
+            <button class="header-footer-icon"><i class="fa-brands fa-instagram"></i></a></button>
+         <a class="social" href="https://taylorswift.tumblr.com/" target="_blank">
+            <button class="header-footer-icon"><i class="fa-brands fa-tumblr"></i></a></button>
+         <a class="social" href="https://twitter.com/taylorswift13" target="_blank">
+            <button class="header-footer-icon"><i class="fa-brands fa-twitter"></i></a></button>
+         <a class="social" href="https://www.tiktok.com/@taylorswift" target="_blank">
+            <button class="header-footer-icon"><i class="fa-brands fa-tiktok"></i></a></button>
+         <a class="social" href="https://www.youtube.com/taylorswift" target="_blank">
+            <button class="header-footer-icon"><i class="fa-brands fa-youtube"></i></a></button>
+         <a class="social" href="https://www.snapchat.com/add/taylorswift" target="_blank">
+            <button class="header-footer-icon"><i class="fa-brands fa-snapchat"></i></a></button>
+         <a class="social" href="https://www.reddit.com/r/taylorswift" target="_blank">
+            <button class="header-footer-icon"><i class="fa-brands fa-reddit"></i></a></button>
+         <a class="social" href="https://www.taylorswift.com" target="_blank">
+            <button class="header-footer-icon"><i class="fa-solid fa-bolt"></i></a></button>
+      </div>
+      <div class="copyright">
+         <i class="fa-regular fa-copyright"></i> 2023 Corey Shurdington 
+      </div>
+   </footer>
+   </div>
+   <!--Text typing effect-->
+   <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+   <!--Image slider-->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+   <!--Link to the js document-->
+   <script src="Script/script.js"></script>
+   </body>
+</html>
