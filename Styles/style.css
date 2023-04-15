@@ -36,7 +36,12 @@ html{
    scroll-behavior: smooth;
 }
 /****Testing****/
-
+.play-button {
+   font-size: 32px;
+   background: transparent;
+   position: relative;
+   color: gold;
+}
 
 
 
