@@ -1,2 +1,2 @@
 # TS-Fan-Club
-This is a project that I worked on for school but quickly grew into something more. yeah idk waht to say bye
+This is my Taylor Swift website that I'm working on that I didn't expect to take this far...
