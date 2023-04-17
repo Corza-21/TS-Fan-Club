@@ -2644,78 +2644,78 @@
         <script>
             //PARAGRAPH SHUFFLER------------------------------------------------------
     
-// Get the container element for the paragraphs
-const container = document.getElementById('paragraphs');
-
-// Get an array of all the paragraphs inside the container
-const paragraphs = Array.from(container.getElementsByTagName('p'));
-
-// Store the original order of the paragraphs
-const originalOrder = paragraphs.slice();
-
-// Shuffle the array of paragraphs randomly on load
-shuffleParagraphs();
-
-// Append each paragraph back to the container in the new order
-function shuffleParagraphs() {
-  paragraphs.sort(() => Math.random() - 0.5);
-  paragraphs.forEach((p) => container.appendChild(p));
-}
-
-// Add event listener to the shuffle button
-const shuffleButton = document.getElementById('shuffle-button');
-shuffleButton.addEventListener('click', shuffleParagraphs);
-
-// Add event listener to the sort button
-const sortButton = document.getElementById('alphabet-button');
-sortButton.addEventListener('click', () => {
-  // Remove all paragraphs from the container
-  while (container.firstChild) {
-    container.removeChild(container.firstChild);
-  }
-  // Sort the paragraphs alphabetically by the small tag content
-  paragraphs.sort((a, b) => {
-    const smallA = a.querySelector('small').textContent.trim().toLowerCase();
-    const smallB = b.querySelector('small').textContent.trim().toLowerCase();
-    if (smallA < smallB) return -1;
-    if (smallA > smallB) return 1;
-    return 0;
-  });
-  // Append each paragraph back to the container in the sorted order
-  paragraphs.forEach((p) => container.appendChild(p));
-});
-
-function sortParagraphs(reverse) {
-  // Get the container element for the paragraphs
-  const container = document.getElementById('paragraphs');
-
-  // Get an array of all the paragraphs inside the container
-  const paragraphs = Array.from(container.getElementsByTagName('p'));
-
-  // Store the original order of the paragraphs
-  const originalOrder = paragraphs.slice();
-
-  // Sort the paragraphs in alphabetical order
-  if (reverse) {
-    paragraphs.sort((a, b) => b.querySelector('small').textContent.localeCompare(a.querySelector('small').textContent));
-  } else {
-    paragraphs.sort((a, b) => a.querySelector('small').textContent.localeCompare(b.querySelector('small').textContent));
-  }
-
-  // Append each paragraph back to the container in the new order
-  paragraphs.forEach((p) => container.appendChild(p));
-
-  // Add event listener to the undo button
-  const undoButton = document.getElementById('undo-button');
-  undoButton.addEventListener('click', () => {
-    // Remove all paragraphs from the container
-    while (container.firstChild) {
-      container.removeChild(container.firstChild);
-    }
-    // Append each paragraph back to the container in the original order
-    originalOrder.forEach((p) => container.appendChild(p));
-  });
-}
+            // Get the container element for the paragraphs
+            const container = document.getElementById('paragraphs');
+            
+            // Get an array of all the paragraphs inside the container
+            const paragraphs = Array.from(container.getElementsByTagName('p'));
+            
+            // Store the original order of the paragraphs
+            const originalOrder = paragraphs.slice();
+            
+            // Shuffle the array of paragraphs randomly on load
+            shuffleParagraphs();
+            
+            // Append each paragraph back to the container in the new order
+            function shuffleParagraphs() {
+                paragraphs.sort(() => Math.random() - 0.5);
+                paragraphs.forEach((p) => container.appendChild(p));
+            }
+            
+            // Add event listener to the shuffle button
+            const shuffleButton = document.getElementById('shuffle-button');
+            shuffleButton.addEventListener('click', shuffleParagraphs);
+            
+            // Add event listener to the sort button
+            const sortButton = document.getElementById('alphabet-button');
+            sortButton.addEventListener('click', () => {
+                // Remove all paragraphs from the container
+                while (container.firstChild) {
+                container.removeChild(container.firstChild);
+                }
+            // Sort the paragraphs alphabetically by the small tag content
+            paragraphs.sort((a, b) => {
+                const smallA = a.querySelector('small').textContent.trim().toLowerCase();
+                const smallB = b.querySelector('small').textContent.trim().toLowerCase();
+                if (smallA < smallB) return -1;
+                if (smallA > smallB) return 1;
+                return 0;
+                });
+                // Append each paragraph back to the container in the sorted order
+                paragraphs.forEach((p) => container.appendChild(p));
+            });
+            
+            function sortParagraphs(reverse) {
+                // Get the container element for the paragraphs
+                const container = document.getElementById('paragraphs');
+            
+                // Get an array of all the paragraphs inside the container
+                const paragraphs = Array.from(container.getElementsByTagName('p'));
+            
+                // Store the original order of the paragraphs
+                const originalOrder = paragraphs.slice();
+            
+                // Sort the paragraphs in alphabetical order
+                if (reverse) {
+                paragraphs.sort((a, b) => b.querySelector('small').textContent.localeCompare(a.querySelector('small').textContent));
+                } else {
+                paragraphs.sort((a, b) => a.querySelector('small').textContent.localeCompare(b.querySelector('small').textContent));
+                }
+            
+              // Append each paragraph back to the container in the new order
+                paragraphs.forEach((p) => container.appendChild(p));
+            
+              // Add event listener to the undo button
+                const undoButton = document.getElementById('undo-button');
+                undoButton.addEventListener('click', () => {
+                // Remove all paragraphs from the container
+                while (container.firstChild) {
+                    container.removeChild(container.firstChild);
+                }
+                // Append each paragraph back to the container in the original order
+                originalOrder.forEach((p) => container.appendChild(p));
+                });
+            }
 
             //AUDIO--------------------------------------------------
 
@@ -2743,36 +2743,37 @@ function sortParagraphs(reverse) {
         });
 
             //VIDEO------------------------------------------------------
+            
             var video = document.getElementById("bridges-video");
-var playButton = document.getElementById("playButton");
-
-// Set up event listeners for the video element
-video.addEventListener('play', function() {
-  playButton.innerHTML = '<i class="fa fa-pause"></i>';
-  video.style.display = "block";
-});
-video.addEventListener('pause', function() {
-  playButton.innerHTML = '<i class="fa fa-play"></i>';
-  video.style.display = "none";
-});
-video.addEventListener('ended', function() {
-  playButton.innerHTML = '<i class="fa fa-play"></i>';
-  video.style.display = "none";
-});
-
-function toggleVideo() {
-  if (video.paused || video.ended) {
-    // Play the video and change the button to show a pause icon
-    video.play();
-    playButton.innerHTML = '<i class="fa fa-pause"></i>';
-    video.style.display = "block";
-  } else {
-    // Pause the video and change the button to show a play icon
-    video.pause();
-    playButton.innerHTML = '<i class="fa fa-play"></i>';
-    video.style.display = "none";
-  }
-}
+            var playButton = document.getElementById("playButton");
+            
+            // Set up event listeners for the video element
+            video.addEventListener('play', function() {
+                playButton.innerHTML = '<i class="fa fa-pause"></i>';
+                video.style.display = "block";
+            });
+            video.addEventListener('pause', function() {
+                playButton.innerHTML = '<i class="fa fa-play"></i>';
+                video.style.display = "none";
+            });
+            video.addEventListener('ended', function() {
+                playButton.innerHTML = '<i class="fa fa-play"></i>';
+                video.style.display = "none";
+            });
+            
+            function toggleVideo() {
+                if (video.paused || video.ended) {
+                // Play the video and change the button to show a pause icon
+                video.play();
+                playButton.innerHTML = '<i class="fa fa-pause"></i>';
+                video.style.display = "block";
+                } else {
+                // Pause the video and change the button to show a play icon
+                video.pause();
+                playButton.innerHTML = '<i class="fa fa-play"></i>';
+                video.style.display = "none";
+                }
+            }
         </script>
     </article>
     

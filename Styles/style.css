@@ -36,51 +36,11 @@ html{
    scroll-behavior: smooth;
 }
 /****Testing****/
-.play-button {
-   font-size: 32px;
-   background: transparent;
-   position: relative;
-   color: gold;
+
+
+.hidden {
+   display: none;
 }
-
-
-
-
-
-.tour-image{
-   width: 200px;
-   height: 300px;
-   padding: 0%;
-}
-
-
-
-
-
-.sort-button{
-   background: transparent;
-   font-size: 20px;
-   color: var(--light-lavender);
-   margin-bottom: 10px;
-}
-.sort-button:hover{
-   color: var(--dark-purple);
-}
-
-
-
-
-
-
-button.play-pause-btn {
-   color: var(--light-lavender);
-   border: none;
-   background: none;
-   cursor: pointer;
-}
-
-
-
 
 
 
@@ -109,16 +69,6 @@ button.play-pause-btn {
 
 
 
-.ts-icon{
-   position: relative;
-   left: auto;
-   right: auto;
-   width: 25px;
-   height: auto;
-   border-radius: 0;
-   padding: 0;
-   vertical-align: -20%;
-}
 
 
 
@@ -128,46 +78,10 @@ button.play-pause-btn {
 
 
 
-.music-container{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   margin: 1rem;
-}
 
-.music{
-   width: 90%;
-   max-width: 900px;
-   padding: 30px;
-   background: #152238;
-   color: var(--white);
-   border-radius: 20px;
-}
-.music h2{
-   color: var(--white);
-}
-.track{
-   display: flex;
-   align-items: center;
-   margin-top: 20px;
-}
 
-.track img{
-   width: 70px;
-   margin-right: 30px;
-   cursor: pointer;
-}
-.track div{
-   flex: 1;
-}
 
-.download-btn{
-   color: var(--white);
-   text-decoration: none;
-}
-.download-btn:hover{
-   color: var(--white);
-}
+
 
 
 
@@ -218,6 +132,7 @@ button.play-pause-btn {
 }
 .generated{
    background-image: linear-gradient(to bottom right, #bf6ddb, #182172);
+   background-clip: text;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
@@ -623,6 +538,9 @@ table{
 button{
    cursor: pointer;
    border: none;
+   background: transparent;
+   color: inherit;
+   font-size: inherit;
 }
 .expanding-button{
    background-color:var(--lavender2);
@@ -672,6 +590,27 @@ button{
    margin: 4px 2px;
    border-radius: 70px;
    transform: rotate(-360deg);
+}
+.play-button {
+   font-size: 32px;
+   background: transparent;
+   position: relative;
+   color: gold;
+}
+.sort-button{
+   background: transparent;
+   font-size: 20px;
+   color: var(--light-lavender);
+   margin-bottom: 10px;
+}
+.sort-button:hover{
+   color: var(--dark-purple);
+}
+button.play-pause-btn {
+   color: var(--light-lavender);
+   border: none;
+   background: none;
+   cursor: pointer;
 }
 .social{
    color: var(--dark-purple);
@@ -815,10 +754,16 @@ header a:hover{
    color: var(--dark-purple);
    transform: rotate(-360deg);
 }
-/*footer:hover{
-   background-color: #3700B3;
-   color: var(--lavender);
-}*/
+.ts-icon{
+   position: relative;
+   left: auto;
+   right: auto;
+   width: 25px;
+   height: auto;
+   border-radius: 0;
+   padding: 0;
+   vertical-align: -20%;
+}
 .navigation{
    font-size: 18px;
 }
@@ -891,6 +836,9 @@ iframe{
 .no-bridge:hover{
    color: var(--white);
 }
+.disguise, .disguise:hover{
+   color: inherit;
+}
 /****IMAGES****/
 img{
    margin: auto;
@@ -944,6 +892,11 @@ img{
    transition: filter 0.5s ease-in-out;
    opacity: 1;
 }
+.tour-image{
+   width: 200px;
+   height: 300px;
+   padding: 0%;
+}
 #paragraphs p small a{
    text-decoration: none;
    color: var(--light-lavender);
@@ -973,6 +926,47 @@ img{
    opacity: 1;
 }
 
+/****MUSIC STUFF****/
+
+.music-container{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 1rem;
+}
+.music{
+   width: 90%;
+   max-width: 900px;
+   padding: 30px;
+   background: #152238;
+   color: var(--white);
+   border-radius: 20px;
+}
+.music h2{
+   color: var(--white);
+}
+.track{
+   display: flex;
+   align-items: center;
+   margin-top: 20px;
+}
+
+.track img{
+   width: 70px;
+   margin-right: 30px;
+   cursor: pointer;
+}
+.track div{
+   flex: 1;
+}
+
+.download-btn{
+   color: var(--white);
+   text-decoration: none;
+}
+.download-btn:hover{
+   color: var(--white);
+}
 
 /****ALBUMS LIST ITEMS****/
 
@@ -1313,4 +1307,38 @@ input[type="radio"]:checked + img{
    .timeline-container .row{
       margin: 10px 0;
    }
+}
+
+/**TOOLTIP STUFF**/
+
+.tooltip {
+   position: relative;
+   display: inline-block;
+}
+
+.tooltip .tooltiptext {
+   min-width: 200px;
+   visibility: hidden;
+   position: absolute;
+   font-size: 0.8rem;
+   z-index: 1;
+   background-color: #555;
+   color: var(--white);
+   padding: 5px;
+   border-radius: 6px;
+   bottom: 100%;
+   left: 50%;
+   margin-left: -60px;
+   opacity: 0;
+   transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+   visibility: visible;
+   opacity: 1;
+}
+.inline{
+   display:inline;
+   margin: 0;
+   padding: 0;
 }
