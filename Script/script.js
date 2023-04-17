@@ -184,7 +184,7 @@ startQuiz();
 
 //TEXT TYPING EFFECT-----------------------------------------------
 var typed = new Typed(".auto-type", {
-    strings: [`Fan Club`, `Is The Best`, `Is A God`, `Slays`, `Is The Music Industry <i class="fa-solid fa-crown"></i>`, `Is ✨Amazing✨`],
+    strings: [`Fan Club`, `Is The Best`, `Is A God`, `Slays`, `Is The Music Industry <i class="fas fa-crown"></i>`, `Is ✨Amazing✨`],
     typeSpeed: 150,
     backSpeed: 100,
     loop: true
@@ -1056,7 +1056,7 @@ function generateLyric() {
 
     // Set the text of the lyric element to the selected lyric
     const lyricElement = document.getElementById("lyric");
-    lyricElement.querySelector(".lyric-text").innerHTML = '<i class="fa-solid fa-music"></i> ' + randomLyric + ' <i class="fa-solid fa-music"></i>';
+    lyricElement.querySelector(".lyric-text").innerHTML = '<i class="fas fa-music"></i> ' + randomLyric + ' <i class="fas fa-music"></i>';
 }
 
 
@@ -1103,6 +1103,6 @@ function generateQuote() {
       // add more quotes here
     ];
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    document.getElementById("quote").innerHTML = '<i class="fa-solid fa-quote-left"></i> ' + randomQuote + ' <i class="fa-solid fa-quote-right"></i>';
+    document.getElementById("quote").innerHTML = '<i class="fas fa-quote-left"></i> ' + randomQuote + ' <i class="fas fa-quote-right"></i>';
 }
 
