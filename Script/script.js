@@ -8,11 +8,11 @@
 
 
 //TOOLTIP-------------------------------------------------
-const button = document.querySelector('.tooltip button');
+const tooltipButton = document.querySelector('.tooltip button');
 const chatgptText = document.querySelectorAll('.chatgpt-text');
 const myText = document.querySelectorAll('.my-text');
 
-button.addEventListener('click', () => {
+tooltipButton.addEventListener('click', () => {
     chatgptText.forEach(el => el.classList.toggle('hidden'));
     myText.forEach(el => el.classList.toggle('hidden'));
 });
@@ -635,7 +635,21 @@ const lyrics = {
         You're just another picture to burn<br>
         Baby, burn`,
         // Teardrops On My Guitar
-
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
         // A Place In This World
 
         // Cold As You
@@ -1095,12 +1109,40 @@ function selectAlbum(albumButton) {
 
 function generateQuote() {
     const quotes = [
-        "People haven't always been there for me but music always has.",
-        "To me, Fearless is not the absence of fear. It's not being completely unafraid. To me, Fearless is having fears. Fearless is having doubts. Lots of them. To me, Fearless is living in spite of those things that scare you to death.",
-        "This is a new year. A new beginning. And things will change.",
-        "I suffer from girl-next-door-itis where the guy is friends with you and that's it.",
-        "No matter what happens in life, be good to people. Being good to people is a wonderful legacy to leave behind.",
-      // add more quotes here
+        `People haven't always been there for me but music always has.`,
+        `To me, Fearless is not the absence of fear. It's not being completely unafraid. To me, Fearless is having fears. Fearless is having doubts. Lots of them. To me, Fearless is living in spite of those things that scare you to death.`,
+        `This is a new year. A new beginning. And things will change.`,
+        `I suffer from girl-next-door-itis where the guy is friends with you and that's it.`,
+        `No matter what happens in life, be good to people. Being good to people is a wonderful legacy to leave behind.`,
+        `When I was a little girl I used to read fairy tales. In fairy tales you meet Prince Charming and he's everything you ever wanted. In fairy tales the bad guy is very easy to spot. The bad guy is always wearing a black cape so you always know who he is. Then you grow up and you realize that Prince Charming is not as easy to find as you thought. You realize the bad guy is not wearing a black cape and he's not easy to spot; he's really funny, and he makes you laugh, and he has perfect hair.`,
+        `Everybody has that point in their life where you hit a crossroads and you've had a bunch of bad days and there's different ways you can deal with it and the way I dealt with it was I just turned completely to music.`,
+        `I'm intimidated by the fear of being average.`,
+        `I never want to change so much that people can't recognize me.`,
+        `Just be yourself, there is no one better.`,
+        `Words can break someone into a million pieces, but they can also put them back together. I hope you use yours for good, because the only words you'll regret more than the ones left unsaid are the ones you use to intentionally hurt someone.`,
+        `The lesson I've learned the most often in life is that you're always going to know more in the future than you know now.`,
+        `If you're horrible to me, I'm going to write a song about it, and you won't like it. That's how I operate.`,
+        `We should love, not fall in love, because everything that falls, gets broken.`,
+        `Be that strong girl that everyone knew would make it through the worst, be that fearless girl, the one who would dare to do anything, be that independent girl who didn't need a man; be that girl who never backed down.`,
+        `If they don't like you for being yourself, be yourself even more.`,
+        `I've always been a hugger. If we all hugged more, the world would be a better place.`,
+        `There are two different categories of love. The first category is called a fairytale. The second category of love is called just another lesson.`,
+        `I haven't had that one great love, which is good. I don't want that to be in the past, I want it to be in the future.`,
+        `To truly love is to have the courage to walk away and let the other person who wishes to be free go no matter how much it hurts.`,
+        `At some point you have to forget about grudges because they only hurt.`,
+        `In high school, I used to think it was like sooooo cool if a guy had an awesome car. Now none of that matters. These days I look for character and honesty and trust.`,
+        `If you're the girl that needs a boyfriend, and once she loses that boyfriend needs to replace it with a different boyfriend, it's just this constant stream of boyfriends all the time. I don't feel like I ever want to be that girl. I want to be the girl that when she falls in love, it's a big deal and it's a rare thing.`,
+        `You have people come into your life shockingly and surprisingly. You have losses that you never thought you'd experience. You have rejection and you have learn how to deal with that and how to get up the next day and go on with it.`,
+        `Don't worry. You may think you'll never get over it. But you also thought it would last forever.`,
+        `Sometimes the person you'd take a bullet for is the person behind the trigger.`,
+        `Just being a human being, I've realised that before every big problem you create for yourself, before every huge mess you have to clean up, there was a crucial moment where you could've just said no.`,
+        `Real love still happens sometimes. It's not just something we make up when you're nine. I have to believe that. You do too.`,
+        `Why leave when you can stay, why stay if you have to go.`,
+        `There are no rules when it comes to love. I just try to let love surprise me because you never know who you're going to fall in love with. You never know who's going to come into your life - and for me, when I picture the person I want to end up with, I don't think about what their career is, or what they look like. I picture the feeling I get when I'm with them.`,
+        `In life and love, you learn that there comes a time to let go and move on.`,
+        `Throughout all of the changes that have happened in my life, one of the priorities I've had is to never change the way I write songs and the reasons I write songs. I write songs to help me understand life a little more. I write songs to get past things that cause me pain. And I write songs because sometimes life makes more sense to me when it's being sung in a chorus, and when I can write it in a verse.`,
+        `Never believe anyone who tells you that you don't deserve what you want.`,
+        `Happiness and confidence are the prettiest things you can wear.`
     ];
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
     document.getElementById("quote").innerHTML = '<i class="fas fa-quote-left"></i> ' + randomQuote + ' <i class="fas fa-quote-right"></i>';

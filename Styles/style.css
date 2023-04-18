@@ -48,6 +48,7 @@ html{
 
 
 .album-button {
+   font-size: 0.9rem;
    color: var(--dark);
    border-radius: 10px;
    padding: 10px;
