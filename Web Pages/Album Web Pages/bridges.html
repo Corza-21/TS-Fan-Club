@@ -2639,7 +2639,8 @@
         <div>
             <h2>Here's what every bridge played at once sounds like!</h2>
             <small style="color: red;">Turn down your volume!!</small><br>
-            <small>Please, take this as a fair warning, ChatGPT very strongly warned me not to do this. (So I of course did it anyway)</small><br>
+            <small>Please, take this as a fair warning, ChatGPT very strongly warned me not to do this. <button onclick="toggleImage()"><i class="fas fa-circle-question"></i></button></small><br>
+            <img id="warningImage" src="../../Images/warning.png" class="hidden"><br>
             <small>It doesn't sound particularly great.</small><br>
             <small>But, if, in the end, you did end up pressing the button... I'm sorry.</small><br>
             <span class="audio-player">
@@ -2780,6 +2781,14 @@
                 video.style.display = "none";
                 }
             }
+
+            //IMAGE------------------------------------------------------
+
+            function toggleImage() {
+                var img = document.getElementById("warningImage");
+                img.classList.toggle("hidden");
+            }
+
         </script>
     </article>
     
