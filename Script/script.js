@@ -1,4 +1,4 @@
-//testing
+//testing----------------------------------------------------
 
 
 
@@ -12,10 +12,10 @@ const tooltipButton = document.querySelector('.tooltip button');
 const chatgptText = document.querySelectorAll('.chatgpt-text');
 const myText = document.querySelectorAll('.my-text');
 
-tooltipButton.addEventListener('click', () => {
+function toggleText() {
     chatgptText.forEach(el => el.classList.toggle('hidden'));
     myText.forEach(el => el.classList.toggle('hidden'));
-});
+}
 
 
 //NAVIGATION OVERLAY---------------------------------
