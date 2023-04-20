@@ -37,11 +37,19 @@ html{
 }
 /****Testing****/
 
+::selection {
+   background-color: var(--lavender);
+}
+
+
+
 
 .hidden {
    display: none;
 }
-
+.warning{
+   color: red;
+}
 
 
 
@@ -652,22 +660,49 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
    padding-top: 54px;
 }
 main{
-   font-family: 'Merienda', 'Pacifico', 'Lobster', 'Sacramento', 'Montserrat', 'Rochester', 'Anton', 'Permanent Marker', 'Satisfy', 'UnifrakturMaguntia', 'IM Fell DW Pica', 'Roboto Mono', 'Helvetica'; 
+   font-family: 'Merienda', 'Roboto Mono', 'Helvetica'; 
    color: var(--white);
    padding-bottom: 20px;
+}
+.ts1-background main, .ts1-background-special main{
+   font-family: 'Sacramento';
+}
+.ts2-background main, .ts2-background-special main{
+   font-family: 'Montserrat';
+}
+.ts3-background main, .ts3-background-special main{
+   font-family: 'Rochester';
+}
+.ts4-background main, .ts4-background-special main{
+   font-family: 'Anton';
+}
+.ts5-background main, .ts5-background-special main{
+   font-family: 'Permanent Marker';
+}
+.ts6-background main, .ts6-background-special main{
+   font-family: 'UnifrakturMaguntia';
+}
+.ts7-background main, .ts7-background-special main{
+   font-family: 'Satisfy';
+}
+.ts8-background main, .ts8-background-special main, .ts9-background main, .ts9-background-special main{
+   font-family: 'IM Fell DW Pica';
+}
+.ts10-background main, .ts10-background-special main{
+   font-family: 'Helvetica';
 }
 body{
    text-align: center;
    font-size: 1.19rem;
    background-color: var(--dark);
    color: var(--white);
+   font-family: 'Roboto Mono', 'Helvetica';
    /*background: linear-gradient(to right, rgb(2,17,27), rgba(45, 50, 56, 1), rgba(64, 75, 91, 1), rgba(63, 67, 85, 1), rgb(2,17,27));*/
 }
 *{
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font-family: 'Roboto Mono', monospace, Roboto Mono, Helvetica;
 }
 p{
    padding: 3px 7%;
