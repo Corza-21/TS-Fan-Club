@@ -635,21 +635,7 @@ const lyrics = {
         You're just another picture to burn<br>
         Baby, burn`,
         // Teardrops On My Guitar
-        ``,
-        ``,
-        ``,
-        ``,
-        ``,
-        ``,
-        ``,
-        ``,
-        ``,
-        ``,
-        ``,
-        ``,
-        ``,
-        ``,
-        ``,
+
         // A Place In This World
 
         // Cold As You
@@ -675,9 +661,37 @@ const lyrics = {
     ],
     "Fearless": [
         // Fearless
-
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
         // Fifteen
-
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
         // Love Story
 
         // White Horse
@@ -724,9 +738,37 @@ const lyrics = {
     ],
     "Speak Now": [
         // Mine
-
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
         // Sparks Fly
-        
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
         // Back To December
 
         // Speak Now
@@ -759,9 +801,37 @@ const lyrics = {
     ],
     "Red": [
         // State Of Grace
-
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
         // Red
-
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
         // Treacherous
 
         // I Knew You Were Trouble
@@ -822,9 +892,37 @@ const lyrics = {
     ],
     "1989": [
         // Welcome To New York
-
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
         // Blank Space
-
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
         // Style
 
         // Out Of The Woods
@@ -855,9 +953,37 @@ const lyrics = {
     ],
     "reputation": [
         // ...Ready For It?
-
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
         // End Game
-
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
         // I Did Something Bad
 
         // Don't Blame Me
@@ -886,9 +1012,37 @@ const lyrics = {
     ],
     "Lover": [
         // I Forgot That You Existed
-
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
         // Cruel Summer
-
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
         // Lover
 
         // The Man
@@ -925,9 +1079,37 @@ const lyrics = {
     ],
     "folklore": [
         // the 1
-
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
         // cardigan
-
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
         // the last great american dynasty
 
         // exile
@@ -960,9 +1142,37 @@ const lyrics = {
     ],
     "evermore": [
         // willow
-
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
         // champagne problems
-
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
+        ``,
         // gold rush
 
         // 'tis the damn season
@@ -995,9 +1205,67 @@ const lyrics = {
     ],
     "Midnights": [
         // Lavender Haze
-
+        `Staring at the ceiling with you<br>
+        Oh, you don't ever say too much`,
+        `And you don't really read into<br>
+        My melancholia`,
+        `I been under scrutiny (Yeah, oh, yeah)`,
+        `You handle it beautifully (Yeah, oh, yeah)`,
+        `All this shit is new to me (Yeah, oh, yeah)`,
+        `I feel the lavender haze creeping up on me<br>
+        Surreal`,
+        `I'm damned if I do give a damn what people say`,
+        `No deal<br>
+        The 1950s shit they want from me`,
+        `I just wanna stay in that lavender haze`,
+        `All they keep asking me (All they keep asking me)<br>
+        Is if I'm gonna be your bride`,
+        `The only kinda girl they see (Only kinda girl they see)<br>
+        Is a one-night or a wife`,
+        `I find it dizzying (Yeah, oh, yeah)`,
+        `They're bringing up my history (Yeah, oh, yeah)`,
+        `But you weren't even listening (Yeah, oh, yeah)`,
+        `Talk your talk and go viral`,
+        `I just need this love spiral`,
+        `Get it off your chest`,
+        `Get it off my desk`,
+        `That lavender haze<br>
+        I just wanna stay`,
         // Maroon
-
+        `When the morning came<br>
+        We were cleaning incense off your vinyl shelf`,
+        `'Cause we lost track of time again`,
+        `Laughing with my feet in your lap<br>
+        Like you were my closest friend`,
+        `"How'd we end up on the floor, anyway?" you say<br>
+        "Your roommate's cheap-ass screw-top rosé, that's how"`,
+        `I see you every day now`,
+        `And I chose you`,
+        `The one I was dancing with`,
+        `In New York, no shoes`,
+        `Looked up at the sky and it was`,
+        `The burgundy on my t-shirt<br>
+        When you splashed your wine into me`,
+        `And how the blood rushed into my cheeks<br>
+        So scarlet, it was`,
+        `The mark they saw on my collarbone<br>
+        The rust that grew between telephones`,
+        `The lips I used to call home`,
+        `So scarlet, it was maroon`,
+        `When the silence came<br>
+        We were shaking, blind and hazy`,
+        `How the hell did we lose sight of us again?`,
+        `Sobbing with your head in your hands<br>
+        Ain't that the way shit always ends?`,
+        `You were standing hollow-eyed in the hallway<br>
+        Carnations you had thought were roses, that's us`,
+        `I feel you, no matter what`,
+        `The rubies that I gave up`,
+        `And I lost you`,
+        `And I wake with your memory over me`,
+        `That's a real fucking legacy, legacy (It was maroon)`,
+        `That's a real fucking legacy to leave`,
+        `It was maroon`,
         // Anti-Hero
 
         // Snow On The Beach
@@ -1142,9 +1410,10 @@ function generateQuote() {
         `In life and love, you learn that there comes a time to let go and move on.`,
         `Throughout all of the changes that have happened in my life, one of the priorities I've had is to never change the way I write songs and the reasons I write songs. I write songs to help me understand life a little more. I write songs to get past things that cause me pain. And I write songs because sometimes life makes more sense to me when it's being sung in a chorus, and when I can write it in a verse.`,
         `Never believe anyone who tells you that you don't deserve what you want.`,
-        `Happiness and confidence are the prettiest things you can wear.`
+        `Happiness and confidence are the prettiest things you can wear.`,
+        `Karma is real.`
     ];
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    document.getElementById("quote").innerHTML = '<i class="fas fa-quote-left"></i> ' + randomQuote + ' <i class="fas fa-quote-right"></i>';
+    document.getElementById("quote").innerHTML = '<i class="fas fa-quote-left"></i> ' + randomQuote + ' <i class="fas fa-quote-right"></i>' + '<br>- Taylor Swift';
 }
 
