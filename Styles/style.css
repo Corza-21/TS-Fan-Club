@@ -38,6 +38,17 @@ html{
 /****Testing****/
 
 
+
+.plain, .plain:hover{
+   text-decoration: none;
+   color: inherit;
+}
+
+
+
+
+
+
 .underline-disguise, .underline-disguise:hover{
    text-decoration: underline;
    color: inherit;
@@ -824,6 +835,7 @@ a{
    color: #6106d0;
    transition: 0.6s;
    text-decoration: none;
+   -webkit-user-drag: none;
 }
 a:hover{
    color: #4d00b3;
