@@ -37,6 +37,18 @@ html{
 }
 /****Testing****/
 
+
+.underline-disguise, .underline-disguise:hover{
+   text-decoration: underline;
+   color: inherit;
+}
+
+
+
+
+
+
+
 ::selection {
    background-color: var(--lavender);
 }
