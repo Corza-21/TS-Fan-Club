@@ -209,7 +209,7 @@ video {
 }
 h2 {
    color: var(--light-lavender);
-   font-size: 2.125rem;
+   font-size: 32px;
    margin: 1rem auto;
 }
 #paragraphs p {
@@ -1168,7 +1168,7 @@ input[type="radio"]:checked + img {
 .row section p {
    margin: 10px 0 17px 0;
 }
-@media screen and (max-width: 772px) {
+@media screen and (max-width: 800px) {
    .timeline-container .center-line {
       left: 40px;
    }
@@ -1184,6 +1184,7 @@ input[type="radio"]:checked + img {
    .row-1 section .icon {
       top: 13px;
       left: -60px;
+      right: auto;
    }
 }
 @media screen and (max-width: 440px) {
