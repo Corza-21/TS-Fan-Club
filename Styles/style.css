@@ -501,7 +501,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
    padding-top: 3.375rem;
 }
 main {
-   font-family: 'Merienda', 'Roboto Mono', 'Helvetica'; 
+   font-family: 'Roboto Mono', 'Helvetica'; 
    color: var(--white);
    padding-bottom: 20px;
 }
@@ -531,6 +531,9 @@ main {
 }
 .ts10-background main, .ts10-background-special main {
    font-family: 'Helvetica';
+}
+.singles-background main, .singles-background-special main, .singles-collabs-background-special main{
+   font-family: 'Merienda';
 }
 body {
    text-align: center;
