@@ -695,6 +695,9 @@ iframe {
    text-decoration: none;
    color: var(--white);
 }
+.singles-collabs-background-special .lyrics-link{
+   color: var(--dark);
+}
 .credits {
    position: absolute;
    bottom: 0;
@@ -704,13 +707,15 @@ iframe {
    align-items: flex-end;
    width: 600px;
 }
-
 .credit {
    color: var(--dark);
    text-decoration: none;
    margin-bottom: 5px;
    padding-right: 6px;
    font-size: 0.625rem;
+}
+.singles-collabs-background-special .credit{
+   color: var(--white);
 }
 .no-bridge {
    text-decoration: none;
