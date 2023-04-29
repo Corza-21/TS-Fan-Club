@@ -378,6 +378,11 @@ table {
    position: relative;
    height: 25rem;
 }
+.singles-collabs-background-special {
+   background: linear-gradient(to right, var(--lsingles), var(--singles));
+   position: relative;
+   height: 25rem;
+}
 
 /*******BUTTONS*******/
 button {
