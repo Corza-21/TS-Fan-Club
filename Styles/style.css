@@ -666,7 +666,7 @@ a:hover {
    color: #4d00b3;
    text-decoration: underline;
 }
-.tracklist a, .setlist a {
+.tracklist a{
    color: var(--white);
 }
 .blend-in {
@@ -869,39 +869,65 @@ img {
 
 /****ALBUMS LIST ITEMS****/
 
-.ts1 a {
+.ts1{
    color: var(--ts1);
 }
-.ts2 a {
+.ts2{
    color: var(--ts2);
 }
-.ts3 a {
+.ts3{
    color: var(--ts3);
 }
-.ts4 a {
+.ts4{
    color: var(--ts4);
 }
-.ts5 a {
+.ts5{
    color: var(--ts5);
 }
-.ts6 a {
+.ts6{
    color: var(--ts6);
 }
-.ts7 a {
+.ts7{
    color: var(--ts7);
 }
-.ts8 a {
+.ts8{
    color: var(--ts8);
 }
-.ts9 a {
+.ts9{
    color: var(--ts9);
 }
-.ts10 a {
+.ts10{
    color: var(--ts10);
 }
-.list {
-   padding-top: 20px;
-   padding-bottom: 20px;
+.ts1:hover{
+   color: var(--lts1);
+}
+.ts2:hover{
+   color: var(--lts2);
+}
+.ts3:hover{
+   color: var(--lts3);
+}
+.ts4:hover{
+   color: var(--lts4);
+}
+.ts5:hover{
+   color: var(--lts5);
+}
+.ts6:hover{
+   color: var(--lts6);
+}
+.ts7:hover{
+   color: var(--lts7);
+}
+.ts8:hover{
+   color: var(--lts8);
+}
+.ts9:hover{
+   color: var(--lts9);
+}
+.ts10:hover{
+   color: var(--lts10);
 }
 
 /**POLLS AND QUIZZES**/
