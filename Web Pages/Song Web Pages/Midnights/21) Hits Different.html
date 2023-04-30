@@ -3,13 +3,13 @@
 <html>
     <head>
         <title>Hits Different | TS Fan Club</title>
-        <link href="../../../Styles/style.css" rel="stylesheet">
+        <link href="/Styles/style.css" rel="stylesheet">
         <!--Favicon Stuff-->
-        <link rel="apple-touch-icon" sizes="180x180" href="../../../Favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../../../Favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../../../Favicon/favicon-16x16.png">
-        <link rel="manifest" href="../../../Favicon/site.webmanifest">
-        <link rel="mask-icon" href="../../../Favicon/safari-pinned-tab.svg" color="#35185a">
+        <link rel="apple-touch-icon" sizes="180x180" href="/Favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/Favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/Favicon/favicon-16x16.png">
+        <link rel="manifest" href="/Favicon/site.webmanifest">
+        <link rel="mask-icon" href="/Favicon/safari-pinned-tab.svg" color="#35185a">
         <meta name="msapplication-TileColor" content="#35185a">
         <meta name="theme-color" content="#ffffff">
         <!--/Favicon Stuff-->
@@ -52,7 +52,7 @@
                 <a href="../../Tours/tours.html"><button class="header-footer-icon"><i class="fas fa-microphone"></i></i></button></a><span class="hide">Tours</span>
             </div>
         </div>
-        <a href="../../../index.html"><img class="ts-icon" src="../../../Favicon/android-chrome-512x512.png" alt="TS Fan Club Icon"></a>
+        <a href="/index.html"><img class="ts-icon" src="/Favicon/android-chrome-512x512.png" alt="TS Fan Club Icon"></a>
         <a class="header-footer-icon youtube" href="https://youtube.com/taylorswift" target="_blank"><i class="fa-brands fa-youtube"></i></a>
         <a class="header-footer-icon" onclick="darkMode()"><i class="fas fa-circle-half-stroke"></i></a>
         <a class="underline-animation" href="../../Album Web Pages/ts6.html">reputation</a>
@@ -71,7 +71,7 @@
                 </main>
                 <div class="image-container">
                     <a href="../../Album Web Pages/ts10.html">
-                    <img class="album-cover" src="../../../Images/Album Covers/ts10.png" alt="Midnights Album Cover">
+                    <img class="album-cover" src="/Images/Album Covers/ts10.png" alt="Midnights Album Cover">
                     </a>
                     <div class="behind-album-text">
                         <a href="../../Album Web Pages/ts10.html">
@@ -205,14 +205,14 @@
             <!--<h2><a class="underline-disguise" href="" target="_blank">Official Lyric Video</a> <i class="fa-solid fa-video"></i></h2>-->
             <h2>Preview <i class="fa-solid fa-magnifying-glass"></i></h2>
             <!--<audio controls>
-                <source src="../../../Audio/Hits Different.mp3" type="audio/ogg">
+                <source src="/Audio/Hits Different.mp3" type="audio/ogg">
                 Your browser does not support the audio element.
             </audio>-->
             <div class="music-container">
                 <div class="music">
-                    <h2>Hits Different <a class="download-btn" href="../../../Audio/Hits Different.mp3" download><i class="fas fa-download"></i></a></h2>
+                    <h2>Hits Different <a class="download-btn" href="/Audio/Hits Different.mp3" download><i class="fas fa-download"></i></a></h2>
                     <div class="track">
-                        <img src="../../../Images/Icons/play.png" id="playBtn">
+                        <img src="/Images/Icons/play.png" id="playBtn">
                         <div id="waveform"></div>
                     </div>
                 </div>
@@ -247,7 +247,7 @@
     </footer>
         </div>
         <!--Link to the js document-->
-        <script src="../../../Script/script.js"></script>
+        <script src="/Script/script.js"></script>
         <script>
             var playBtn = document.getElementById("playBtn");
 
@@ -261,19 +261,19 @@
                 barRadius: 4
             });
 
-            wavesurfer.load('../../../Audio/Hits Different.mp3');
+            wavesurfer.load('/Audio/Hits Different.mp3');
 
             playBtn.onclick = function(){
                 wavesurfer.playPause();
                 if(playBtn.src.includes("play.png")){
-                    playBtn.src = "../../../Images/Icons/pause.png";
+                    playBtn.src = "/Images/Icons/pause.png";
                 }else{
-                    playBtn.src = "../../../Images/Icons/play.png";
+                    playBtn.src = "/Images/Icons/play.png";
                 }
             }
 
             wavesurfer.on('finish', function(){
-                playBtn.src = "../../../Images/Icons/play.png";
+                playBtn.src = "/Images/Icons/play.png";
                 wavesurfer.stop();
             })
 
