@@ -666,7 +666,7 @@ a:hover {
    color: #4d00b3;
    text-decoration: underline;
 }
-.tracklist a {
+.tracklist a, .setlist a {
    color: var(--white);
 }
 .blend-in {
