@@ -477,7 +477,7 @@ button.play-pause-btn {
    color: #183052;
    transition: 0.6s;
    }
-.dark-mode .tracklist-item, .dark-mode .no-bridge {
+.dark-mode .list-item, .dark-mode .no-bridge {
    color: #183058;
 }
 
