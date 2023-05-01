@@ -38,7 +38,15 @@ html {
 /****Testing****/
 
 
-
+table, th, td {
+   border: 5px solid #8800c7/*#e090df-->*/;
+   border-collapse: collapse;
+}
+th, td {
+   background-color: #a44cd3;
+   padding: 10px;
+   color: black;
+}
 
 
 /**PARALLAX**/
