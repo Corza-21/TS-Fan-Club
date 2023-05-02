@@ -204,19 +204,10 @@
             <!--EMBED CODE-->
             <!--<h2><a class="underline-disguise" href="" target="_blank">Official Lyric Video</a> <i class="fa-solid fa-video"></i></h2>-->
             <h2>Preview <i class="fa-solid fa-magnifying-glass"></i></h2>
-            <!--<audio controls>
+            <audio controls>
                 <source src="../../../Audio/Hits Different.mp3" type="audio/ogg">
                 Your browser does not support the audio element.
-            </audio>-->
-            <div class="music-container">
-                <div class="music">
-                    <h2>Hits Different <a class="download-btn" href="../../../Audio/Hits Different.mp3" download><i class="fas fa-download"></i></a></h2>
-                    <div class="track">
-                        <img src="../../../Images/Icons/play.png" id="playBtn">
-                        <div id="waveform"></div>
-                    </div>
-                </div>
-            </div>
+            </audio>
             <!--FOOTER-->
     <footer>
         <div class="socials">
@@ -248,35 +239,5 @@
         </div>
         <!--Link to the js document-->
         <script src="../../../Script/script.js"></script>
-        <script>
-            var playBtn = document.getElementById("playBtn");
-
-            var wavesurfer = WaveSurfer.create({
-                container: '#waveform',
-                waveColor: '#ddd',
-                progressColor: '#ff006c',
-                barWidth: 3,
-                responsive: true,
-                height: 80,
-                barRadius: 4
-            });
-
-            wavesurfer.load('../../../Audio/Hits Different.mp3');
-
-            playBtn.onclick = function(){
-                wavesurfer.playPause();
-                if(playBtn.src.includes("play.png")){
-                    playBtn.src = "../../../Images/Icons/pause.png";
-                }else{
-                    playBtn.src = "../../../Images/Icons/play.png";
-                }
-            }
-
-            wavesurfer.on('finish', function(){
-                playBtn.src = "../../../Images/Icons/play.png";
-                wavesurfer.stop();
-            })
-
-        </script>
     </body>
 </html>
