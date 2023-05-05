@@ -2,9 +2,35 @@
 
 
 
+const toggleButton = document.getElementById('mark-toggle-button');
+const removeLyricsParagraph = document.getElementById('lyrics');
+let hidden = false;
+let originalText = '';
+
+toggleButton.addEventListener('click', () => {
+    if (!hidden) {
+    originalText = removeLyricsParagraph.innerHTML;
+    const lines = originalText.split('\n');
+    const filteredLines = lines.filter(line => !line.trim().startsWith('<mark'));
+    const modifiedText = filteredLines.join('\n');
+    removeLyricsParagraph.innerHTML = modifiedText;
+    toggleButton.innerText = `Show Labels`;
+    } else {
+    removeLyricsParagraph.innerHTML = originalText;
+    toggleButton.innerText = `Hide Labels`;
+    }
+    hidden = !hidden;
+});
 
 
+const copyButton = document.getElementById('copy-button');
+const copyLyricsParagraph = document.getElementById('lyrics');
 
+copyButton.addEventListener('click', () => {
+    navigator.clipboard.writeText(copyLyricsParagraph.textContent)
+        .then(() => console.log('Text copied to clipboard'))
+        .catch((error) => console.error('Error copying text: ', error));
+});
 
 
 //TOOLTIP-------------------------------------------------

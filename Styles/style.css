@@ -48,6 +48,23 @@ th, td {
    color: black;
 }
 
+#mark-toggle-button, #copy-button {
+   padding: 6px;
+   border-radius: 5px;
+   font-size: smaller;
+   margin-bottom: 5px;
+   color: var(--white);
+}
+#mark-toggle-button {
+   background-color:#5e20c1;
+}
+#copy-button {
+   background-color: #4CAF50;
+}
+#copy-button:hover {
+   background-color: #3e8e41;
+}
+
 
 /**PARALLAX**/
 .parallax {
