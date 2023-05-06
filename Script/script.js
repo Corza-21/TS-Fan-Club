@@ -1,7 +1,7 @@
 //testing----------------------------------------------------
 
 
-
+//TOGGLE BUTTON-------------------------------------------------
 const toggleButton = document.getElementById('mark-toggle-button');
 const removeLyricsParagraph = document.getElementById('lyrics');
 let hidden = false;
@@ -22,7 +22,7 @@ toggleButton.addEventListener('click', () => {
     hidden = !hidden;
 });
 
-
+//COPY BUTTON-------------------------------------------------
 const copyButton = document.getElementById('copy-button');
 const copyLyricsParagraph = document.getElementById('lyrics');
 
@@ -31,7 +31,6 @@ copyButton.addEventListener('click', () => {
         .then(() => console.log('Text copied to clipboard'))
         .catch((error) => console.error('Error copying text: ', error));
 });
-
 
 //TOOLTIP-------------------------------------------------
 const tooltipButton = document.querySelector('.tooltip button');
@@ -42,7 +41,6 @@ function toggleText() {
     chatgptText.forEach(el => el.classList.toggle('hidden'));
     myText.forEach(el => el.classList.toggle('hidden'));
 }
-
 
 //NAVIGATION OVERLAY---------------------------------
 function openNav() {
