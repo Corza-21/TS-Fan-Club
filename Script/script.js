@@ -76,12 +76,8 @@ const swiper = new Swiper(".swiper", {
     },
 });
 */
-//POLL SECTION----------------------------------------------------
-
-
-
 //QUIZ-----------------------------------------------
-
+/*
 const questions = [
     {
         question: "How many albums has Taylor Swift re-released so far?",
@@ -207,7 +203,7 @@ nextButton.addEventListener("click", ()=>{
 
 startQuiz();
 
-
+*/
 //TEXT TYPING EFFECT-----------------------------------------------
 var typed = new Typed(".auto-type", {
     strings: [`Fan Club`, `Is The Best`, `Is A God`, `Slays`, `Is The Music Industry <i class="fas fa-crown"></i>`, `Is ✨Amazing✨`],
