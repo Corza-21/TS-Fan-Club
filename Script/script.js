@@ -59,6 +59,7 @@ function toggleNav() {
 }
 
 //IMAGE-SLIDER---------------------------------------
+/*
 const swiper = new Swiper(".swiper", {
     loop: true,
     autoplay: {
@@ -74,6 +75,7 @@ const swiper = new Swiper(".swiper", {
         prevEl: ".swiper-button-prev",
     },
 });
+*/
 //POLL SECTION----------------------------------------------------
 
 
