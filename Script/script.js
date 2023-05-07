@@ -276,7 +276,7 @@ albumGenerateBtn.addEventListener('click', function() {
 });
 
 // NUMBER CONVERTER SECTION-------------------------------------------------------
-
+/*
 function convertNumber() {
     var number = document.getElementById("numberInput").value;
     var numberResultDiv = document.getElementById("numberResult");
@@ -588,7 +588,7 @@ function convertNumber() {
     }
     numberResultDiv.innerHTML = "You are " + meaning + ".";
 }
-
+*/
 // LYRIC GENERATOR SECTION-------------------------------------------------------
 
 const lyrics = {
