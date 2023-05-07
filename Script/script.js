@@ -2,6 +2,7 @@
 
 
 //TOGGLE BUTTON-------------------------------------------------
+/*
 const toggleButton = document.getElementById('mark-toggle-button');
 const removeLyricsParagraph = document.getElementById('lyrics');
 let hidden = false;
@@ -31,7 +32,7 @@ copyButton.addEventListener('click', () => {
         .then(() => console.log('Text copied to clipboard'))
         .catch((error) => console.error('Error copying text: ', error));
 });
-
+*/
 //TOOLTIP-------------------------------------------------
 const tooltipButton = document.querySelector('.tooltip button');
 const chatgptText = document.querySelectorAll('.chatgpt-text');
