@@ -1434,7 +1434,8 @@ function generateQuote() {
         `Throughout all of the changes that have happened in my life, one of the priorities I've had is to never change the way I write songs and the reasons I write songs. I write songs to help me understand life a little more. I write songs to get past things that cause me pain. And I write songs because sometimes life makes more sense to me when it's being sung in a chorus, and when I can write it in a verse.`,
         `Never believe anyone who tells you that you don't deserve what you want.`,
         `Happiness and confidence are the prettiest things you can wear.`,
-        `Karma is real.`
+        `Karma is real.`,
+        `The worst kind of person is someone who makes someone feel bad, dumb or stupid for… like being excited about something.`
     ];
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
     document.getElementById("quote").innerHTML = '<i class="fas fa-quote-left"></i> ' + randomQuote + ' <i class="fas fa-quote-right"></i>' + '<br>- Taylor Swift';
