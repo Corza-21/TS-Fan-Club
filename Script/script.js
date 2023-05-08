@@ -534,10 +534,6 @@ function convertNumber() {
     numberResultDiv.innerHTML = "You are " + meaning + ".";
 }
 */
-// LYRIC GENERATOR SECTION-------------------------------------------------------
-
-
-
 // QUOTE GENERATOR SECTION-------------------------------------------------------
 
 function generateQuote() {
