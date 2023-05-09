@@ -680,10 +680,6 @@ header a:hover {
 #navigation {
    background-color: transparent;
 }
-/*******HIGHLIGHTING*******/
-::selection {
-   background-color: #b98ed9;
-}
 /*******HYPERLINKS*******/
 
 a {
