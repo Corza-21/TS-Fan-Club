@@ -1283,7 +1283,7 @@ input[type="radio"]:checked + img {
    justify-content: center;
    align-items: center;
    box-sizing: border-box;
-   margin: 20px auto calc(100% / 15);
+   margin: 10px auto calc(100% / 15);
 }
 .box button {
    position: relative;
@@ -1299,6 +1299,31 @@ input[type="radio"]:checked + img {
    color: var(--white);
    padding-bottom: 0.5rem;
 }
+.special-box {
+   width: calc(80% - 20px);
+   min-height: 400px;
+   display: flex;
+   position: relative;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   box-sizing: border-box;
+   margin: 10px auto calc(100% / 15);
+}
+.special-box button {
+   position: relative;
+   color: var(--dark);
+   font-weight: 600;
+}
+
+.special-box button:hover::after {
+   display: none;
+}
+.special-box h3 {
+   font-size: 1.4rem;
+   color: var(--dark);
+   padding-bottom: 0.5rem;
+}
 .generated {
    font-size: 21px;
    background-image: linear-gradient(to bottom right, #bf6ddb, #182172);
@@ -1309,7 +1334,13 @@ input[type="radio"]:checked + img {
 .box-2 .generated {
    background-image: linear-gradient(to top, #bf6ddb, #182172);
 }
-
+#searchInput {
+   padding: 10px;
+   border: 3px solid var(--dark-purple);
+   border-radius: 7px;
+   box-sizing: border-box;
+   background: white;
+}
 .games-buttons {
    background-color: transparent;
    border-radius: 10px;
@@ -1351,9 +1382,11 @@ input[type="radio"]:checked + img {
    border-radius: 3px 30px 30px 30px;
    background: linear-gradient(to top left, #ed008e, #ffde17);
 }
-.box:nth-child(odd) {
-   margin-right: 20px;
+.box-5 {
+   border-radius: 3px 3px 30px 30px;
+   background: linear-gradient(to bottom, #f3b7f3, #35e5d4);
 }
+
 
 
 @media screen and (max-width: 800px) {
@@ -1363,10 +1396,16 @@ input[type="radio"]:checked + img {
    margin-right: 0;
    border-radius: 0;
    }
-   .box:nth-child(odd) {
+   .special-box {
+      width: 100%;
+      margin-bottom: 20px;
       margin-right: 0;
-   }
+      border-radius: 0;
+      }
    .box h3 {
+      font-size: 2.2rem;
+   }
+   .special-box h3 {
       font-size: 2.2rem;
    }
 }
