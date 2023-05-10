@@ -38,6 +38,73 @@ html {
 /****Testing****/
 
 
+
+.album-taylor-swift {
+   font-size: 1.4rem;
+   font-family: 'Sacramento';
+   color: var(--ts1);
+}
+.album-fearless {
+   font-size: 1.4rem;
+   font-family: 'Montserrat';
+   color: var(--ts2);
+}
+.album-speak-now {
+   font-size: 1.4rem;
+   font-family: 'Rochester';
+   color: var(--ts3);
+}
+.album-red {
+   font-size: 1.4rem;
+   font-family: 'Anton';
+   color: var(--ts4);
+}
+.album-1989 {
+   font-size: 1.4rem;
+   font-family: 'Permanent Marker';
+   color: var(--ts5);
+}
+.album-reputation {
+   font-size: 1.4rem;
+   font-family: 'UnifrakturMaguntia';
+   color: var(--ts6);
+}
+.album-lover {
+   font-size: 1.4rem;
+   font-family: 'Satisfy';
+   color: var(--ts7);
+}
+.album-folklore {
+   font-size: 1.4rem;
+   font-family: 'IM Fell DW Pica';
+   color: var(--ts8);
+}
+.album-evermore {
+   font-size: 1.4rem;
+   font-family: 'IM Fell DW Pica';
+   color: var(--ts9);
+}
+.album-midnights {
+   font-size: 1.4rem;
+   font-family: 'Helvetica';
+   color: var(--ts10);
+}
+
+
+
+
+#searchResults{
+   font-size: smaller;
+   border-radius: 13px;
+   border: 3px dashed var(--dark-purple);
+   margin: 10px;
+}
+
+
+
+
+
+
 table, th, td {
    border: 5px solid #8800c7/*#e090df-->*/;
    border-collapse: collapse;
@@ -1320,15 +1387,22 @@ input[type="radio"]:checked + img {
    color: var(--dark);
    padding-bottom: 0.5rem;
 }
-.generated {
-   font-size: 21px;
+.box-1 .generated, .box-3 .generated, .box-4 .generated {
+   font-size: 1.3rem;
    background-image: linear-gradient(to bottom right, #bf6ddb, #182172);
    background-clip: text;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
 .box-2 .generated {
+   font-size: 1.3rem;
    background-image: linear-gradient(to top, #bf6ddb, #182172);
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+.box-5 .generated {
+   color: purple;
 }
 #searchInput {
    padding: 10px;
@@ -1336,6 +1410,7 @@ input[type="radio"]:checked + img {
    border-radius: 7px;
    box-sizing: border-box;
    background: white;
+   min-width: 250px;
 }
 .games-buttons {
    background-color: transparent;
@@ -1381,6 +1456,11 @@ input[type="radio"]:checked + img {
 .box-5 {
    border-radius: 3px 3px 30px 30px;
    background: linear-gradient(to bottom, #f3b7f3, #35e5d4);
+}
+.box-5 h4 {
+   font-size: 2.1rem;
+   color: var(--dark);
+   margin-bottom: 5px;
 }
 
 
