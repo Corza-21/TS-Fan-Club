@@ -172,6 +172,17 @@
     </footer>
 
     </div>
+    <!--Other Code-->
+    <script>
+        const tooltipButton = document.querySelector('.tooltip button');
+        const chatgptText = document.querySelectorAll('.chatgpt-text');
+        const myText = document.querySelectorAll('.my-text');
+
+        function toggleText() {
+            chatgptText.forEach(el => el.classList.toggle('hidden'));
+            myText.forEach(el => el.classList.toggle('hidden'));
+        }
+    </script>
     <!--Link to the js document-->
     <script src="../../Script/script.js"></script>
     </body>

@@ -340,9 +340,6 @@ mark {
    text-decoration: none;
    display: inline-block;
 }
-.chatgpt-text, .my-text{
-   font-size: 1.25rem;
-}
 /*******TABLES*******/
 table {
    margin: auto;

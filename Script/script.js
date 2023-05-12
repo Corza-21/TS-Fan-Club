@@ -104,16 +104,6 @@ function copyTextToClipboard(elementId) {
     copyTextToClipboard('lyrics');
     });
 
-//TOOLTIP-------------------------------------------------
-const tooltipButton = document.querySelector('.tooltip button');
-const chatgptText = document.querySelectorAll('.chatgpt-text');
-const myText = document.querySelectorAll('.my-text');
-
-function toggleText() {
-    chatgptText.forEach(el => el.classList.toggle('hidden'));
-    myText.forEach(el => el.classList.toggle('hidden'));
-}
-
 //NAVIGATION OVERLAY---------------------------------
 function openNav() {
     document.getElementById("myNav").style.width = "100%";
