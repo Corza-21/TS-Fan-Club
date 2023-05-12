@@ -86,16 +86,23 @@ toggleMarkedText('mark-toggle-button', 'lyrics');
 
 //COPY BUTTON-------------------------------------------------
 function copyTextToClipboard(elementId) {
-const copyLyricsParagraph = document.getElementById(elementId);
-navigator.clipboard.writeText(copyLyricsParagraph.textContent)
-    .then(() => console.log('Text copied to clipboard'))
-    .catch((error) => console.error('Error copying text: ', error));
-}
+    const copyLyricsParagraph = document.getElementById(elementId);
+    navigator.clipboard.writeText(copyLyricsParagraph.textContent)
+        .then(() => {
+        console.log('Text copied to clipboard');
+        const originalText = copyButton.textContent;
+        copyButton.textContent = 'Copied!';
+        setTimeout(() => {
+        copyButton.textContent = originalText;
+        }, 2000);
+        })
+        .catch((error) => console.error('Error copying text: ', error));
+    }
 
-const copyButton = document.getElementById('copy-button');
-copyButton.addEventListener('click', () => {
-copyTextToClipboard('lyrics');
-});
+    const copyButton = document.getElementById('copy-button');
+    copyButton.addEventListener('click', () => {
+    copyTextToClipboard('lyrics');
+    });
 
 //TOOLTIP-------------------------------------------------
 const tooltipButton = document.querySelector('.tooltip button');
