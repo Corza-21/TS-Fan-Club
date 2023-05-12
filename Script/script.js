@@ -1,6 +1,62 @@
 //testing----------------------------------------------------
 
+var originalParagraph = ""; // Variable to store the original paragraph
 
+function convertToAcronyms() {
+    var button = document.getElementById("acronym-button");
+    var paragraph = document.getElementById("lyrics");
+    var currentState = paragraph.innerHTML;
+    
+    if (currentState === originalParagraph) {
+    var convertedParagraph = convertNodeToAcronyms(paragraph.cloneNode(true));
+    paragraph.innerHTML = convertedParagraph;
+    button.textContent = "Restore Original";
+    } else {
+    paragraph.innerHTML = originalParagraph;
+    button.textContent = "Convert to Acronyms";
+    }
+}
+
+function convertNodeToAcronyms(node) {
+    if (node.nodeType === Node.TEXT_NODE) {
+    var words = node.textContent.split(" ");
+    var convertedText = "";
+
+    for (var j = 0; j < words.length; j++) {
+        var word = words[j];
+        if (isNaN(word)) {
+        convertedText += word.charAt(0).toUpperCase();
+        } else {
+        convertedText += word;
+        }
+    }
+
+    return convertedText;
+    } else if (node.nodeType === Node.ELEMENT_NODE) {
+    var tagName = node.tagName.toLowerCase();
+
+    if (tagName === "br" || tagName === "mark") {
+        return node.outerHTML;
+        } else {
+        var convertedContent = "";
+        for (var i = 0; i < node.childNodes.length; i++) {
+        var childNode = node.childNodes[i];
+        convertedContent += convertNodeToAcronyms(childNode);
+        }
+        return "<" + tagName + ">" + convertedContent + "</" + tagName + ">";
+    }
+    } else {
+    return node.textContent;
+    }
+}
+
+window.onload = function() {
+    var paragraph = document.getElementById("lyrics");
+    originalParagraph = paragraph.innerHTML;
+    
+    var button = document.getElementById("acronym-button");
+    button.addEventListener("click", convertToAcronyms);
+};
 
 //TOGGLE BUTTON-------------------------------------------------
 

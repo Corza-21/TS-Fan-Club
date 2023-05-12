@@ -115,7 +115,7 @@ th, td {
    color: black;
 }
 
-#mark-toggle-button, #copy-button {
+#mark-toggle-button, #copy-button, #acronym-button {
    padding: 6px;
    border-radius: 5px;
    font-size: smaller;
@@ -125,11 +125,20 @@ th, td {
 #mark-toggle-button {
    background-color:#5e20c1;
 }
+#mark-toggle-button:hover {
+   background-color:#4c199d;
+}
 #copy-button {
-   background-color: #4CAF50;
+   background-color:#4CAF50;
 }
 #copy-button:hover {
-   background-color: #3e8e41;
+   background-color:#3e8e41;
+}
+#acronym-button {
+   background-color:#d51e9e;
+}
+#acronym-button:hover {
+   background-color:#b81981;
 }
 
 
