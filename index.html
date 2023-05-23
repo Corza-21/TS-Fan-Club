@@ -11745,12 +11745,16 @@ function handleKeyUp(event) {
 }
 
 function search() {
-   const keyword = searchInput.value.toLowerCase();
+   const keyword = searchInput.value.toLowerCase().replace(/[^\w\s\d]/g, '');
    const results = songs.filter(song => {
       if (typeof song.lyrics === 'string') {
-      return song.lyrics.toLowerCase().includes(keyword);
+      const lyricsWithoutPunctuation = song.lyrics.toLowerCase().replace(/[^\w\s\d]/g, '');
+      return lyricsWithoutPunctuation.includes(keyword);
       } else if (Array.isArray(song.lyrics)) {
-      return song.lyrics.some(line => line.toLowerCase().includes(keyword));
+      return song.lyrics.some(line => {
+         const lineWithoutPunctuation = line.toLowerCase().replace(/[^\w\s\d]/g, '');
+         return lineWithoutPunctuation.includes(keyword);
+      });
       }
       return false;
    });
@@ -11758,7 +11762,7 @@ function search() {
 }
 
 function highlightKeyword(text, keyword) {
-   const regex = new RegExp(keyword, 'gi');
+  const regex = new RegExp(`(${keyword.replace(/[^\w\s\d]/g, '')})`, 'gi'); // Remove punctuation from keyword for matching
    return text.replace(regex, match => `<b>${match}</b>`);
 }
 
@@ -11769,15 +11773,7 @@ function displayResults(results, keyword) {
    if (results.length === 0) {
       resultsContainer.innerText = 'No results found.';
    } else {
-      results.sort((a, b) => {
-      if (a.title < b.title) {
-         return -1;
-      }
-      if (a.title > b.title) {
-         return 1;
-      }
-      return 0;
-      });
+      results.sort((a, b) => a.title.localeCompare(b.title));
 
       for (let i = 0; i < results.length; i++) {
       const result = document.createElement('div');
@@ -11793,11 +11789,13 @@ function displayResults(results, keyword) {
 
       let matchedLines = '';
       if (typeof results[i].lyrics === 'string') {
-         matchedLines = highlightKeyword(results[i].lyrics, keyword);
+         const lyricsWithoutPunctuation = results[i].lyrics.toLowerCase().replace(/[^\w\s\d]/g, '');
+         matchedLines = highlightKeyword(lyricsWithoutPunctuation, keyword);
       } else if (Array.isArray(results[i].lyrics)) {
-         const matchingLines = results[i].lyrics.filter(line =>
-            line.toLowerCase().includes(keyword)
-         );
+         const matchingLines = results[i].lyrics.filter(line => {
+            const lineWithoutPunctuation = line.toLowerCase().replace(/[^\w\s\d]/g, '');
+            return lineWithoutPunctuation.includes(keyword);
+         });
          matchedLines = matchingLines.map(line => highlightKeyword(line, keyword)).join('<br>');
       }
       lyrics.innerHTML = matchedLines;
@@ -11805,6 +11803,8 @@ function displayResults(results, keyword) {
       }
    }
 }
+
+
 
 // Add event listener
 document.addEventListener('keyup', handleKeyUp);
