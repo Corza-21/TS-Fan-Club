@@ -243,7 +243,7 @@
          </div>
          <div class="special-box box-5">
             <h4>Taylor Swift Song Search</h4>
-            <input type="text" id="searchInput" placeholder="Enter a keyword...">
+            <input type="text" id="searchInput" placeholder="Enter a keyword..." onkeydown="handleKeyDown(event)">
             <button class="games-buttons" onclick="search()">Search</button>
             <div class="generated" id="searchResults"></div>
          </div>
@@ -11721,13 +11721,36 @@ const songs = [
    },
 ];
 
+var searchInput = document.getElementById('searchInput');
+
+// Add event listener for clicking outside the input field
+document.addEventListener('click', function(event) {
+   var isClickInsideInput = searchInput.contains(event.target);
+   if (!isClickInsideInput) {
+    searchInput.blur(); // Remove focus from the input field
+   }
+});
+
+// Handle keyup event
+function handleKeyUp(event) {
+   if (event.key === '/') {
+      event.preventDefault();
+      searchInput.focus(); // Set focus back to the input field
+   } else if (event.key === 'Enter') {
+      if (event.target === searchInput) {
+      event.preventDefault();
+      search();
+      }
+   }
+}
+
 function search() {
-   const keyword = document.getElementById('searchInput').value.toLowerCase();
+   const keyword = searchInput.value.toLowerCase();
    const results = songs.filter(song => {
       if (typeof song.lyrics === 'string') {
-         return song.lyrics.toLowerCase().includes(keyword);
+      return song.lyrics.toLowerCase().includes(keyword);
       } else if (Array.isArray(song.lyrics)) {
-         return song.lyrics.some(line => line.toLowerCase().includes(keyword));
+      return song.lyrics.some(line => line.toLowerCase().includes(keyword));
       }
       return false;
    });
@@ -11747,16 +11770,16 @@ function displayResults(results, keyword) {
       resultsContainer.innerText = 'No results found.';
    } else {
       results.sort((a, b) => {
-   if (a.title < b.title) {
-      return -1;
-   }
-   if (a.title > b.title) {
-      return 1;
+      if (a.title < b.title) {
+         return -1;
+      }
+      if (a.title > b.title) {
+         return 1;
       }
       return 0;
-   });
+      });
 
-   for (let i = 0; i < results.length; i++) {
+      for (let i = 0; i < results.length; i++) {
       const result = document.createElement('div');
       const title = document.createElement('h3');
       const album = document.createElement('p');
@@ -11773,15 +11796,19 @@ function displayResults(results, keyword) {
          matchedLines = highlightKeyword(results[i].lyrics, keyword);
       } else if (Array.isArray(results[i].lyrics)) {
          const matchingLines = results[i].lyrics.filter(line =>
-         line.toLowerCase().includes(keyword)
+            line.toLowerCase().includes(keyword)
          );
-      matchedLines = matchingLines.map(line => highlightKeyword(line, keyword)).join('<br>');
+         matchedLines = matchingLines.map(line => highlightKeyword(line, keyword)).join('<br>');
       }
       lyrics.innerHTML = matchedLines;
       resultsContainer.appendChild(result);
       }
    }
 }
+
+// Add event listener
+document.addEventListener('keyup', handleKeyUp);
+
 </script>
 <script>
 // Get the button element and the result element
