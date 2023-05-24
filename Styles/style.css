@@ -50,14 +50,6 @@ html {
    transform: translateY(-50%);
 }
 
-#searchInput {
-  padding-right: 25px; /* Adjust the value as needed */
-}
-
-
-
-
-
 
 .album-taylor-swift {
    font-size: 1.4rem;
@@ -1439,6 +1431,7 @@ input[type="radio"]:checked + img {
 }
 #searchInput {
    padding: 10px;
+   padding-right: 25px;
    border: 3px solid var(--dark-purple);
    border-radius: 7px;
    box-sizing: border-box;
