@@ -38,6 +38,26 @@ html {
 /****Testing****/
 
 
+.search-container {
+   position: relative;
+}
+
+#clearButton {
+   position: absolute;
+   top: 50%;
+   right: 10px;
+   display: none;
+   transform: translateY(-50%);
+}
+
+#searchInput {
+  padding-right: 25px; /* Adjust the value as needed */
+}
+
+
+
+
+
 
 .album-taylor-swift {
    font-size: 1.4rem;
@@ -489,6 +509,13 @@ table {
 
 /*******BUTTONS*******/
 button {
+   cursor: pointer;
+   border: none;
+   background: transparent;
+   color: inherit;
+   font-size: inherit;
+}
+.button{
    cursor: pointer;
    border: none;
    background: transparent;

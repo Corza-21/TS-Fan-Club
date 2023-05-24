@@ -243,12 +243,14 @@
          </div>
          <div class="special-box box-5">
             <h4>Taylor Swift Song Search</h4>
-            <input type="text" id="searchInput" placeholder="Enter a keyword..." onkeydown="handleKeyDown(event)">
+            <div class="search-container">
+               <input type="text" id="searchInput" placeholder="Enter a keyword..." onkeydown="handleKeyDown(event)">
+               <i id="clearButton" class="fas fa-xmark button" onclick="clearInput()"></i>
+            </div>
             <button class="games-buttons" onclick="search()">Search</button>
             <div class="generated" id="searchResults"></div>
          </div>
       </div>
-
             <!--<h3>What's Your Favourite Number? (1-100)</h3>
             <input type="number" id="numberInput" name="numberInput" min="1" max="100">
             <button class="games-buttons" id="number-btn" onclick="convertNumber()">I am...</button>
@@ -11720,8 +11722,38 @@ const songs = [
       ],
    },
 ];
-
 var searchInput = document.getElementById('searchInput');
+var clearButton = document.getElementById('clearButton');
+
+// Add event listener to show/hide clear button
+searchInput.addEventListener('input', function() {
+   if (searchInput.value.trim() !== '') {
+      clearButton.style.display = 'inline-block';
+   } else {
+      clearButton.style.display = 'none';
+   }
+});
+
+// Add event listener for clicking the clear button
+   clearButton.addEventListener('click', function() {
+   searchInput.value = ''; // Clear the input field
+   searchInput.focus(); // Set focus back to the input field
+   clearButton.style.display = 'none'; // Hide the clear button
+});
+
+function clearInput() {
+   searchInput.value = '';
+   setTimeout(function() {
+      searchInput.focus();
+   }, 0);
+}
+
+function handleKeyDown(event) {
+   if (event.key === '/') {
+      event.preventDefault();
+      searchInput.focus();
+   }
+}
 
 // Add event listener for clicking outside the input field
 document.addEventListener('click', function(event) {
