@@ -148,19 +148,25 @@ function toggleMarkedText(buttonId, paragraphId) {
     let originalText = '';
 
     toggleButton.addEventListener('click', () => {
-    if (!hidden) {
-        originalText = removeLyricsParagraph.innerHTML;
-        const lines = originalText.split('\n');
-        const filteredLines = lines.filter(line => !line.trim().startsWith('<mark')/* && !line.trim().startsWith('<br')*/);
-        const modifiedText = filteredLines.join('\n');
-        removeLyricsParagraph.innerHTML = modifiedText;
-        toggleButton.innerText = `Show Labels`;
-    } else {
-        removeLyricsParagraph.innerHTML = originalText;
-        toggleButton.innerText = `Hide Labels`;
-    }
-    hidden = !hidden;
-    });
+        if (!hidden) {
+            originalText = removeLyricsParagraph.innerHTML;
+            const lines = originalText.split('\n');
+            const filteredLines = lines.filter(line => !line.trim().startsWith('<mark')/* && !line.trim().startsWith('<br')*/);
+            const modifiedText = filteredLines.join('\n');
+            removeLyricsParagraph.innerHTML = modifiedText;
+            toggleButton.innerText = `Show Labels`;
+
+            var acronymButton = document.getElementById("acronym-button");
+            acronymButton.style.display = "none";
+            } else {
+                removeLyricsParagraph.innerHTML = originalText;
+                toggleButton.innerText = `Hide Labels`;
+
+                var acronymButton = document.getElementById("acronym-button");
+                acronymButton.style.display = "inline";
+        }
+        hidden = !hidden;
+        });
 }
 
 toggleMarkedText('mark-toggle-button', 'lyrics');
