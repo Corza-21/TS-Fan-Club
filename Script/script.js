@@ -8,62 +8,72 @@
     // Create the copy button element
     const copyButton = document.createElement('i');
     copyButton.classList.add('fas', 'fa-copy', 'copy-button'); // Add the 'copy-button' class
-    
+
     // Add click event listener to copy button
     copyButton.addEventListener('click', () => {
-    const paragraph = markTag.nextElementSibling;
-    
-    // Collect the text content of the paragraph until the next mark tag or double <br><br> tag
-    let paragraphText = '';
-    let node = paragraph;
-    while (node && !(node.nodeName === 'MARK' || (node.nodeName === 'BR' && node.nextElementSibling && node.nextElementSibling.nodeName === 'BR'))) {
-        const lineText = node.textContent.trim();
-        paragraphText += lineText ? lineText + '\n' : '';
-        node = node.nextElementSibling;
-    }
-    
-    // Split the paragraph text into lines and trim each line individually
-    const lines = paragraphText.split('\n').map(line => line.trim());
-    
-    // Remove the last line break from the paragraph text
-    if (lines.length > 0 && lines[lines.length - 1] === '') {
-        lines.pop();
-    }
+        const paragraph = markTag.nextElementSibling;
 
-    // Join the lines back into a single string
-    paragraphText = lines.join('\n');
-
-    // Create a temporary input element to copy the paragraph text
-    const tempInput = document.createElement('textarea');
-    tempInput.value = paragraphText;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-
-    try {
-        const successful = document.execCommand('copy');
-        const message = successful ? 'Paragraph text copied!' : 'Copy command failed.';
-        console.log(message);
-        /*if (successful) {
-            document.querySelector('.copy-button').classList.remove('fa-copy');
-            document.querySelector('.copy-button').classList.add('fa-check-double');
-            setTimeout(() => {
-                document.querySelector('.copy-button').classList.add('fa-copy');
-                document.querySelector('.copy-button').classList.remove('fa-check-double');
-            }, 2000);
-        } else {
-            document.querySelector('.copy-button').classList.remove('fa-copy');
-            document.querySelector('.copy-button').classList.add('fa-xmark');
-        }*/
-        } catch (err) {
-        console.error('Unable to copy paragraph text:', err);
+        // Collect the text content of the paragraph until the next mark tag or double <br><br> tag
+        let paragraphText = '';
+        let node = paragraph;
+        while (node && !(node.nodeName === 'MARK' || (node.nodeName === 'BR' && node.nextElementSibling && node.nextElementSibling.nodeName === 'BR'))) {
+            const lineText = node.textContent.trim();
+            paragraphText += lineText ? lineText + '\n' : '';
+            node = node.nextElementSibling;
         }
 
-    document.body.removeChild(tempInput);
+        // Split the paragraph text into lines and trim each line individually
+        const lines = paragraphText.split('\n').map(line => line.trim());
+    
+        // Remove the last line break from the paragraph text
+        if (lines.length > 0 && lines[lines.length - 1] === '') {
+            lines.pop();
+        }
+    
+        // Join the lines back into a single string
+        paragraphText = lines.join('\n');
+    
+        // Create a temporary input element to copy the paragraph text
+        const tempInput = document.createElement('textarea');
+        tempInput.value = paragraphText;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+
+        try {
+            const successful = document.execCommand('copy');
+            const message = successful ? 'Paragraph text copied!' : 'Copy command failed.';
+            console.log(message);
+    
+            // Change the copy button icon to 'fa-check-double' temporarily
+            copyButton.classList.remove('fa-copy');
+            copyButton.classList.add('fa-check-double');
+    
+            // Set a timeout to revert the copy button icon to 'fa-copy' after 2 seconds
+            setTimeout(() => {
+                copyButton.classList.remove('fa-check-double');
+                copyButton.classList.add('fa-copy');
+            }, 2000);
+            } catch (err) {
+                console.error('Unable to copy paragraph text:', err);
+    
+                // Change the copy button icon to 'fa-xmark'
+                copyButton.classList.remove('fa-copy');
+                copyButton.classList.add('fa-xmark');
+    
+                // Set a timeout to revert the copy button icon to 'fa-copy' after 5 seconds
+                setTimeout(() => {
+                    copyButton.classList.remove('fa-xmark');
+                    copyButton.classList.add('fa-copy');
+                }, 5000);
+            }
+
+        document.body.removeChild(tempInput);
     });
 
     // Insert the copy button after the mark tag
     markTag.parentNode.insertBefore(copyButton, markTag.nextSibling);
 });
+
 
 
 
