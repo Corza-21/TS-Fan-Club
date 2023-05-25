@@ -87,22 +87,45 @@ toggleMarkedText('mark-toggle-button', 'lyrics');
 //COPY BUTTON-------------------------------------------------
 function copyTextToClipboard(elementId) {
     const copyLyricsParagraph = document.getElementById(elementId);
-    navigator.clipboard.writeText(copyLyricsParagraph.textContent)
+    const paragraphText = copyLyricsParagraph.textContent;
+
+    // Split the paragraph text into lines
+    const lines = paragraphText.split('\n');
+
+    // Remove leading and trailing whitespace from each line and handle blank lines
+    const formattedLines = lines.map(line => {
+        const trimmedLine = line.trim();
+        return trimmedLine ? trimmedLine : null; // Return null for blank lines
+    });
+
+    // Exclude the first line if it's empty after trimming
+    if (formattedLines[0] === null) {
+        formattedLines.shift();
+    }
+
+    // Exclude blank lines at the end
+    while (formattedLines.length && formattedLines[formattedLines.length - 1] === null) {
+        formattedLines.pop();
+    }
+
+    const formattedText = formattedLines.join('\n');
+
+    navigator.clipboard.writeText(formattedText)
         .then(() => {
-        console.log('Text copied to clipboard');
+        console.log('Paragraph text copied!');
         const originalText = copyButton.textContent;
         copyButton.textContent = 'Copied!';
         setTimeout(() => {
-        copyButton.textContent = originalText;
+            copyButton.textContent = originalText;
         }, 2000);
         })
         .catch((error) => console.error('Error copying text: ', error));
-    }
+}
 
-    const copyButton = document.getElementById('copy-button');
-    copyButton.addEventListener('click', () => {
+const copyButton = document.getElementById('copy-button');
+copyButton.addEventListener('click', () => {
     copyTextToClipboard('lyrics');
-    });
+});
 
 //NAVIGATION OVERLAY---------------------------------
 function openNav() {
