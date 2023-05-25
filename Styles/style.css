@@ -37,6 +37,16 @@ html {
 }
 /****Testing****/
 
+.copy-button {
+   border-radius: 50%;
+   color: #b98ed9;
+   margin-left: 7px;
+   cursor: pointer;
+}
+
+
+
+
 
 .search-container {
    position: relative;
