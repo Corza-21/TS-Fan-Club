@@ -667,6 +667,12 @@ main {
 .singles-background main, .singles-background-special main, .singles-collabs-background-special main{
    font-family: 'Merienda';
 }
+.unreleased-background main, .unreleased-background-special main {
+   font-family: 'Lobster';
+}
+.tours-background main, .tours-background-special main{
+   font-family: 'Pacifico';
+}
 body {
    text-align: center;
    font-size: 1.19rem;
