@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^midnights$ /Web%20Pages/Album%20Web%20Pages/ts10.html [L]
+RewriteRule ^midnights$ /public_html/Web%20Pages/Album%20Web%20Pages/ts10.html [L]
