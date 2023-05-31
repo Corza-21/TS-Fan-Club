@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Rewrite Rules For Album Pages
+RewriteRule ^taylor-swift$ /Web%20Pages/Album%20Web%20Pages/ts1.html [L]
+RewriteRule ^fearless$ /Web%20Pages/Album%20Web%20Pages/ts2.html [L]
+RewriteRule ^speak-now$ /Web%20Pages/Album%20Web%20Pages/ts3.html [L]
+RewriteRule ^red$ /Web%20Pages/Album%20Web%20Pages/ts4.html [L]
+RewriteRule ^1989$ /Web%20Pages/Album%20Web%20Pages/ts5.html [L]
+RewriteRule ^reputation$ /Web%20Pages/Album%20Web%20Pages/ts6.html [L]
+RewriteRule ^lover$ /Web%20Pages/Album%20Web%20Pages/ts7.html [L]
+RewriteRule ^folklore$ /Web%20Pages/Album%20Web%20Pages/ts8.html [L]
+RewriteRule ^evermore$ /Web%20Pages/Album%20Web%20Pages/ts9.html [L]
+RewriteRule ^midnights$ /Web%20Pages/Album%20Web%20Pages/ts10.html [L]
