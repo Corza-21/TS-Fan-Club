@@ -30,7 +30,7 @@ RewriteRule ^taylor-swift/a-perfectly-good-heart$ /Pages/Song-Pages/Taylor-Swift
 RewriteRule ^taylor-swift/teardrops-on-my-guitar-pop-version$ /Pages/Song-Pages/Taylor-Swift/15-teardrops-on-my-guitar-pop-version.html [L]
 
 # Rewrite Rules For Fearless
-RewriteRule ^fearless/fearless-song$ /Pages/Song-Pages/Fearless/1-fearless.html [L]
+RewriteRule ^fearless/fearless$ /Pages/Song-Pages/Fearless/1-fearless.html [L]
 RewriteRule ^fearless/fifteen$ /Pages/Song-Pages/Fearless/2-fifteen.html [L]
 RewriteRule ^fearless/love-story$ /Pages/Song-Pages/Fearless/3-love-story.html [L]
 RewriteRule ^fearless/hey-stephen$ /Pages/Song-Pages/Fearless/4-hey-stephen.html [L]
@@ -62,7 +62,7 @@ RewriteRule ^fearless/if-this-was-a-movie$ /Pages/Song-Pages/Fearless/27-if-this
 RewriteRule ^speak-now/mine$ /Pages/Song-Pages/Speak-Now/1-mine.html [L]
 RewriteRule ^speak-now/sparks-fly$ /Pages/Song-Pages/Speak-Now/2-sparks-fly.html [L]
 RewriteRule ^speak-now/back-to-december$ /Pages/Song-Pages/Speak-Now/3-back-to-december.html [L]
-RewriteRule ^speak-now/speak-now-song$ /Pages/Song-Pages/Speak-Now/4-speak-now.html [L]
+RewriteRule ^speak-now/speak-now$ /Pages/Song-Pages/Speak-Now/4-speak-now.html [L]
 RewriteRule ^speak-now/dear-john$ /Pages/Song-Pages/Speak-Now/5-dear-john.html [L]
 RewriteRule ^speak-now/mean$ /Pages/Song-Pages/Speak-Now/6-mean.html [L]
 RewriteRule ^speak-now/the-story-of-us$ /Pages/Song-Pages/Speak-Now/7-the-story-of-us.html [L]
@@ -81,7 +81,7 @@ RewriteRule ^speak-now/haunted-acoustic-version$ /Pages/Song-Pages/Speak-Now/19-
 
 # Rewrite Rules For Red
 RewriteRule ^red/state-of-grace$ /Pages/Song-Pages/Red/1-state-of-grace.html [L]
-RewriteRule ^red/red-song$ /Pages/Song-Pages/Red/2-red.html [L]
+RewriteRule ^red/red$ /Pages/Song-Pages/Red/2-red.html [L]
 RewriteRule ^red/treacherous$ /Pages/Song-Pages/Red/3-treacherous.html [L]
 RewriteRule ^red/i-knew-you-were-trouble$ /Pages/Song-Pages/Red/4-i-knew-you-were-trouble.html [L]
 RewriteRule ^red/all-too-well$ /Pages/Song-Pages/Red/5-all-too-well.html [L]
@@ -151,7 +151,7 @@ RewriteRule ^reputation/new-years-day$ /Pages/Song-Pages/reputation/15-new-years
 # Rewrite Rules For Lover
 RewriteRule ^lover/i-forgot-that-you-existed$ /Pages/Song-Pages/Lover/1-i-forgot-that-you-existed.html [L]
 RewriteRule ^lover/cruel-summer$ /Pages/Song-Pages/Lover/2-cruel-summer.html [L]
-RewriteRule ^lover/lover-song$ /Pages/Song-Pages/Lover/3-lover.html [L]
+RewriteRule ^lover/lover$ /Pages/Song-Pages/Lover/3-lover.html [L]
 RewriteRule ^lover/the-man$ /Pages/Song-Pages/Lover/4-the-man.html [L]
 RewriteRule ^lover/the-archer$ /Pages/Song-Pages/Lover/5-the-archer.html [L]
 RewriteRule ^lover/i-think-he-knows$ /Pages/Song-Pages/Lover/6-i-think-he-knows.html [L]
@@ -203,7 +203,7 @@ RewriteRule ^evermore/cowboy-like-me$ /Pages/Song-Pages/evermore/11-cowboy-like-
 RewriteRule ^evermore/long-story-short$ /Pages/Song-Pages/evermore/12-long-story-short.html [L]
 RewriteRule ^evermore/marjorie$ /Pages/Song-Pages/evermore/13-marjorie.html [L]
 RewriteRule ^evermore/closure$ /Pages/Song-Pages/evermore/14-closure.html [L]
-RewriteRule ^evermore/evermore-song$ /Pages/Song-Pages/evermore/15-evermore.html [L]
+RewriteRule ^evermore/evermore$ /Pages/Song-Pages/evermore/15-evermore.html [L]
 RewriteRule ^evermore/right-where-you-left-me$ /Pages/Song-Pages/evermore/16-right-where-you-left-me.html [L]
 RewriteRule ^evermore/its-time-to-go$ /Pages/Song-Pages/evermore/17-its-time-to-go.html [L]
 
