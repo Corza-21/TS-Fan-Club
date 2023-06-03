@@ -190,7 +190,7 @@ RewriteRule ^folklore/the-lakes$ /Pages/Song-Pages/folklore/17-the-lakes.html [L
 
 # Rewrite Rules For evermore
 RewriteRule ^evermore/willow$ /Pages/Song-Pages/evermore/1-willow.html [L]
-RewriteRule ^evermore/champange-problems$ /Pages/Song-Pages/evermore/2-champange-problems.html [L]
+RewriteRule ^evermore/champange-problems$ /Pages/Song-Pages/evermore/2-champagne-problems.html [L]
 RewriteRule ^evermore/gold-rush$ /Pages/Song-Pages/evermore/3-gold-rush.html [L]
 RewriteRule ^evermore/tis-the-damn-season$ /Pages/Song-Pages/evermore/4-tis-the-damn-season.html [L]
 RewriteRule ^evermore/tolerate-it$ /Pages/Song-Pages/evermore/5-tolerate-it.html [L]
