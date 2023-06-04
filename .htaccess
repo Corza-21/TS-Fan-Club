@@ -1,5 +1,11 @@
 RewriteEngine On
 
+# Rewrite Rules For Special Pages
+RewriteRule ^singles$ /Pages/Album-Pages/singles [L]
+RewriteRule ^unreleased$ /Pages/Album-Pages/unreleased [L]
+RewriteRule ^bridges$ /Pages/Album-Pages/bridges [L]
+RewriteRule ^tours$ /Pages/Album-Pages/tours [L]
+
 # Rewrite Rules For Album Pages
 RewriteRule ^taylor-swift$ /Pages/Album-Pages/ts1.html [L]
 RewriteRule ^fearless$ /Pages/Album-Pages/ts2.html [L]
