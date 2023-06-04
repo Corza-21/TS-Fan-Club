@@ -4,7 +4,7 @@ RewriteEngine On
 RewriteRule ^singles$ /Pages/Album-Pages/singles.html [L]
 RewriteRule ^unreleased$ /Pages/Album-Pages/unreleased.html [L]
 RewriteRule ^bridges$ /Pages/Album-Pages/bridges.html [L]
-RewriteRule ^tours$ /Pages/Album-Pages/tours.html [L]
+RewriteRule ^tours$ /Pages/Tours/tours.html [L]
 
 # Rewrite Rules For Album Pages
 RewriteRule ^taylor-swift$ /Pages/Album-Pages/ts1.html [L]
