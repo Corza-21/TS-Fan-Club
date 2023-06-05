@@ -244,7 +244,7 @@ RewriteRule ^midnights/youre-losing-me$ /Pages/Song-Pages/Midnights/24-youre-los
 
 # Rewrite Rules For Unreleased Songs
 RewriteRule ^unreleased/4-u$ /Pages/Song-Pages/Unreleased-Songs/4-u.html [L]
-RewriteRule ^unreleased/10-dollars-and-a-six-pack$ /Pages/Song-Pages/Unreleased-Songs/10-dollars-and-a-six-pack.html [L]
+RewriteRule ^unreleased/10-dollars-and-a-6-pack$ /Pages/Song-Pages/Unreleased-Songs/10-dollars-and-a-6-pack.html [L]
 RewriteRule ^unreleased/all-night-diner$ /Pages/Song-Pages/Unreleased-Songs/all-night-diner.html [L]
 RewriteRule ^unreleased/am-i-ready-for-love$ /Pages/Song-Pages/Unreleased-Songs/am-i-ready-for-love.html [L]
 RewriteRule ^unreleased/american-boy$ /Pages/Song-Pages/Unreleased-Songs/american-boy.html [L]
