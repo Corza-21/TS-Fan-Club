@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Rewrite Rule For Index File
+RewriteRule ^home$ index.html [L]
+
 # Rewrite Rules For Special Pages
 RewriteRule ^singles$ /Pages/Album-Pages/singles.html [L]
 RewriteRule ^unreleased$ /Pages/Album-Pages/unreleased.html [L]
