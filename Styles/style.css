@@ -1276,7 +1276,7 @@ input[type="radio"]:checked + img {
 .timeline-container .row-2 {
    justify-content: flex-end;
 }
-.timeline-container .row div {
+.timeline-container .row section {
    color: var(--white);
    background: #152238;
    border-radius: 5px;
@@ -1284,7 +1284,7 @@ input[type="radio"]:checked + img {
    padding: 20px;
    position: relative;
 }
-.timeline-container .row div::before {
+.timeline-container .row section::before {
    position: absolute;
    content: "";
    height: 15px;
@@ -1295,13 +1295,13 @@ input[type="radio"]:checked + img {
    z-index: -1;
    background: #152238;
 }
-.row-1 div::before {
+.row-1 section::before {
    right: -7px;
 }
-.row-2 div::before {
+.row-2 section::before {
    left: -7px;
 }
-.row div .icon, .center-line .scroll-icon {
+.row section .icon, .center-line .scroll-icon {
    position: absolute;
    background: #152238;
    height: 40px;
@@ -1311,7 +1311,7 @@ input[type="radio"]:checked + img {
    border-radius: 50%;
    color: purple;
 }
-.row div .icon:hover {
+.row section .icon:hover {
    transform: scale(2);
 }
 .center-line .scroll-icon {
@@ -1320,25 +1320,25 @@ input[type="radio"]:checked + img {
    font-size: 25px;
    transform: translateX(-50%);
 }
-.row-1 div .icon {
+.row-1 section .icon {
    top: 13px;
    right: -60px;
 }
-.row-2 div .icon {
+.row-2 section .icon {
    top: 13px;
    left: -60px;
 }
-.row div .bottom, .row div .details {
+.row section .bottom, .row section .details {
    display: flex;
    align-items: center;
    justify-content: center;
 }
-.row div .details .title {
+.row section .details .title {
    color: var(--light-lavender);
    font-size: 26px;
    font-weight: 600;
 }
-.row div p {
+.row section p {
    margin: 10px 0 17px 0;
 }
 @media screen and (max-width: 800px) {
@@ -1348,20 +1348,20 @@ input[type="radio"]:checked + img {
    .timeline-container .row {
       margin: 30px 0 3px 60px;
    }
-   .timeline-container .row div {
+   .timeline-container .row section {
       width: 100%;
    }
-   .row-1 div::before {
+   .row-1 section::before {
       left: -7px;
    }
-   .row-1 div .icon {
+   .row-1 section .icon {
       top: 13px;
       left: -60px;
       right: auto;
    }
 }
 @media screen and (max-width: 440px) {
-   .timeline-container .center-line, .row div::before, .row div .icon {
+   .timeline-container .center-line, .row section::before, .row section .icon {
       display: none;
    }
    .timeline-container .row {
