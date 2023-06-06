@@ -242,6 +242,23 @@ RewriteRule ^midnights/snow-on-the-beach-more-lana$ /Pages/Song-Pages/Midnights/
 RewriteRule ^midnights/karma-remix$ /Pages/Song-Pages/Midnights/23-karma-remix.html [L]
 RewriteRule ^midnights/youre-losing-me$ /Pages/Song-Pages/Midnights/24-youre-losing-me.html [L]
 
+# Rewrite Rules For Singles
+RewriteRule ^singles/beautiful-ghosts$ /Pages/Song-Pages/Singles/beautiful-ghosts.html [L]
+RewriteRule ^singles/carolina$ /Pages/Song-Pages/Singles/carolina.html [L]
+RewriteRule ^singles/christmas-tree-farm$ /Pages/Song-Pages/Singles/christmas-tree-farm.html [L]
+RewriteRule ^singles/only-the-young$ /Pages/Song-Pages/Singles/only-the-young.html [L]
+RewriteRule ^singles/sweeter-than-fiction$ /Pages/Song-Pages/Singles/sweeter-than-fiction.html [L]
+RewriteRule ^singles/babe-sugarland-version$ /Pages/Song-Pages/Singles-Collabs/babe-sugarland-version.html [L]
+RewriteRule ^singles/birch$ /Pages/Song-Pages/Singles-Collabs/birch.html [L]
+RewriteRule ^singles/both-of-us$ /Pages/Song-Pages/Singles-Collabs/both-of-us.html [L]
+RewriteRule ^singles/gasoline$ /Pages/Song-Pages/Singles-Collabs/gasoline.html [L]
+RewriteRule ^singles/highway-dont-care$ /Pages/Song-Pages/Singles-Collabs/highway-dont-care.html [L]
+RewriteRule ^singles/i-dont-wanna-live-forever$ /Pages/Song-Pages/Singles-Collabs/i-dont-wanna-live-forever.html [L]
+RewriteRule ^singles/renegade$ /Pages/Song-Pages/Singles-Collabs/renegade.html [L]
+RewriteRule ^singles/the-alcott$ /Pages/Song-Pages/Singles-Collabs/the-alcott.html [L]
+RewriteRule ^singles/the-joker-and-the-queen$ /Pages/Song-Pages/Singles-Collabs/the-joker-and-the-queen.html [L]
+RewriteRule ^singles/two-is-better-than-one$ /Pages/Song-Pages/Singles-Collabs/two-is-better-than-one.html [L]
+
 # Rewrite Rules For Unreleased Songs
 RewriteRule ^unreleased/4-u$ /Pages/Song-Pages/Unreleased-Songs/4-u.html [L]
 RewriteRule ^unreleased/10-dollars-and-a-6-pack$ /Pages/Song-Pages/Unreleased-Songs/10-dollars-and-a-6-pack.html [L]
