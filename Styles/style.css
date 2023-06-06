@@ -31,6 +31,7 @@
    --lavender: #AE0DE6;
    --lavender2: #862eb7;
    --dark-purple: #40048a;
+   --darker-purple: #32035a;
 }
 html {
    scroll-behavior: smooth;
@@ -769,7 +770,7 @@ header a:hover {
    padding: 0 3px;
 }
 .header-footer-icon:hover {
-   color: var(--dark-purple);
+   color: var(--darker-purple);
    transform: rotate(-360deg);
 }
 .ts-icon {
