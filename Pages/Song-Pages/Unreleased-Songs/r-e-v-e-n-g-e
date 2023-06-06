@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>Gracie | TS Fan Club</title>
+        <title>R-E-V-E-N-G-E | TS Fan Club</title>
         <link href="../../../Styles/style.css" rel="stylesheet">
         <meta charset="UTF-8">
         <!--Favicon Stuff-->
@@ -67,7 +67,7 @@
         <div class="main">
             <div class="unreleased-background-special">
                 <main>
-                <h1>Gracie</h1>
+                <h1>R-E-V-E-N-G-E</h1>
                 </main>
                 <div class="image-container">
                     <a href="/unreleased">
@@ -80,13 +80,13 @@
                     </div>
                 </div>
                 <div class="lyrics-links">
-                    <a href="#gracie-verse-1" class="lyrics-link">Verse 1</a>
-                    <a href="#gracie-chorus-1" class="lyrics-link">Chorus</a>
-                    <a href="#gracie-verse-2" class="lyrics-link">Verse 2</a>
-                    <a href="#gracie-chorus-2" class="lyrics-link">Chorus</a>
-                    <a href="#gracie-verse-3" class="lyrics-link">Verse 3</a>
-                    <a href="#gracie-chorus-3" class="lyrics-link">Chorus</a>
-                    <a href="#gracie-verse-4" class="lyrics-link">Verse 4</a>
+                    <a href="#r-e-v-e-n-g-e-verse-1" class="lyrics-link">Verse 1</a>
+                    <a href="#r-e-v-e-n-g-e-chorus-1" class="lyrics-link">Chorus</a>
+                    <a href="#r-e-v-e-n-g-e-verse-2" class="lyrics-link">Verse 2</a>
+                    <a href="#r-e-v-e-n-g-e-chorus-2" class="lyrics-link">Chorus</a>
+                    <a href="#r-e-v-e-n-g-e-bridge" class="lyrics-link">Bridge</a>
+                    <a href="#r-e-v-e-n-g-e-chorus-3" class="lyrics-link">Chorus</a>
+                    <a href="#r-e-v-e-n-g-e-outro" class="lyrics-link">Outro</a>
                 </div>
                 <div class="credits">
                     <p class="credit">Written By Taylor Swift</p>
@@ -94,10 +94,10 @@
             </div>
             <!--ABOUT-->
             <h2>About <i class="fas fa-rocket"></i></h2>
-            <p>From <a class="disguise" href="https://genius.com" target="_blank">Genius</a>, the ultimate source of music knowledge</p>
+            <p>From the <a class="disguise" href="https://taylorswift.fandom.com" target="_blank">Taylor Swift Wiki</a></p>
             <p>
                 This song is ✨Unreleased✨.<br><br>
-                Swift wrote “Gracie” about a young girl named Gracie Johnson who she met on a flight before releasing her 2006 debut album. Gracie had leukemia and passed away in 2019. Swift included a picture of herself with Gracie in the lyric video for "<a href="https://youtu.be/aXzVF3XeS8M" class="underline-disguise">Love Story (Taylor's Version)</a>" in 2021.
+                "R-E-V-E-N-G-E", alternatively known as "R.E.V.E.N.G.E" is an unreleased song by Taylor Swift. The song is rumored to be an outtake from her debut studio album, "Taylor Swift".
             </p>
             <br> <!--(Originally hr)-->
             <!--LYRICS-FROM-GENIUS-->
@@ -106,53 +106,65 @@
             <button id="copy-button">Copy</button>
             <button id="acronym-button">Convert to Acronyms</button>
             <p id="lyrics">
-                <mark id="gracie-verse-1" style="scroll-margin-top: 62px;">[Verse 1]</mark><br><span>
-                My name's Gracie, I'll be five in May<br>
-                Kind of scared, 'cause<br>
-                I've never been on a plane<br>
-                My mama says that it'll be alright<br>
-                'Cause I'm going to see my daddy tonight<br>
-                And she says that<br>
+                <mark id="r-e-v-e-n-g-e-verse-1" style="scroll-margin-top: 62px;">[Verse 1]</mark><br><span>
+                I could have keyed your car<br>
+                I could have rolled your yard<br>
+                I know the passwords to your emails<br>
+                And everything you do<br>
+                I could have put them to good use<br>
+                But I'm dressed to kill<br>
+                And tonight, I am going out on a date<br>
+                With your best friend<br>
+                He always liked me anyway<br>
                 </span><br><br>
-                <mark id="gracie-chorus-1" style="scroll-margin-top: 62px;">[Chorus]</mark><br><span>
-                There's a whole a lot of good people in Heaven<br>
-                And I don't wanna get there too soon<br>
-                And I know there's a God because I met him<br>
-                And I see it when I'm looking at you<br>
-                There ain't no accidents in what we do<br>
+                <mark id="r-e-v-e-n-g-e-chorus-1" style="scroll-margin-top: 62px;">[Chorus]</mark><br><span>
+                R-E-V-E-N-G-E<br>
+                My list of things to do this week<br>
+                Jealousy, misery<br>
+                Gon' give you what you gave to me<br>
+                Make you feel so B-A-D<br>
+                Break you, make you sorry<br>
+                I hope you cry, I'm getting my<br>
+                R-E-V-E-N-G-E<br>
                 </span><br><br>
-                <mark id="gracie-verse-2" style="scroll-margin-top: 62px;">[Verse 2]</mark><br><span>
-                My name's Heather, guess we're on the same flight<br>
-                Don't mind Gracie, she could talk to you all night<br>
-                She's finally well enough to travel<br>
-                Doctor says she's in the clear<br>
-                She's been in and out of hospital<br>
-                Since the beginning of the year<br>
+                <mark id="r-e-v-e-n-g-e-verse-2" style="scroll-margin-top: 62px;">[Verse 2]</mark><br><span>
+                So I'm gonna paint the town with him<br>
+                Replace your memory everywhere we've ever been<br>
+                I don't hang out at smokey bars, but I know we'll see you there<br>
+                And I'll make you hear me laughing, like I just don't care<br>
+                I know you hate my friends, so, tonight, I called them all<br>
+                And later on, you can expect some prank phone calls, baby<br>
                 </span><br><br>
-                <mark id="gracie-chorus-2" style="scroll-margin-top: 62px;">[Chorus]</mark><br><span>
-                There's a whole a lot of good people in Heaven<br>
-                And I don't wanna get there too soon<br>
-                And I know there's a God because I met him<br>
-                And I see it when I'm looking at you<br>
-                There ain't no accidents in what we do<br>
+                <mark id="r-e-v-e-n-g-e-chorus-2" style="scroll-margin-top: 62px;">[Chorus]</mark><br><span>
+                R-E-V-E-N-G-E<br>
+                My list of things to do this week<br>
+                Jealousy, misery<br>
+                Gon' give you what you gave to me<br>
+                Make you feel so B-A-D<br>
+                Break you, make you sorry<br>
+                I hope you cry, I'm getting my<br>
+                R-E-V-E-N-G-E<br>
                 </span><br><br>
-                <mark id="gracie-verse-3" style="scroll-margin-top: 62px;">[Verse 3]</mark><br><span>
-                James T. Johnson, that's her daddy's name<br>
-                He's been overseas, it'll be a year today<br>
-                He never talked about being scared over the phone<br>
-                He just said, "Me and Gracie will come and take him on"<br>
+                <mark id="r-e-v-e-n-g-e-bridge" style="scroll-margin-top: 62px;">[Bridge]</mark><br><span>
+                S-A-N-I-T-Y<br>
+                I hope you lose yours tonight<br>
+                You've made me crazy too long<br>
+                And so I'm working on<br>
                 </span><br><br>
-                <mark id="gracie-chorus-3" style="scroll-margin-top: 62px;">[Chorus]</mark><br><span>
-                There's a whole a lot of good people in Heaven<br>
-                And I don't wanna get there too soon<br>
-                And I know there's a God because I met him<br>
-                And I see it when I'm looking at you<br>
-                There ain't no accidents in what we do<br>
+                <mark id="r-e-v-e-n-g-e-chorus-3" style="scroll-margin-top: 62px;">[Chorus]</mark><br><span>
+                R-E-V-E-N-G-E<br>
+                My list of things to do this week<br>
+                Jealousy, misery<br>
+                Gon' give you what you gave to me<br>
+                Make you feel so B-A-D<br>
+                Break you, make you sorry<br>
+                I hope you cry, I'm getting my<br>
+                R-E-V-E-N-G-E<br>
                 </span><br><br>
-                <mark id="gracie-verse-4" style="scroll-margin-top: 62px;">[Verse 4]</mark><br><span>
-                And the people that we meet<br>
-                As we go through the rain<br>
-                There are no accidents in what we do<br>
+                <mark id="r-e-v-e-n-g-e-outro" style="scroll-margin-top: 62px;">[Outro]</mark><br><span>
+                Baby, baby<br>
+                R-E-V-E-N-G-E, oh<br>
+                And give you what you gave to me, oh<br>
                 </span>
             </p>
             <!--EMBED CODE-->
@@ -160,7 +172,7 @@
             <!--<h2><a href="" class="underline-disguise" target="_blank">Official Music Video</a> <i class="fas fa-film"></i></h2>-->
             <h2>Preview <i class="fas fa-magnifying-glass"></i></h2>
             <audio controls>
-                <source src="../../../Audio/Unreleased/Gracie.mp3" type="audio/ogg">
+                <source src="../../../Audio/Unreleased/R-E-V-E-N-G-E.mp3" type="audio/ogg">
                 Your browser does not support the audio element.
             </audio>
             <!--FOOTER-->
