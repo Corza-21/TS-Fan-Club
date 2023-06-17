@@ -1250,6 +1250,54 @@ input[type="radio"]:checked + img {
    padding: 20px;
    position: relative;
 }
+.timeline-container .ts1 section {
+   background: var(--ts1);
+}
+.timeline-container .ts2 section {
+   background: var(--ts2);
+}
+.timeline-container .ts2-tour section {
+   background: var(--lts2);
+}
+.timeline-container .ts3 section {
+   background: var(--ts3);
+}
+.timeline-container .ts3-tour section {
+   background: var(--lts3);
+}
+.timeline-container .ts4 section {
+   background: var(--ts4);
+}
+.timeline-container .ts4-tour section {
+   background: var(--lts4);
+}
+.timeline-container .ts5 section {
+   background: var(--ts5);
+}
+.timeline-container .ts5-tour section {
+   background: var(--lts5);
+}
+.timeline-container .ts6 section {
+   background: var(--ts6);
+}
+.timeline-container .ts6-tour section {
+   background: var(--lts6);
+}
+.timeline-container .ts7 section {
+   background: var(--ts7);
+}
+.timeline-container .ts8 section {
+   background: var(--ts8);
+}
+.timeline-container .ts9 section {
+   background: var(--ts9);
+}
+.timeline-container .ts10 section {
+   background: var(--ts10);
+}
+.timeline-container .ts10-tour section {
+   background: var(--lts10);
+}
 .timeline-container .row section::before {
    position: absolute;
    content: "";
@@ -1300,7 +1348,12 @@ input[type="radio"]:checked + img {
    justify-content: center;
 }
 .row section .details .title {
-   color: var(--light-lavender);
+   color: var(--dark);
+   font-size: 26px;
+   font-weight: 600;
+}
+.ts6 section .details .title {
+   color: var(--white);
    font-size: 26px;
    font-weight: 600;
 }
