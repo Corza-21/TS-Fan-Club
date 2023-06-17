@@ -390,12 +390,12 @@ table {
    height: 25rem;
 }
 .bridges-background {
-   background: url(../Images/bridge-image.jpeg);
+   background: url(../Images/bridge-image.webp);
    position: relative;
    height: 25rem;
 }
 .eras-tour-background {
-   background: url(../Images/eras-tour-image.jpeg);
+   background: url(../Images/eras-tour-image.webp);
    position: relative;
    height: 25rem;
 }
