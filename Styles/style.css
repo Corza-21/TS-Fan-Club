@@ -188,41 +188,6 @@ th, td {
    color: var(--white);
    transform: translate(0%, 100%);
 }
-/*****MEDIA QUERIES*****/
-@media screen and (max-width: 1400px) {
-   .underline-animation {
-      display: none;
-   }
-}
-@media screen and (max-width: 800px) {
-   :root {
-      font-size: 12px;
-   }
-   .album-cover {
-      width: 200px;
-      height: auto;
-   }
-}
-
-@media screen and (min-width: 1400px) {
-   .album-dropbtn {
-      display: none;
-   }
-   .underline-animation {
-      display: inline-block;
-   }
-   .youtube {
-      display: none;
-   }
-}
-@media screen and (max-height: 450px) {
-   .overlay a {font-size: 20px}
-   .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-   }
-}
 /*****HR*****/
 hr {
    border: none;
@@ -492,7 +457,7 @@ table {
 .ts10-background-special {
    background: linear-gradient(to right, var(--ts10), var(--lts10));
    position: relative;
-   height: 25rem;
+   height: 26rem;
 }
 .unreleased-background-special {
    background: linear-gradient(to right, var(--unreleased), var(--lunreleased));
@@ -1580,4 +1545,54 @@ input[type="radio"]:checked + img {
    display: inline;
    margin: 0;
    padding: 0;
+}
+/*****MEDIA QUERIES*****/
+@media screen and (max-width: 1400px) {
+   .underline-animation {
+      display: none;
+   }
+}
+@media screen and (max-width: 800px) {
+   :root {
+      font-size: 12px;
+   }
+   .album-cover {
+      width: 200px;
+      height: auto;
+   }
+}
+@media screen and (max-width: 1000px) {
+   .lyrics-link {
+      font-size: 0.9rem;
+   }
+   .ts1-background-special, .ts2-background-special, .ts3-background-special, .ts4-background-special, .ts5-background-special, .ts6-background-special, .ts7-background-special, .ts8-background-special, .ts9-background-special, .ts10-background-special {
+      height: 28rem;
+   }
+   .credits {
+      width: 60%;
+   }
+}
+@media screen and (max-width: 400px) {
+   .lyrics-link {
+      font-size: 0.7rem;
+   }
+}
+@media screen and (min-width: 1400px) {
+   .album-dropbtn {
+      display: none;
+   }
+   .underline-animation {
+      display: inline-block;
+   }
+   .youtube {
+      display: none;
+   }
+}
+@media screen and (max-height: 450px) {
+   .overlay a {font-size: 20px}
+   .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+   }
 }
