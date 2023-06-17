@@ -174,7 +174,7 @@ th, td {
 }
 /*****LANDING PAGE*****/
 .landing-page {
-   background: url(../Images/landing-page-image.jpeg);
+   background: url(../Images/landing-page-image.webp);
    height: 100vh;
    display: flex;
    flex-direction: column;
