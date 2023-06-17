@@ -4,7 +4,7 @@ RewriteEngine On
 RewriteRule ^home$ index.html [L]
 
 # Rewrite Rules For Tour Pages
-RewriteRules ^tours/eras-tour /Pages/Tours/Eras-Tour/tour.html [L]
+RewriteRules ^tours/eras-tour$ /Pages/Tours/Eras-Tour/tour.html [L]
 
 # Rewrite Rules For Special Pages
 RewriteRule ^singles$ /Pages/Album-Pages/singles.html [L]
