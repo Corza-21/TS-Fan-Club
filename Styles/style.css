@@ -38,6 +38,25 @@ html {
 }
 /****Testing****/
 
+
+@media screen and (max-width: 800px) {
+   .auto-type {
+      display: none;
+   }
+}
+@media screen and (min-width: 800px) {
+   .mobile-first {
+      display: none;
+   }
+}
+
+
+
+
+
+
+
+
 .copy-button {
    border-radius: 50%;
    color: #b98ed9;
