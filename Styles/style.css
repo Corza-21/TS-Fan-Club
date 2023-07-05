@@ -137,6 +137,11 @@ html {
    font-family: 'Helvetica';
    color: var(--ts10);
 }
+.album-single {
+   font-size: 1.4rem;
+   font-family: 'Merienda';
+   color: white;
+}
 
 
 
