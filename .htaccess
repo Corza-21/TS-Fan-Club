@@ -117,6 +117,12 @@ RewriteRule ^speak-now/last-kiss$ /Pages/Song-Pages/Speak-Now/13-last-kiss.html 
 RewriteRule ^speak-now/long-live$ /Pages/Song-Pages/Speak-Now/14-long-live.html [L]
 RewriteRule ^speak-now/ours$ /Pages/Song-Pages/Speak-Now/15-ours.html [L]
 RewriteRule ^speak-now/superman$ /Pages/Song-Pages/Speak-Now/16-superman.html [L]
+RewriteRule ^speak-now/electric-touch$ /Pages/Song-Pages/Speak-Now/17-electric-touch.html [L]
+RewriteRule ^speak-now/when-emma-falls-in-love$ /Pages/Song-Pages/Speak-Now/18-when-emma-falls-in-love.html [L]
+RewriteRule ^speak-now/i-can-see-you$ /Pages/Song-Pages/Speak-Now/19-i-can-see-you.html [L]
+RewriteRule ^speak-now/castles-crumbling$ /Pages/Song-Pages/Speak-Now/20-castles-crumbling.html [L]
+RewriteRule ^speak-now/foolish-one$ /Pages/Song-Pages/Speak-Now/21-foolish-one.html [L]
+RewriteRule ^speak-now/timeless$ /Pages/Song-Pages/Speak-Now/22-timeless.html [L]
 
 # Rewrite Rules For Red
 RewriteRule ^red/state-of-grace$ /Pages/Song-Pages/Red/1-state-of-grace.html [L]
