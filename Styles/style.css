@@ -168,7 +168,7 @@ th, td {
    color: black;
 }
 
-#mark-toggle-button, #copy-button, #acronym-button {
+#mark-toggle-button, #copy-button, #acronym-button, #capitalization-button {
    padding: 6px;
    border-radius: 5px;
    font-size: smaller;
@@ -192,6 +192,12 @@ th, td {
 }
 #acronym-button:hover {
    background-color:#b81981;
+}
+#capitalization-button {
+   background-color: #006DB2;
+}
+#capitalization-button:hover {
+   background-color: #00609C;
 }
 
 

@@ -1,83 +1,130 @@
 //testing----------------------------------------------------
 
-    // Get all the mark tags within the lyrics container
-    const markTags = document.querySelectorAll('#lyrics mark');
-    
-    // Iterate over each mark tag
-    markTags.forEach(markTag => {
+var originalText = "";
+var isCapitalized = false;
+keepAcronymHidden = false;
+keepCapitalizationHidden = false;
+
+function toggleCapitalization() {
+  var lyricsElement = document.getElementById("lyrics");
+  var lyricsText = lyricsElement.innerHTML;
+
+  if (originalText === "") {
+    // Store the original text if it hasn't been stored yet
+    originalText = lyricsText;
+  }
+
+  var modifiedText = lyricsText.replace(/<mark[^>]*>[^<]*<\/mark>|[^<]+/g, function (match) {
+    if (match.startsWith("<mark")) {
+      return match; // Preserve lines starting with <mark>
+    } else {
+      if (isCapitalized) {
+        var acronymButton = document.getElementById("acronym-button");
+        acronymButton.style.display = "inline";
+        keepAcronymHidden = false;
+        return match.toLowerCase();
+      } else {
+        var acronymButton = document.getElementById("acronym-button");
+        acronymButton.style.display = "none";
+        keepAcronymHidden = true;
+        return match.toUpperCase();
+      }
+    }
+  });
+
+  if (isCapitalized) {
+    lyricsElement.innerHTML = originalText;
+  } else {
+    lyricsElement.innerHTML = modifiedText;
+  }
+
+  isCapitalized = !isCapitalized;
+
+  // Remove existing copy buttons
+  removeCopyButtons();
+
+  // Add the updated copy buttons
+  addCopyButtons();
+}
+
+function addCopyButtons() {
+  var lyricsElement = document.getElementById("lyrics");
+  var markTags = lyricsElement.querySelectorAll("mark");
+  markTags.forEach(function (markTag) {
     // Create the copy button element
-    const copyButton = document.createElement('i');
-    copyButton.classList.add('fas', 'fa-copy', 'copy-button'); // Add the 'copy-button' class
+    var copyButton = document.createElement("i");
+    copyButton.classList.add("fas", "fa-copy", "copy-button");
 
     // Add click event listener to copy button
-    copyButton.addEventListener('click', () => {
-        const paragraph = markTag.nextElementSibling;
-
-        // Collect the text content of the paragraph until the next mark tag or double <br><br> tag
-        let paragraphText = '';
-        let node = paragraph;
-        while (node && !(node.nodeName === 'MARK' || (node.nodeName === 'BR' && node.nextElementSibling && node.nextElementSibling.nodeName === 'BR'))) {
-            const lineText = node.textContent.trim();
-            paragraphText += lineText ? lineText + '\n' : '';
-            node = node.nextElementSibling;
-        }
-
-        // Split the paragraph text into lines and trim each line individually
-        const lines = paragraphText.split('\n').map(line => line.trim());
-    
-        // Remove the last line break from the paragraph text
-        if (lines.length > 0 && lines[lines.length - 1] === '') {
-            lines.pop();
-        }
-    
-        // Join the lines back into a single string
-        paragraphText = lines.join('\n');
-    
-        // Create a temporary input element to copy the paragraph text
-        const tempInput = document.createElement('textarea');
-        tempInput.value = paragraphText;
-        document.body.appendChild(tempInput);
-        tempInput.select();
-
-        try {
-            const successful = document.execCommand('copy');
-            const message = successful ? 'Paragraph text copied!' : 'Copy command failed.';
-            console.log(message);
-    
-            // Change the copy button icon to 'fa-check-double' temporarily
-            copyButton.classList.remove('fa-copy');
-            copyButton.classList.add('fa-check-double');
-    
-            // Set a timeout to revert the copy button icon to 'fa-copy' after 2 seconds
-            setTimeout(() => {
-                copyButton.classList.remove('fa-check-double');
-                copyButton.classList.add('fa-copy');
-            }, 2000);
-            } catch (err) {
-                console.error('Unable to copy paragraph text:', err);
-    
-                // Change the copy button icon to 'fa-xmark'
-                copyButton.classList.remove('fa-copy');
-                copyButton.classList.add('fa-xmark');
-    
-                // Set a timeout to revert the copy button icon to 'fa-copy' after 5 seconds
-                setTimeout(() => {
-                    copyButton.classList.remove('fa-xmark');
-                    copyButton.classList.add('fa-copy');
-                }, 5000);
-            }
-
-        document.body.removeChild(tempInput);
+    copyButton.addEventListener("click", function () {
+      copyText(markTag);
     });
 
     // Insert the copy button after the mark tag
     markTag.parentNode.insertBefore(copyButton, markTag.nextSibling);
-});
+  });
+}
 
+function removeCopyButtons() {
+  var copyButtons = document.querySelectorAll(".copy-button");
+  copyButtons.forEach(function (copyButton) {
+    copyButton.parentNode.removeChild(copyButton);
+  });
+}
 
+function copyText(markTag) {
+  var paragraph = markTag.nextElementSibling;
 
+  // Collect the text content of the paragraph until the next mark tag or double <br><br> tag
+  var paragraphText = "";
+  var node = paragraph;
+  while (node && !(node.nodeName === "MARK" || (node.nodeName === "BR" && node.nextElementSibling && node.nextElementSibling.nodeName === "BR"))) {
+    var lineText = node.textContent.trim();
+    paragraphText += lineText ? lineText + "\n" : "";
+    node = node.nextElementSibling;
+  }
 
+  // Create a temporary input element to copy the paragraph text
+  var tempInput = document.createElement("textarea");
+  tempInput.value = paragraphText;
+  document.body.appendChild(tempInput);
+  tempInput.select();
 
+  try {
+    var successful = document.execCommand("copy");
+    var message = successful ? "Paragraph text copied!" : "Copy command failed.";
+    console.log(message);
+
+    // Change the copy button icon to 'fa-check-double' temporarily
+    var copyButton = markTag.nextElementSibling;
+    copyButton.classList.remove("fa-copy");
+    copyButton.classList.add("fa-check-double");
+
+    // Set a timeout to revert the copy button icon to 'fa-copy' after 2 seconds
+    setTimeout(function () {
+      copyButton.classList.remove("fa-check-double");
+      copyButton.classList.add("fa-copy");
+    }, 2000);
+  } catch (err) {
+    console.error("Unable to copy paragraph text:", err);
+
+    // Change the copy button icon to 'fa-xmark'
+    var copyButton = markTag.nextElementSibling;
+    copyButton.classList.remove("fa-copy");
+    copyButton.classList.add("fa-xmark");
+
+    // Set a timeout to revert the copy button icon to 'fa-copy' after 5 seconds
+    setTimeout(function () {
+      copyButton.classList.remove("fa-xmark");
+      copyButton.classList.add("fa-copy");
+    }, 5000);
+  }
+
+  document.body.removeChild(tempInput);
+}
+
+// Initial addition of copy buttons
+addCopyButtons();
 
 
 //ACRONYM CONVERTER------------------------------------------
@@ -89,12 +136,18 @@ function convertToAcronyms() {
     var currentState = paragraph.innerHTML;
     
     if (currentState === originalParagraph) {
-    var convertedParagraph = convertNodeToAcronyms(paragraph.cloneNode(true));
-    paragraph.innerHTML = convertedParagraph;
-    button.textContent = "Restore Original";
+        var capitalizationButton = document.getElementById("capitalization-button");
+        capitalizationButton.style.display = "none";
+        keepCapitalizationHidden = true;
+        var convertedParagraph = convertNodeToAcronyms(paragraph.cloneNode(true));
+        paragraph.innerHTML = convertedParagraph;
+        button.textContent = "Restore Original";
     } else {
-    paragraph.innerHTML = originalParagraph;
-    button.textContent = "Convert to Acronyms";
+        var capitalizationButton = document.getElementById("capitalization-button");
+        capitalizationButton.style.display = "inline";
+        keepCapitalizationHidden = false;
+        paragraph.innerHTML = originalParagraph;
+        button.textContent = "Convert to Acronyms";
     }
 }
 
@@ -147,6 +200,12 @@ function toggleMarkedText(buttonId, paragraphId) {
     let hidden = false;
     let originalText = '';
 
+    // Show the buttons initially
+    const acronymButton = document.getElementById("acronym-button");
+    const capitalizationButton = document.getElementById("capitalization-button");
+    acronymButton.style.display = "inline";
+    capitalizationButton.style.display = "inline";
+
     toggleButton.addEventListener('click', () => {
         if (!hidden) {
             originalText = removeLyricsParagraph.innerHTML;
@@ -156,18 +215,25 @@ function toggleMarkedText(buttonId, paragraphId) {
             removeLyricsParagraph.innerHTML = modifiedText;
             toggleButton.innerText = `Show Labels`;
 
-            var acronymButton = document.getElementById("acronym-button");
+            // Hide the buttons
             acronymButton.style.display = "none";
-            } else {
-                removeLyricsParagraph.innerHTML = originalText;
-                toggleButton.innerText = `Hide Labels`;
+            capitalizationButton.style.display = "none";
+        } else {
+            removeLyricsParagraph.innerHTML = originalText;
+            toggleButton.innerText = `Hide Labels`;
 
-                var acronymButton = document.getElementById("acronym-button");
+            // Show the buttons
+            if (keepAcronymHidden !== true) {
                 acronymButton.style.display = "inline";
+            }
+            if (keepCapitalizationHidden !== true) {
+                capitalizationButton.style.display = "inline";
+            }
         }
         hidden = !hidden;
-        });
+    });
 }
+
 
 toggleMarkedText('mark-toggle-button', 'lyrics');
 
