@@ -73,55 +73,63 @@ function removeCopyButtons() {
 }
 
 function copyText(markTag) {
-  var paragraph = markTag.nextElementSibling;
-
-  // Collect the text content of the paragraph until the next mark tag or double <br><br> tag
-  var paragraphText = "";
-  var node = paragraph;
-  while (node && !(node.nodeName === "MARK" || (node.nodeName === "BR" && node.nextElementSibling && node.nextElementSibling.nodeName === "BR"))) {
-    var lineText = node.textContent.trim();
-    paragraphText += lineText ? lineText + "\n" : "";
-    node = node.nextElementSibling;
+    var paragraph = markTag.nextElementSibling;
+  
+    // Collect the text content of the paragraph until the next mark tag or double <br><br> tag
+    var paragraphText = "";
+    var node = paragraph;
+    while (node && !(node.nodeName === "MARK" || (node.nodeName === "BR" && node.nextElementSibling && node.nextElementSibling.nodeName === "BR"))) {
+      var lineText = node.textContent.trim();
+  
+      // Remove spaces before each line
+      lineText = lineText.replace(/^\s+/gm, '');
+  
+      paragraphText += lineText ? lineText + "\n" : "";
+      node = node.nextElementSibling;
+    }
+  
+    // Remove the trailing newline character
+    paragraphText = paragraphText.trim();
+  
+    // Create a temporary input element to copy the paragraph text
+    var tempInput = document.createElement("textarea");
+    tempInput.value = paragraphText;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+  
+    try {
+      var successful = document.execCommand("copy");
+      var message = successful ? "Paragraph text copied!" : "Copy command failed.";
+      console.log(message);
+  
+      // Change the copy button icon to 'fa-check-double' temporarily
+      var copyButton = markTag.nextElementSibling;
+      copyButton.classList.remove("fa-copy");
+      copyButton.classList.add("fa-check-double");
+  
+      // Set a timeout to revert the copy button icon to 'fa-copy' after 2 seconds
+      setTimeout(function () {
+        copyButton.classList.remove("fa-check-double");
+        copyButton.classList.add("fa-copy");
+      }, 2000);
+    } catch (err) {
+      console.error("Unable to copy paragraph text:", err);
+  
+      // Change the copy button icon to 'fa-xmark'
+      var copyButton = markTag.nextElementSibling;
+      copyButton.classList.remove("fa-copy");
+      copyButton.classList.add("fa-xmark");
+  
+      // Set a timeout to revert the copy button icon to 'fa-copy' after 5 seconds
+      setTimeout(function () {
+        copyButton.classList.remove("fa-xmark");
+        copyButton.classList.add("fa-copy");
+      }, 5000);
+    }
+  
+    document.body.removeChild(tempInput);
   }
-
-  // Create a temporary input element to copy the paragraph text
-  var tempInput = document.createElement("textarea");
-  tempInput.value = paragraphText;
-  document.body.appendChild(tempInput);
-  tempInput.select();
-
-  try {
-    var successful = document.execCommand("copy");
-    var message = successful ? "Paragraph text copied!" : "Copy command failed.";
-    console.log(message);
-
-    // Change the copy button icon to 'fa-check-double' temporarily
-    var copyButton = markTag.nextElementSibling;
-    copyButton.classList.remove("fa-copy");
-    copyButton.classList.add("fa-check-double");
-
-    // Set a timeout to revert the copy button icon to 'fa-copy' after 2 seconds
-    setTimeout(function () {
-      copyButton.classList.remove("fa-check-double");
-      copyButton.classList.add("fa-copy");
-    }, 2000);
-  } catch (err) {
-    console.error("Unable to copy paragraph text:", err);
-
-    // Change the copy button icon to 'fa-xmark'
-    var copyButton = markTag.nextElementSibling;
-    copyButton.classList.remove("fa-copy");
-    copyButton.classList.add("fa-xmark");
-
-    // Set a timeout to revert the copy button icon to 'fa-copy' after 5 seconds
-    setTimeout(function () {
-      copyButton.classList.remove("fa-xmark");
-      copyButton.classList.add("fa-copy");
-    }, 5000);
-  }
-
-  document.body.removeChild(tempInput);
-}
+  
 
 // Initial addition of copy buttons
 addCopyButtons();
