@@ -337,7 +337,7 @@ h2 {
    font-size: 32px;
    margin: 1rem auto;
 }
-#paragraphs p, #singles-paragraphs p {
+#paragraphs p {
    font-size: 16px;
 }
 .hidden {
@@ -931,7 +931,7 @@ img {
    height: 300px;
    padding: 0%;
 }
-#paragraphs p small a, #singles-paragraphs p small a {
+#paragraphs p small a {
    text-decoration: none;
    color: var(--light-lavender);
 }
