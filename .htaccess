@@ -33,8 +33,8 @@ RewriteEngine On
 RewriteRule ^home$ index.html [L]
 
 # Rewrite Rules For Tour Pages
-RewriteRule ^tours/speak-now-tour$ /Pages/Tours/Fearless-Tour/tour.html [L]
-RewriteRule ^tours/fearless-tour$ /Pages/Tours/Speak-Now-World-Tour/tour.html [L]
+RewriteRule ^tours/fearless-tour$ /Pages/Tours/Fearless-Tour/tour.html [L]
+RewriteRule ^tours/speak-now-tour$ /Pages/Tours/Speak-Now-World-Tour/tour.html [L]
 RewriteRule ^tours/red-tour$ /Pages/Tours/Red-Tour/tour.html [L]
 RewriteRule ^tours/1989-tour$ /Pages/Tours/1989-World-Tour/tour.html [L]
 RewriteRule ^tours/reputation-tour$ /Pages/Tours/Reputation-Stadium-Tour/tour.html [L]
