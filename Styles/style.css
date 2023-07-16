@@ -38,8 +38,11 @@ html {
 }
 /****Testing****/
 
-.greyed-out li{
+.greyed-out {
    color: grey;
+}
+.greyed-out:hover {
+   color: lightgrey;
 }
 
 
@@ -430,8 +433,33 @@ table {
    position: relative;
    height: 25rem;
 }
-.eras-tour-background {
-   background: url(../Images/eras-tour-image.webp);
+.tour-background-fearless {
+   background: url(../Images/Tour-Images/fearless-landing-image.webp);
+   position: relative;
+   height: 25rem;
+}
+.tour-background-speak-now {
+   background: url(../Images/Tour-Images/speak-now-landing-image.jpeg);
+   position: relative;
+   height: 25rem;
+}
+.tour-background-red {
+   background: url(../Images/Tour-Images/red-landing-image.jpeg);
+   position: relative;
+   height: 25rem;
+}
+.tour-background-1989 {
+   background: url(../Images/Tour-Images/1989-landing-image.jpeg);
+   position: relative;
+   height: 25rem;
+}
+.tour-background-reputation {
+   background: url(../Images/Tour-Images/reputation-landing-image.webp);
+   position: relative;
+   height: 25rem;
+}
+.tour-background-eras {
+   background: url(../Images/Tour-Images/eras-landing-image.webp);
    position: relative;
    height: 25rem;
 }
@@ -671,7 +699,7 @@ main {
 .unreleased-background main, .unreleased-background-special main {
    font-family: 'Lobster';
 }
-.tours-background main, .eras-tour-background main{
+.tours-background main, .tour-background-fearless main, .tour-background-speak-now main, .tour-background-red main, .tour-background-1989 main, .tour-background-reputation main, .tour-background-eras main{
    font-family: 'Pacifico';
 }
 body {
