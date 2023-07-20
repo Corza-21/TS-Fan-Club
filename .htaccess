@@ -33,16 +33,16 @@ RewriteEngine On
 RewriteRule ^home$ index.html [L]
 
 # Rewrite Rules For Album Cover Images
-RewriteRule ^Images/Album-Covers/ts1.webp$ /taylor-swift-cover [R=301,L]
-RewriteRule ^Images/Album-Covers/ts2.webp$ /fearless-cover [R=301,L]
-RewriteRule ^Images/Album-Covers/ts3.webp$ /speak-now-cover [R=301,L]
-RewriteRule ^Images/Album-Covers/ts4.webp$ /red-cover [R=301,L]
-RewriteRule ^Images/Album-Covers/ts5.webp$ /1989-cover [R=301,L]
-RewriteRule ^Images/Album-Covers/ts6.webp$ /reputation-cover [R=301,L]
-RewriteRule ^Images/Album-Covers/ts7.webp$ /lover-cover [R=301,L]
-RewriteRule ^Images/Album-Covers/ts8.webp$ /folklore-cover [R=301,L]
-RewriteRule ^Images/Album-Covers/ts9.webp$ /evermore-cover [R=301,L]
-RewriteRule ^Images/Album-Covers/ts10.webp$ /midnights-cover [R=301,L]
+RewriteRule ^taylor-swift-cover$ /Images/Album-Covers/ts1.webp [R=301,L]
+RewriteRule ^fearless-cover$ /Images/Album-Covers/ts2.webp [R=301,L]
+RewriteRule ^speak-now-cover$ /Images/Album-Covers/ts3.webp [R=301,L]
+RewriteRule ^red-cover$ /Images/Album-Covers/ts4.webp [R=301,L]
+RewriteRule ^1989-cover$ /Images/Album-Covers/ts5.webp [R=301,L]
+RewriteRule ^reputation-cover$ /Images/Album-Covers/ts6.webp [R=301,L]
+RewriteRule ^lover-cover$ /Images/Album-Covers/ts7.webp [R=301,L]
+RewriteRule ^folklore-cover$ /Images/Album-Covers/ts8.webp [R=301,L]
+RewriteRule ^evermore-cover$ /Images/Album-Covers/ts9.webp [R=301,L]
+RewriteRule ^midnights-cover$ /Images/Album-Covers/ts10.webp [R=301,L]
 
 # Rewrite Rules For Tour Pages
 RewriteRule ^tours/fearless-tour$ /Pages/Tours/Fearless-Tour/tour.html [L]
