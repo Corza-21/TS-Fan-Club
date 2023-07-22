@@ -606,6 +606,6 @@ RewriteRule ^midnights/glitch-bridge$ /Audio/Bridges/10-Midnights/18-glitch.mp3 
 RewriteRule ^midnights/wouldve-couldve-shouldve-bridge$ /Audio/Bridges/10-Midnights/19-wouldve-couldve-shouldve.mp3 [L]
 RewriteRule ^midnights/dear-reader-bridge$ /Audio/Bridges/10-Midnights/20-dear-reader.mp3 [L]
 RewriteRule ^midnights/hits-different-bridge$ /Audio/Bridges/10-Midnights/21-hits-different.mp3 [L]
-RewriteRule ^midnights/karma-remix-bridge$ /Audio/Bridges/10-Midnights/22-karma-remix.mp3 [L]
-RewriteRule ^midnights/snow-on-the-beach-more-lana-bridge$ /Audio/Bridges/10-Midnights/23-snow-on-the-beach-more-lana.mp3 [L]
+RewriteRule ^midnights/snow-on-the-beach-more-lana-bridge$ /Audio/Bridges/10-Midnights/22-snow-on-the-beach-more-lana.mp3 [L]
+RewriteRule ^midnights/karma-remix-bridge$ /Audio/Bridges/10-Midnights/23-karma-remix.mp3 [L]
 RewriteRule ^midnights/youre-losing-me-bridge$ /Audio/Bridges/10-Midnights/24-youre-losing-me.mp3 [L]
