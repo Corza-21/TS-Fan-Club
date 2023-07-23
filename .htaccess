@@ -33,6 +33,13 @@ RewriteEngine On
 RewriteRule ^home$ index.html [L]
 
 # Rewrite Rules For Album Cover Images
+RewriteRule ^taylor-swift-cover-old$ /Images/Album-Covers/ts1-old.webp [L]
+RewriteRule ^fearless-cover-old$ /Images/Album-Covers/ts2-old.webp [L]
+RewriteRule ^speak-now-cover-old$ /Images/Album-Covers/ts3-old.webp [L]
+RewriteRule ^red-cover-old$ /Images/Album-Covers/ts4-old.webp [L]
+RewriteRule ^1989-cover-old$ /Images/Album-Covers/ts5-old.webp [L]
+RewriteRule ^reputation-cover-old$ /Images/Album-Covers/ts6-old.webp [L]
+
 RewriteRule ^taylor-swift-cover$ /Images/Album-Covers/ts1.webp [L]
 RewriteRule ^fearless-cover$ /Images/Album-Covers/ts2.webp [L]
 RewriteRule ^speak-now-cover$ /Images/Album-Covers/ts3.webp [L]
