@@ -1,5 +1,14 @@
 //testing----------------------------------------------------
 
+
+    // Add a click event listener to the button
+    document.getElementById('backButton').addEventListener('click', function() {
+        // Use the window.history object to go back one step in the browser's history
+        window.history.back();
+    });
+
+
+
 var originalText = "";
 var isCapitalized = false;
 keepAcronymHidden = false;
