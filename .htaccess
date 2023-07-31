@@ -32,6 +32,12 @@ RewriteEngine On
 # Rewrite Rule For Index File
 RewriteRule ^home$ index.html [L]
 
+# Rewrite Rules For js Files
+RewriteRule ^darkmode.js$ /Script/darkmode.js [L]
+RewriteRule ^games.js$ /Script/games.js [L]
+RewriteRule ^project.js$ /Script/project.js [L]
+RewriteRule ^script.js$ /Script/script.js [L]
+
 # Rewrite Rules For Album Cover Images
 RewriteRule ^taylor-swift-cover-old$ /Images/Album-Covers/ts1-old.webp [L]
 RewriteRule ^fearless-cover-old$ /Images/Album-Covers/ts2-old.webp [L]
