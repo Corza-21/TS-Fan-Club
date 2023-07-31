@@ -23184,4 +23184,59 @@ function displayResults(results, keyword) {
 // Add event listener
 document.addEventListener('keyup', handleKeyUp);
 
+// Acronym Searcher------------------------------------------
+
+// Sample acronym and its meaning data
+const acronymData = {
+    "iftye": "I forgot that you existed",
+    "brb": "Be right back",
+    "lol": "Laugh out loud",
+    // Add more acronyms and their meanings here
+};
+
+const options = {
+    includeScore: true,
+    threshold: 0.4, // Adjust this threshold to control the fuzziness level (0 to 1)
+};
+
+function searchAcronym() {
+    const inputElement = document.getElementById("acronymInput");
+    const resultElement = document.getElementById("result");
+
+    const acronym = inputElement.value.trim().toLowerCase(); // Convert input to lowercase
+
+    const fuse = new Fuse(Object.keys(acronymData), options);
+    const results = fuse.search(acronym);
+
+    if (results.length > 0 && results[0].score < options.threshold) {
+        const bestMatch = results[0].item;
+        const meaning = acronymData[bestMatch];
+        if (bestMatch === acronym) {
+            resultElement.textContent = `Exact match found for "${acronym}" - ${meaning}`;
+        } else {
+            resultElement.textContent = `Closest match found for "${acronym}" is "${bestMatch}" - ${meaning}`;
+        }
+    } else {
+        resultElement.textContent = `No match found for "${acronym}"`;
+    }
+}
+
+// Handle keyup event
+function handleKeyUp(event) {
+    const searchInput = document.getElementById("acronymInput");
+    if (event.key === '/') {
+        event.preventDefault();
+        searchInput.focus(); // Set focus back to the input field
+    } else if (event.key === 'Enter') {
+        if (event.target === searchInput) {
+            event.preventDefault();
+            searchAcronym(); // Call the acronym search function
+        }
+    }
+}
+
+// Add event listener for keyup
+document.addEventListener("keyup", handleKeyUp);
+
+
 // END OF DOCUMENT --------------------------
