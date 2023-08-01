@@ -65,6 +65,7 @@ RewriteRule ^unreleased$ /Pages/Album-Pages/unreleased.html [L]
 RewriteRule ^bridges$ /Pages/Album-Pages/bridges.html [L]
 RewriteRule ^tours$ /Pages/Tours/tours.html [L]
 RewriteRule ^what-ticketmaster-did$ /Pages/what-ticketmaster-did.html [L]
+RewriteRule ^acronym-searcher$ /Pages/acronym-searcher.html [L]
 
 # Rewrite Rules For Album Pages
 RewriteRule ^taylor-swift$ /Pages/Album-Pages/ts1.html [L]
