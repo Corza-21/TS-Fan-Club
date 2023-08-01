@@ -727,6 +727,9 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 /*******MAIN/BODY*******/
 .main {
    padding-top: 3.375rem;
+   display: flex; /* Use Flexbox to fill the available vertical space */
+   flex-direction: column; /* Stack child elements vertically */
+   min-height: 100vh; /* Set minimum height to at least full viewport height */
 }
 main {
    font-family: 'Roboto Mono', 'Helvetica'; 
@@ -819,7 +822,7 @@ footer {
    right: 0px;
    color: var(--dark-purple);
    float: center;
-   
+   margin-top: auto;
 }
 .underline-animation {
    color: var(--dark-purple);
@@ -1605,6 +1608,21 @@ input[type="radio"]:checked + img {
    background: white;
    min-width: 250px;
 }
+.acronym-input-wrapper {
+   position: relative; /* To allow absolute positioning of the line */
+   margin: 20px; /* Add margin as needed for spacing */
+}
+.acronym-input-wrapper input[type="text"] {
+   color: var(--white);
+   font-size: 26px;
+   border: none; /* Remove default border */
+   border-bottom: 1px solid #999; /* Add a 1px line at the bottom */
+   background: transparent; /* Set the background to transparent */
+   outline: none; /* Remove the focus outline */
+   padding: 5px 0; /* Add some vertical padding as needed */
+   width: 30%; /* Make the input field occupy the full width of the container */
+   text-align: center; /* Center the text within the input field */
+}
 .games-buttons {
    background-color: transparent;
    border-radius: 10px;
@@ -1744,6 +1762,12 @@ input[type="radio"]:checked + img {
    .album-cover {
       width: 200px;
       height: auto;
+   }
+   .acronym-container {
+      width: 80%;
+   }
+   .acronym-input-wrapper input[type="text"] {
+      width: 70%; /* Make the input field occupy the full width of the container */
    }
 }
 @media screen and (max-width: 1000px) {

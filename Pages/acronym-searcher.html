@@ -24,7 +24,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/deec24d314.js" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-92RLWVWV1J"></script>
         <script>
@@ -78,11 +78,16 @@
         </header>
     <div class="main">
         <main>
-            <h1>Taylor Swift Acronym Searcher</h1>
+            <h1 style="font-family: 'Abril Fatface'; margin-top: 40px; font-size: 48px;">Taylor Swift Acronym Searcher</h1>
         </main>
-        <input type="text" id="acronymInput" placeholder="Enter an acronym...">
-        <button onclick="searchAcronym()">Search</button>
-        <div id="result"></div>
+        <div class="search-container">
+            <div class="acronym-input-wrapper">
+                <input type="text" id="acronymInput" placeholder="Enter an acronym..." onkeyup="handleKeyUp(event)">
+            </div>
+            <i id="clearButton" class="fas fa-xmark button" onclick="clearInput()"></i>
+        </div>
+            <div id="result"></div>
+        </div>
         <footer>
             <div class="socials">
                 <a class="social header-footer-icon" href="https://github.com/Corza-21/TS-Fan-Club" target="_blank"><i class="fas fa-code"></i></a>
@@ -110,229 +115,235 @@
     <script>
         // Acronym Searcher------------------------------------------
 
-// Sample acronym and its meaning data
-const acronymData = {
-    // Taylor Swift
-    "TM": "Tim McGraw",
-    "PTB": "Picture To Burn",
-    "TOMG": "Teardrops On My Guitar",
-    "APITW": "A Place In This World",
-    "CAY": "Cold As You",
-    "TO": "The Outside",
-    "TTWAS": "Tied Together With A Smile",
-    "SB": "Stay Beautiful",
-    "SSN": "Should've Said No",
-    "MS": "Mary's Song",
-    "OS": "Our Song",
-    "IOMWIWY": "I'm Only Me When I'm With You",
-    "APGH": "A Perfectly Good Heart",
-    // Fearless
-    "LS": "Love Story",
-    "HS": "Hey Stephen",
-    "WH": "White Horse",
-    "TMW": "Tell Me Why",
-    "YNS": "You're Not Sorry",
-    "TWILY": "The Way I Loved You",
-    "FAA": "Forever & Always",
-    "F&A": "Forever & Always",
-    "TBD": "The Best Day",
-    "JTF": "Jump Then Fall",
-    "CIWTR": "Come In With The Rain",
-    "TOSOTD": "The Other Side Of The Door",
-    "TWAF": "Today Was A Fairytale",
-    "YAOM": "You All Over Me",
-    "MPF": "Mr. Perfectly Fine",
-    "WWH": "We Were Happy",
-    "TW": "That's When",
-    "DY": "Don't You",
-    "BBB": "Bye Bye Baby",
-    "ITWAM": "If This Was A Movie",
-    // Speak Now
-    "SF": "Sparks Fly",
-    "BTD": "Back To December",
-    "SN": ["Speak Now", "Sweet Nothing", "Silent Night"],
-    "DJ": "Dear John",
-    "TSOU": "The Story Of Us",
-    "NGU": "Never Grow Up",
-    "BTR": "Better Than Revenge",
-    "LK": "Last Kiss",
-    "LL": "Long Live",
-    "ET": "Electric Touch",
-    "WEFIL": "When Emma Falls In Love",
-    "ICSY": "I Can See You",
-    "CC": "Castles Crumbling",
-    "FO": "Foolish One",
-    // Red
-    "SOG": "State Of Grace",
-    "IKYWT": "I Knew You Were Trouble",
-    "ATW": "All Too Well",
-    "IAD": "I Almost Do",
-    "WANEGBT": "We Are Never Ever Getting Back Together",
-    "SSS": "Stay Stay Stay",
-    "TLT": "The Last Time",
-    "HG": "Holy Ground",
-    "SBT": "Sad Beautiful Tragic",
-    "TLO": "The Lucky One",
-    "EHC": "Everything Has Changed",
-    "BA": "Begin Again",
-    "TMIK": "The Moment I Knew",
-    "CBBH": "Come Back...Be Here",
-    "GAH": "Girl At Home",
-    "BM": "Better Man",
-    "NN": "Nothing New",
-    "MIAB": "Message In A Bottle",
-    "IBYTAM": "I Bet You Think About Me",
-    "FW": "Forever Winter",
-    "TVFN": "The Very First Night",
-    "ATWTMV": "All Too Well (10 Minute Version)",
-    "ATW10": "All Too Well (10 Minute Version)",
-    "SAS": "Safe & Sound",
-    "S&S": "Safe & Sound",
-    "EO": "Eyes Open",
-    // 1989
-    "WTNY": "Welcome To New York",
-    "BS": "Blank Space",
-    "OOTW": "Out Of The Woods",
-    "AYHTDWS": "All You Had To Do Was Stay",
-    "SIO": "Shake It Off",
-    "IWYW": "I Wish You Would",
-    "BB": "Bad Blood",
-    "WD": "Wildest Dreams",
-    "HYGTG": "How You Get The Girl",
-    "TL": ["This Love", "the lakes"],
-    "IKP": "I Know Places",
-    "YAIL": "You Are In Love",
-    "NR": "New Romantics",
-    // reputation
-    "RFI": "...Ready For It?",
-    "EG": "End Game",
-    "IDSB": "I Did Something Bad",
-    "DBM": "Don't Blame Me",
-    "LWYMMD": "Look What You Made Me Do",
-    "SIG": "So It Goes...",
-    "GC": "Getaway Car",
-    "KOMH": "King Of My Heart",
-    "DWOHT": "Dancing With Our Hands Tied",
-    "TIWWCHNT": "This Is Why We Can't Have Nice Things",
-    "CIWYW": "Call It What You Want",
-    "NYD": "New Year's Day",
-    // Lover
-    "IFTYE": "I Forgot That You Existed",
-    "CS": ["Cruel Summer", "Cornelia Street"],
-    "TM": "The Man",
-    "TA": "The Archer",
-    "ITHK": "I Think He Knows",
-    "MAATHP": "Miss Americana & The Heartbreak Prince",
-    "MA&THP": "Miss Americana & The Heartbreak Prince",
-    "PR": "Paper Rings",
-    "DBATC": "Death By A Thousand Cuts",
-    "LB": "London Boy",
-    "SYGB": "Soon You'll Get Better",
-    "FG": "False God",
-    "YNTCD": "You Need To Calm Down",
-    "INTHAF": "It's Nice To Have A Friend",
-    "AOTGYLB": "All Of The Girls You Loved Before",
-    // folklore
-    "TO": "the 1",
-    "T1": "the 1",
-    "TLGAD": "the last great american dynasty",
-    "MTR": "my tears ricochet",
-    "TIMT": "this is me trying",
-    "IA": "illicit affairs",
-    "IS": "invisible string",
-    "MW": "mad woman",
-    // evermore
-    "CP": "champagne problems",
-    "GR": "gold rush",
-    "TTDS": "'tis the damn season",
-    "TI": "tolerate it",
-    "NBNC": "no body, no crime",
-    "CI": "coney island",
-    "CLM": "cowboy like me",
-    "LSS": "long story short",
-    "RWYLM": "right where you left me",
-    "ITTG": "it's time to go",
-    // Midnights
-    "LH": "Lavender Haze",
-    "AH": "Anti-Hero",
-    "SOTB": "Snow On The Beach",
-    "YOYOK": "You're On Your Own, Kid",
-    "MR": "Midnight Rain",
-    "VS": "Vigilante Shit",
-    "TGW": "The Great War",
-    "BTTWS": "Bigger Than The Whole Sky",
-    "HI": "High Infidelity",
-    "WCS": "Would've, Could've, Should've",
-    "DR": "Dear Reader",
-    "HD": "Hits Different",
-    "YLM": "You're Losing Me",
-    // Singles/Christmas
-    "BG": "Beautiful Ghosts",
-    "BOU": "Both Of Us",
-    "HDC": "Highway Don't Care",
-    "IDWLF": "I Don't Wanna Live Forever",
-    "OTY": "Only The Young",
-    "STF": "Sweeter Than Fiction",
-    "TA": "The Alcott",
-    "TJATQ": "The Joker And The Queen",
-    "TIBTO": "Two Is Better Than One",
-    "LC": "Last Christmas",
-    "CWYWM": "Christmases When You Were Mine",
-    "SB": "Santa Baby",
-    "CMBSM": "Christmas Must Be Something More",
-    "WC": "White Christmas",
-    "CTF": "Christmas Tree Farm",
-};
+        // Sample acronym and its meaning data
+        const acronymData = {
+            // Taylor Swift
+            "TM": "Tim McGraw",
+            "PTB": "Picture To Burn",
+            "TOMG": "Teardrops On My Guitar",
+            "APITW": "A Place In This World",
+            "CAY": "Cold As You",
+            "TO": "The Outside",
+            "TTWAS": "Tied Together With A Smile",
+            "SB": "Stay Beautiful",
+            "SSN": "Should've Said No",
+            "MS": "Mary's Song",
+            "OS": "Our Song",
+            "IOMWIWY": "I'm Only Me When I'm With You",
+            "APGH": "A Perfectly Good Heart",
+            // Fearless
+            "LS": "Love Story",
+            "HS": "Hey Stephen",
+            "WH": "White Horse",
+            "TMW": "Tell Me Why",
+            "YNS": "You're Not Sorry",
+            "TWILY": "The Way I Loved You",
+            "FAA": "Forever & Always",
+            "F&A": "Forever & Always",
+            "TBD": "The Best Day",
+            "JTF": "Jump Then Fall",
+            "CIWTR": "Come In With The Rain",
+            "TOSOTD": "The Other Side Of The Door",
+            "TWAF": "Today Was A Fairytale",
+            "YAOM": "You All Over Me",
+            "MPF": "Mr. Perfectly Fine",
+            "WWH": "We Were Happy",
+            "TW": "That's When",
+            "DY": "Don't You",
+            "BBB": "Bye Bye Baby",
+            "ITWAM": "If This Was A Movie",
+            // Speak Now
+            "SF": "Sparks Fly",
+            "BTD": "Back To December",
+            "SN": ["Speak Now", "Sweet Nothing", "Silent Night"],
+            "DJ": "Dear John",
+            "TSOU": "The Story Of Us",
+            "NGU": "Never Grow Up",
+            "BTR": "Better Than Revenge",
+            "LK": "Last Kiss",
+            "LL": "Long Live",
+            "ET": "Electric Touch",
+            "WEFIL": "When Emma Falls In Love",
+            "ICSY": "I Can See You",
+            "CC": "Castles Crumbling",
+            "FO": "Foolish One",
+            // Red
+            "SOG": "State Of Grace",
+            "IKYWT": "I Knew You Were Trouble",
+            "ATW": "All Too Well",
+            "IAD": "I Almost Do",
+            "WANEGBT": "We Are Never Ever Getting Back Together",
+            "SSS": "Stay Stay Stay",
+            "TLT": "The Last Time",
+            "HG": "Holy Ground",
+            "SBT": "Sad Beautiful Tragic",
+            "TLO": "The Lucky One",
+            "EHC": "Everything Has Changed",
+            "BA": "Begin Again",
+            "TMIK": "The Moment I Knew",
+            "CBBH": "Come Back...Be Here",
+            "GAH": "Girl At Home",
+            "BM": "Better Man",
+            "NN": "Nothing New",
+            "MIAB": "Message In A Bottle",
+            "IBYTAM": "I Bet You Think About Me",
+            "FW": "Forever Winter",
+            "TVFN": "The Very First Night",
+            "ATWTMV": "All Too Well (10 Minute Version)",
+            "ATW10": "All Too Well (10 Minute Version)",
+            "SAS": "Safe & Sound",
+            "S&S": "Safe & Sound",
+            "EO": "Eyes Open",
+            // 1989
+            "WTNY": "Welcome To New York",
+            "BS": "Blank Space",
+            "OOTW": "Out Of The Woods",
+            "AYHTDWS": "All You Had To Do Was Stay",
+            "SIO": "Shake It Off",
+            "IWYW": "I Wish You Would",
+            "BB": "Bad Blood",
+            "WD": "Wildest Dreams",
+            "HYGTG": "How You Get The Girl",
+            "TL": ["This Love", "the lakes"],
+            "IKP": "I Know Places",
+            "YAIL": "You Are In Love",
+            "NR": "New Romantics",
+            // reputation
+            "RFI": "...Ready For It?",
+            "EG": "End Game",
+            "IDSB": "I Did Something Bad",
+            "DBM": "Don't Blame Me",
+            "LWYMMD": "Look What You Made Me Do",
+            "SIG": "So It Goes...",
+            "GC": "Getaway Car",
+            "KOMH": "King Of My Heart",
+            "DWOHT": "Dancing With Our Hands Tied",
+            "TIWWCHNT": "This Is Why We Can't Have Nice Things",
+            "CIWYW": "Call It What You Want",
+            "NYD": "New Year's Day",
+            // Lover
+            "IFTYE": "I Forgot That You Existed",
+            "CS": ["Cruel Summer", "Cornelia Street"],
+            "TM": "The Man",
+            "TA": "The Archer",
+            "ITHK": "I Think He Knows",
+            "MAATHP": "Miss Americana & The Heartbreak Prince",
+            "MA&THP": "Miss Americana & The Heartbreak Prince",
+            "PR": "Paper Rings",
+            "DBATC": "Death By A Thousand Cuts",
+            "LB": "London Boy",
+            "SYGB": "Soon You'll Get Better",
+            "FG": "False God",
+            "YNTCD": "You Need To Calm Down",
+            "INTHAF": "It's Nice To Have A Friend",
+            "AOTGYLB": "All Of The Girls You Loved Before",
+            // folklore
+            "TO": "the 1",
+            "T1": "the 1",
+            "TLGAD": "the last great american dynasty",
+            "MTR": "my tears ricochet",
+            "TIMT": "this is me trying",
+            "IA": "illicit affairs",
+            "IS": "invisible string",
+            "MW": "mad woman",
+            // evermore
+            "CP": "champagne problems",
+            "GR": "gold rush",
+            "TTDS": "'tis the damn season",
+            "TI": "tolerate it",
+            "NBNC": "no body, no crime",
+            "CI": "coney island",
+            "CLM": "cowboy like me",
+            "LSS": "long story short",
+            "RWYLM": "right where you left me",
+            "ITTG": "it's time to go",
+            // Midnights
+            "LH": "Lavender Haze",
+            "AH": "Anti-Hero",
+            "SOTB": "Snow On The Beach",
+            "YOYOK": "You're On Your Own, Kid",
+            "MR": "Midnight Rain",
+            "VS": "Vigilante Shit",
+            "TGW": "The Great War",
+            "BTTWS": "Bigger Than The Whole Sky",
+            "HI": "High Infidelity",
+            "WCS": "Would've, Could've, Should've",
+            "DR": "Dear Reader",
+            "HD": "Hits Different",
+            "YLM": "You're Losing Me",
+            // Singles/Christmas
+            "BG": "Beautiful Ghosts",
+            "BOU": "Both Of Us",
+            "HDC": "Highway Don't Care",
+            "IDWLF": "I Don't Wanna Live Forever",
+            "OTY": "Only The Young",
+            "STF": "Sweeter Than Fiction",
+            "TA": "The Alcott",
+            "TJATQ": "The Joker And The Queen",
+            "TIBTO": "Two Is Better Than One",
+            "LC": "Last Christmas",
+            "CWYWM": "Christmases When You Were Mine",
+            "SB": "Santa Baby",
+            "CMBSM": "Christmas Must Be Something More",
+            "WC": "White Christmas",
+            "CTF": "Christmas Tree Farm",
+        };
+        
+        function searchAcronym() {
+        const inputElement = document.getElementById("acronymInput");
+        const resultElement = document.getElementById("result");
 
-const options = {
-    includeScore: true,
-    threshold: 0.4, // Adjust this threshold to control the fuzziness level (0 to 1)
-};
+        const acronym = inputElement.value.trim().toLowerCase(); // Convert input to lowercase
 
-function searchAcronym() {
-    const inputElement = document.getElementById("acronymInput");
-    const resultElement = document.getElementById("result");
-
-    const acronym = inputElement.value.trim().toLowerCase(); // Convert input to lowercase
-
-    const fuse = new Fuse(Object.keys(acronymData), options);
-    const results = fuse.search(acronym);
-
-    if (results.length > 0 && results[0].score < options.threshold) {
-        const bestMatch = results[0].item;
-        const meanings = acronymData[bestMatch];
-
-        if (Array.isArray(meanings)) {
-            // The acronym has multiple meanings
-            resultElement.textContent = `Possible meanings of "${bestMatch}":\n`;
-            meanings.forEach((meaning) => {
-                resultElement.textContent += `- ${meaning}\n`;
-            });
+        if (acronym === '') {
+            // Clear the results when the input is empty
+            resultElement.innerHTML = '';
         } else {
-            // The acronym has a single meaning
-            resultElement.textContent = `The meaning of "${bestMatch}" is: ${meanings}`;
-        }
-    } else {
-        resultElement.textContent = `No match found for "${acronym}"`;
-    }
-}
+            const matchingAcronyms = Object.keys(acronymData).filter(acr => acr.toLowerCase().includes(acronym));
 
-// Handle keyup event
-function handleKeyUp(event) {
-    const searchInput = document.getElementById("acronymInput");
-    if (event.key === '/') {
-        event.preventDefault();
-        searchInput.focus(); // Set focus back to the input field
-    } else if (event.key === 'Enter') {
-        if (event.target === searchInput) {
-            event.preventDefault();
-            searchAcronym(); // Call the acronym search function
+            if (matchingAcronyms.length > 0) {
+                // Sort the matching acronyms alphabetically
+                matchingAcronyms.sort();
+
+                const numResults = matchingAcronyms.length;
+                let resultText = `<strong>${numResults} matching ${numResults === 1 ? 'result' : 'results'}:</strong><br>`;
+                matchingAcronyms.forEach((acronym) => {
+                    const meanings = acronymData[acronym];
+                    resultText += `<p style="margin-top: 10px; margin-bottom: 10px;">- ${acronym}: ${Array.isArray(meanings) ? meanings.join(', ') : meanings}</p>`;
+                });
+                resultElement.innerHTML = resultText;
+            } else {
+                resultElement.innerHTML = "No matching acronyms found";
+            }
         }
     }
-}
-
-// Add event listener for keyup
-document.addEventListener("keyup", handleKeyUp);
+        
+        // Add event listener for keyup to perform search on every keypress
+        const inputElement = document.getElementById("acronymInput");
+        inputElement.addEventListener("keyup", searchAcronym);
+        
+        // Handle keyup event
+        function handleKeyUp(event) {
+            const searchInput = document.getElementById("acronymInput");
+            if (event.key === '/') {
+                event.preventDefault();
+                searchInput.focus(); // Set focus back to the input field
+            } else if (event.key === 'Enter') {
+                if (event.target === searchInput) {
+                    event.preventDefault();
+                    searchAcronym(); // Call the acronym search function
+                }
+            }
+        }
+        
+        function clearInput() {
+            const searchInput = document.getElementById("searchInput");
+            searchInput.value = ""; // Clear the input field
+            searchInput.focus(); // Set focus back to the input field
+        }
+        
+        // Add event listener for keyup
+        document.addEventListener("keyup", handleKeyUp);
     </script>
     </body>
 </html>
