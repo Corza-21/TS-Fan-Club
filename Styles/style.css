@@ -717,7 +717,7 @@ body.darkmode {
    background-color: #ffffff;
    color: #183052;
    }
-.darkmode .list-item, .darkmode .no-bridge, .darkmode .as-title {
+.darkmode .list-item, .darkmode .no-bridge, .darkmode .as-title, .darkmode .acronym-input-wrapper input[type="text"] {
    color: #183058;
 }
 
