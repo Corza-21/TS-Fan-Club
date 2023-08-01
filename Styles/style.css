@@ -38,6 +38,18 @@ html {
 }
 /****Testing****/
 
+.as-title {
+   color: var(--white);
+   font-family: 'Abril Fatface';
+   margin-top: 40px;
+   font-size: 48px;
+}
+
+
+
+
+
+
 .area {
    margin-top: 40px;
    display: flex;
@@ -705,7 +717,7 @@ body.darkmode {
    background-color: #ffffff;
    color: #183052;
    }
-.darkmode .list-item, .darkmode .no-bridge {
+.darkmode .list-item, .darkmode .no-bridge, .darkmode .as-title {
    color: #183058;
 }
 
