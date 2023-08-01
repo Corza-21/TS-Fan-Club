@@ -720,6 +720,9 @@ body.darkmode {
 .darkmode .list-item, .darkmode .no-bridge, .darkmode .as-title, .darkmode .acronym-input-wrapper input[type="text"] {
    color: #183058;
 }
+.darkmode .acronym-input-wrapper input[type="text"] {
+   border: 3px solid black;
+}
 
 input[type=number] {
    padding: 10px;
@@ -1628,7 +1631,7 @@ input[type="radio"]:checked + img {
    color: var(--white);
    font-size: 26px;
    border: none; /* Remove default border */
-   border-bottom: 1px solid #999; /* Add a 1px line at the bottom */
+   border-bottom: 3px solid white; /* Add a 1px line at the bottom */
    background: transparent; /* Set the background to transparent */
    outline: none; /* Remove the focus outline */
    padding: 5px 0; /* Add some vertical padding as needed */
