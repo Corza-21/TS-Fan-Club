@@ -721,7 +721,7 @@ body.darkmode {
    color: #183058;
 }
 .darkmode .acronym-input-wrapper input[type="text"] {
-   border: 3px solid black;
+   border-bottom: 3px solid black;
 }
 
 input[type=number] {
