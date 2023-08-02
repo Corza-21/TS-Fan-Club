@@ -1821,6 +1821,12 @@ input[type="radio"]:checked + img {
    .acronym-input-wrapper input[type="text"] {
       width: 70%; /* Make the input field occupy the full width of the container */
    }
+   .beautiful-box {
+      width: 70%;
+   }
+   .half-beautiful-box {
+      width: 34.5%;
+   }
 }
 @media screen and (max-width: 1000px) {
    .lyrics-link {
