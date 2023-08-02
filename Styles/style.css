@@ -38,6 +38,43 @@ html {
 }
 /****Testing****/
 
+
+.beautiful-box {
+   margin: auto;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   padding: 10px;
+   width: 40%;
+   border: 3px solid white;
+   border-radius: 10px;
+   color: #183058;
+}
+.beautiful-box-1 {
+   background: linear-gradient(to right, #8360c3, #2ebf91);
+}
+.beautiful-box-2 {
+   background: linear-gradient(to left, #8360c3, #2ebf91);
+}
+.half-beautiful-box {
+   margin: auto;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   padding: 10px;
+   width: 19.5%;
+   border: 3px solid white;
+   display: inline-block;
+   background: linear-gradient(to right, #009fff, #ec2f4b);
+   border-radius: 10px;
+}
+.half-beautiful-box a {
+   color: #183058;
+}
+
+
+
+
+
+
 .as-title {
    color: var(--white);
    font-family: 'Abril Fatface';
