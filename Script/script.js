@@ -297,22 +297,6 @@ copyButton.addEventListener('click', () => {
     copyTextToClipboard('lyrics');
 });
 
-//NAVIGATION OVERLAY---------------------------------
-function openNav() {
-    document.getElementById("myNav").style.width = "100%";
-}
-function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
-}
-function toggleNav() {
-    var nav = document.getElementById("myNav");
-    if (nav.style.width === "100%") {
-        closeNav();
-    } else {
-        openNav();
-    }
-}
-
 //IMAGE-SLIDER---------------------------------------
 /*
 const swiper = new Swiper(".swiper", {
