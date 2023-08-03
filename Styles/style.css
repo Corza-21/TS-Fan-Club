@@ -779,9 +779,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 /*******MAIN/BODY*******/
 .main {
    padding-top: 3.375rem;
-   display: flex; /* Use Flexbox to fill the available vertical space */
-   flex-direction: column; /* Stack child elements vertically */
-   min-height: 100vh; /* Set minimum height to at least full viewport height */
 }
 main {
    font-family: 'Roboto Mono', 'Helvetica'; 
