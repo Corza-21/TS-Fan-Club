@@ -293,6 +293,8 @@ th, td {
    font-size: smaller;
    margin-bottom: 5px;
    color: var(--white);
+   display: inline-block;
+   margin: 4px auto;
 }
 #mark-toggle-button {
    background-color:#5e20c1;
