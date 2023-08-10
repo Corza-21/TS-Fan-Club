@@ -95,9 +95,13 @@
             </div>
             <input type="file" id="file-input" style="display: none;">
             <div id="filtered-image"></div>
-            <a id="download-button" class="half-beautiful-box disguise" style="display: none; color: #183058;" download="1989-blue-filtered-image.png"><button>Download</button></a>
-            <a id="download-button" style="display: none;">Download</a>
-            <a id="save-to-photos-mobile-button" class="half-beautiful-box disguise" style="display: none; color: #183058;">Save to Photos (Mobile)</a>
+            <a id="download-button" class="half-beautiful-box disguise" style="display: none; color: #183058;" download="1989-blue-filtered-image.png">
+                <button>Download</button>
+            </a>
+            <!-- Add the Save to Photos (Mobile) button -->
+            <a id="save-to-photos-mobile-button" class="half-beautiful-box disguise" style="display: none; color: #183058;">
+                <button>Save to Photos (Mobile)</button>
+            </a>
         </main>
         <footer>
             <div class="socials">
@@ -188,22 +192,6 @@
                         data[i] = contrasted;         // Red channel
                         data[i + 1] = contrasted;     // Green channel
                         data[i + 2] = contrasted;     // Blue channel
-
-
-                            // Show the "Download" button
-                            downloadButton.style.display = "block";
-                                            
-                        // Set download link attributes
-                        downloadButton.href = canvas.toDataURL("image/png");
-                        downloadButton.download = "1989-blue-filtered-image.png";
-                                            
-                        // Check if the user agent indicates a mobile device
-                        if (/Mobi|Android/i.test(navigator.userAgent)) {
-                            const saveToPhotosMobileButton = document.getElementById("save-to-photos-mobile");
-                        
-                            // Display the "Save to Photos (Mobile)" button
-                            saveToPhotosMobileButton.style.display = "block";
-                        }
                     }
 
                     // Apply duotone effect
@@ -247,6 +235,31 @@
                         a.click();
                         document.body.removeChild(a);
                     });
+
+
+                        // Show the "Download" button
+                        downloadButton.style.display = "block";
+
+                        // Set download link attributes
+                        downloadButton.href = canvas.toDataURL("image/png");
+                        downloadButton.download = "1989-blue-filtered-image.png";
+
+                        // Check if the user agent indicates a mobile device
+                        if (/Mobi|Android/i.test(navigator.userAgent)) {
+                            const saveToPhotosMobileButton = document.getElementById("save-to-photos-mobile-button");
+                        
+                            // Display the "Save to Photos (Mobile)" button
+                            saveToPhotosMobileButton.style.display = "block";
+                        
+                            // Add a click event listener to the "Save to Photos (Mobile)" button
+                            saveToPhotosMobileButton.addEventListener("click", () => {
+                                const canvasDataURL = canvas.toDataURL("image/png");
+                                navigator.share({
+                                    files: [new File([canvasDataURL], "1989-blue-filtered-image.png", { type: "image/png" })],
+                                });
+                            });
+                        }
+
                 };
             };
 
