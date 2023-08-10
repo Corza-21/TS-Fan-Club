@@ -69,6 +69,7 @@ RewriteRule ^bridges$ /Pages/Album-Pages/bridges.html [L]
 RewriteRule ^tours$ /Pages/Tours/tours.html [L]
 RewriteRule ^what-ticketmaster-did$ /Pages/what-ticketmaster-did.html [L]
 RewriteRule ^acronym-searcher$ /Pages/acronym-searcher.html [L]
+RewriteRule ^1989-photo-themer$ /Pages/1989-photo-themer.html [L]
 
 # Rewrite Rules For Album Pages
 RewriteRule ^taylor-swift$ /Pages/Album-Pages/ts1.html [L]

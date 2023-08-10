@@ -39,6 +39,24 @@ html {
 /****Testing****/
 
 
+        #filtered-image {
+            margin-top: 20px;
+            border-radius: 20px;
+        }
+
+        #filtered-image canvas {
+            max-width: 80%;
+            max-height: 500px; /* Adjust the maximum height as needed */
+            border-radius: 20px;
+        }
+
+
+
+
+
+
+
+
 .beautiful-box {
    margin: auto;
    margin-top: 10px;
@@ -78,6 +96,12 @@ html {
 .as-title {
    color: var(--white);
    font-family: 'Abril Fatface';
+   margin-top: 40px;
+   font-size: 48px;
+}
+.make-it-blue-title {
+   color: #183058;
+   font-family: 'Permanent Marker';
    margin-top: 40px;
    font-size: 48px;
 }
