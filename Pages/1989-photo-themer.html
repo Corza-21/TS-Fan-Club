@@ -188,6 +188,22 @@
                         data[i] = contrasted;         // Red channel
                         data[i + 1] = contrasted;     // Green channel
                         data[i + 2] = contrasted;     // Blue channel
+
+
+                            // Show the "Download" button
+                            downloadButton.style.display = "block";
+                                            
+                        // Set download link attributes
+                        downloadButton.href = canvas.toDataURL("image/png");
+                        downloadButton.download = "1989-blue-filtered-image.png";
+                                            
+                        // Check if the user agent indicates a mobile device
+                        if (/Mobi|Android/i.test(navigator.userAgent)) {
+                            const saveToPhotosMobileButton = document.getElementById("save-to-photos-mobile");
+                        
+                            // Display the "Save to Photos (Mobile)" button
+                            saveToPhotosMobileButton.style.display = "block";
+                        }
                     }
 
                     // Apply duotone effect
