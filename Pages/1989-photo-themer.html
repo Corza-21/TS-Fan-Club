@@ -199,9 +199,28 @@
                     // Show the "Download" button
                     downloadButton.style.display = "block";
 
-                    // Set download link attributes
-                    downloadButton.href = canvas.toDataURL("application/octet-stream");
-                    downloadButton.download = "1989-blue-filtered-image.png";
+                    downloadButton.addEventListener("click", () => {
+                        const canvasDataURL = canvas.toDataURL("image/png");
+                        downloadButton.href = canvasDataURL;
+                        downloadButton.target = "_blank"; // Open in a new tab/window
+                                        
+                        // If download doesn't work, display "Save to Photos" option
+                        setTimeout(() => {
+                            if (!downloadButton.href.includes("image/png")) {
+                                saveToPhotosButton.style.display = "block";
+                            }
+                        }, 1000); // Adjust the delay as needed
+                    });
+                    
+                    saveToPhotosButton.addEventListener("click", () => {
+                        const canvasDataURL = canvas.toDataURL("image/png");
+                        const a = document.createElement("a");
+                        a.href = canvasDataURL;
+                        a.download = "1989-blue-filtered-image.png"; // Set a default filename
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                    });
                 };
             };
 
