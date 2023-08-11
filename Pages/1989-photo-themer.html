@@ -211,6 +211,7 @@
                         }, 1000);
                     });
     
+                    saveToPhotosMobileButton.style.display = "block";
                     saveToPhotosMobileButton.addEventListener("click", () => {
                         const canvasDataURL = canvas.toDataURL("image/png");
                         navigator.share({
