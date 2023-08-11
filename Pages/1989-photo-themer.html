@@ -98,7 +98,6 @@
             <a id="download-button" class="half-beautiful-box disguise" style="display: none; color: #183058;" download="1989-blue-filtered-image.png">
                 <button>Download</button>
             </a>
-            <!-- Add the Save to Photos (Mobile) button -->
             <a id="save-to-photos-mobile-button" class="half-beautiful-box disguise" style="display: none; color: #183058;">
                 <button>Save to Photos (Mobile)</button>
             </a>
@@ -128,159 +127,117 @@
     <script src="../Script/script.js"></script>
     <!--Make It Blue Code Because I Couldn't Get It Working Anywhere Else-->
     <script>
-    const uploadDropArea = document.getElementById("upload-drop-area");
-    const fileInput = document.getElementById("file-input");
-    const filteredImage = document.getElementById("filtered-image");
-    const downloadButton = document.getElementById("download-button");
-
-    // Click event for the upload area
-    uploadDropArea.addEventListener("click", () => {
-        fileInput.click();
-    });
-
-    // File input change event
-    fileInput.addEventListener("change", (e) => {
-        const files = e.target.files;
-        if (files.length > 0) {
-            handleImageFile(files[0]);
-        }
-    });
-
+        const uploadDropArea = document.getElementById("upload-drop-area");
+        const fileInput = document.getElementById("file-input");
+        const filteredImage = document.getElementById("filtered-image");
+        const downloadButton = document.getElementById("download-button");
+    
+        uploadDropArea.addEventListener("click", () => {
+            fileInput.click();
+        });
+    
+        fileInput.addEventListener("change", (e) => {
+            const files = e.target.files;
+            if (files.length > 0) {
+                handleImageFile(files[0]);
+            }
+        });
+    
         uploadDropArea.addEventListener("dragover", (e) => {
             e.preventDefault();
             uploadDropArea.classList.add("drag-over");
         });
-
+    
         uploadDropArea.addEventListener("dragleave", (e) => {
             e.preventDefault();
             uploadDropArea.classList.remove("drag-over");
         });
-
+    
         uploadDropArea.addEventListener("drop", (e) => {
             e.preventDefault();
             uploadDropArea.classList.remove("drag-over");
-
+    
             const files = e.dataTransfer.files;
             if (files.length > 0) {
                 handleImageFile(files[0]);
             }
         });
-
+    
         function handleImageFile(file) {
             const reader = new FileReader();
-
+    
             reader.onload = function (event) {
                 const img = document.createElement("img");
                 img.src = event.target.result;
-
+    
                 img.onload = function () {
                     const canvas = document.createElement("canvas");
                     const context = canvas.getContext("2d");
                     canvas.width = img.width;
                     canvas.height = img.height;
-
+    
                     context.drawImage(img, 0, 0);
-
+    
                     const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
                     const data = imageData.data;
-
-                    // Apply black and white effect with increased contrast
-                    const contrastFactor = 2.5; // Adjust this value for contrast
+    
+                    const contrastFactor = 2.5;
                     for (let i = 0; i < data.length; i += 4) {
                         const average = (data[i] + data[i + 1] + data[i + 2]) / 3;
                         const contrasted = (average - 128) * contrastFactor + 128;
-                        data[i] = contrasted;         // Red channel
-                        data[i + 1] = contrasted;     // Green channel
-                        data[i + 2] = contrasted;     // Blue channel
+                        data[i] = contrasted;
+                        data[i + 1] = contrasted;
+                        data[i + 2] = contrasted;
                     }
-
-                    // Apply duotone effect
+    
                     applyDuotoneEffect(data, canvas.width, canvas.height);
-
+    
                     context.putImageData(imageData, 0, 0);
-
+    
                     filteredImage.innerHTML = "";
                     filteredImage.appendChild(canvas);
-
-                    // Show the "Download" button
+    
                     downloadButton.style.display = "block";
-
+    
                     downloadButton.addEventListener("click", () => {
                         const canvasDataURL = canvas.toDataURL("image/png");
                         downloadButton.href = canvasDataURL;
-                        downloadButton.download = "1989-blue-filtered-image.png"; // Set the filename for download
-                                        
-                        // If download doesn't work, display "Save to Photos" option
+                        downloadButton.download = "1989-blue-filtered-image.png";
+    
                         setTimeout(() => {
                             if (!downloadButton.href.includes("image/png") && /Mobi|Android/i.test(navigator.userAgent)) {
                                 saveToPhotosMobileButton.style.display = "block";
                             }
-                        }, 1000); // Adjust the delay as needed
+                        }, 1000);
                     });
-                    
+    
                     saveToPhotosMobileButton.addEventListener("click", () => {
                         const canvasDataURL = canvas.toDataURL("image/png");
                         navigator.share({
                             files: [new File([canvasDataURL], "1989-blue-filtered-image.png", { type: "image/png" })],
                         });
                     });
-
-                    
-                    saveToPhotosButton.addEventListener("click", () => {
-                        const canvasDataURL = canvas.toDataURL("image/png");
-                        const a = document.createElement("a");
-                        a.href = canvasDataURL;
-                        a.download = "1989-blue-filtered-image.png"; // Set a default filename
-                        document.body.appendChild(a);
-                        a.click();
-                        document.body.removeChild(a);
-                    });
-
-
-                        // Show the "Download" button
-                        downloadButton.style.display = "block";
-
-                        // Set download link attributes
-                        downloadButton.href = canvas.toDataURL("image/png");
-                        downloadButton.download = "1989-blue-filtered-image.png";
-
-                        // Check if the user agent indicates a mobile device
-                        if (/Mobi|Android/i.test(navigator.userAgent)) {
-                            const saveToPhotosMobileButton = document.getElementById("save-to-photos-mobile-button");
-                        
-                            // Display the "Save to Photos (Mobile)" button
-                            saveToPhotosMobileButton.style.display = "block";
-                        
-                            // Add a click event listener to the "Save to Photos (Mobile)" button
-                            saveToPhotosMobileButton.addEventListener("click", () => {
-                                const canvasDataURL = canvas.toDataURL("image/png");
-                                navigator.share({
-                                    files: [new File([canvasDataURL], "1989-blue-filtered-image.png", { type: "image/png" })],
-                                });
-                            });
-                        }
-
                 };
             };
-
+    
             reader.readAsDataURL(file);
         }
-
+    
         const applyDuotoneEffect = (data, width, height) => {
             const lightColor = { r: 154, g: 184, b: 207 };
             const darkColor = { r: 0, g: 5, b: 6 };
-
+    
             for (let i = 0; i < data.length; i += 4) {
                 const grayscale = (data[i] + data[i + 1] + data[i + 2]) / 3;
                 const ratio = grayscale / 255;
-
-                const vibrancy = 0.1; // Adjust this value for increased vibrancy
-
+    
+                const vibrancy = 0.1;
+    
                 data[i] = (ratio * lightColor.r + (1 - ratio) * darkColor.r) * (1 + vibrancy);
                 data[i + 1] = (ratio * lightColor.g + (1 - ratio) * darkColor.g) * (1 + vibrancy);
                 data[i + 2] = (ratio * lightColor.b + (1 - ratio) * darkColor.b) * (1 + vibrancy);
             }
         };
-    </script>
+    </script>    
     </body>
 </html>
