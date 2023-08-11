@@ -95,10 +95,10 @@
             </div>
             <input type="file" id="file-input" style="display: none;">
             <div id="filtered-image"></div>
-            <a id="download-button" class="half-beautiful-box disguise" style="display: block; color: #183058;" download="1989-blue-filtered-image.png">
+            <a id="download-button" class="half-beautiful-box disguise" style="display: none; color: #183058;" download="1989-blue-filtered-image.png">
                 <button>Download</button>
             </a>
-            <a id="save-to-photos-mobile-button" class="half-beautiful-box disguise" style="display: block; color: #183058;">
+            <a id="save-to-photos-mobile-button" class="half-beautiful-box disguise" style="display: none; color: #183058;">
                 <button>Save to Photos (Mobile)</button>
             </a>
         </main>
@@ -131,6 +131,7 @@
         const fileInput = document.getElementById("file-input");
         const filteredImage = document.getElementById("filtered-image");
         const downloadButton = document.getElementById("download-button");
+        const saveToPhotosMobileButton = document.getElementById("save-to-photos-mobile-button");
     
         uploadDropArea.addEventListener("click", () => {
             fileInput.click();
