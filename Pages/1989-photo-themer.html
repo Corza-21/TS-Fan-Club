@@ -202,14 +202,17 @@
     
                     downloadButton.addEventListener("click", () => {
                         const canvasDataURL = canvas.toDataURL("image/png");
-                        downloadButton.href = canvasDataURL;
-                        downloadButton.download = "1989-blue-filtered-image.png";
-    
-                        setTimeout(() => {
-                            if (!downloadButton.href.includes("image/png") && /Mobi|Android/i.test(navigator.userAgent)) {
-                                saveToPhotosMobileButton.style.display = "block";
-                            }
-                        }, 1000);
+                                        
+                        // Create a temporary link element
+                        const downloadLink = document.createElement("a");
+                        downloadLink.href = canvasDataURL;
+                        downloadLink.download = "1989-blue-filtered-image.png"; // Set the desired download filename
+                                        
+                        // Programmatically trigger the click event on the link
+                        downloadLink.click();
+                                        
+                        // Clean up: remove the temporary link
+                        document.body.removeChild(downloadLink);
                     });
     
                     saveToPhotosMobileButton.style.display = "block";
