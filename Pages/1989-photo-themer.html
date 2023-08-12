@@ -171,83 +171,59 @@
                 const img = document.createElement("img");
                 img.src = event.target.result;
     
-
                 img.onload = function () {
-        const canvas = document.createElement("canvas");
-        const context = canvas.getContext("2d");
-        canvas.width = img.width;
-        canvas.height = img.height;
-
-        context.drawImage(img, 0, 0);
-
-        const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
-        const data = imageData.data;
-
-        const contrastFactor = 2.5;
-        for (let i = 0; i < data.length; i += 4) {
-            const average = (data[i] + data[i + 1] + data[i + 2]) / 3;
-            const contrasted = (average - 128) * contrastFactor + 128;
-            data[i] = contrasted;
-            data[i + 1] = contrasted;
-            data[i + 2] = contrasted;
-        }
-
-        applyDuotoneEffect(data, canvas.width, canvas.height);
-
-        context.putImageData(imageData, 0, 0);
-
-        // Use an <img> element to display the filtered image
-        const imgElement = document.createElement("img");
-        imgElement.src = canvas.toDataURL("image/jpeg", 0.8);
-
-        // Display the image on the page
-        filteredImage.innerHTML = "";
-        filteredImage.appendChild(imgElement);
-
-        downloadButton.style.display = "block";
-
-        downloadButton.addEventListener("click", () => {
-            // Use the same canvas data to generate the download link
-            const canvasDataURL = canvas.toDataURL("image/jpeg", 0.8);
-            downloadButton.href = canvasDataURL;
-            downloadButton.download = "1989-blue-filtered-image.jpg";
-
-            // Show the "Save to Photos (Mobile)" button for mobile devices
-            setTimeout(() => {
-                if (!downloadButton.href.includes("image/jpeg") && /Mobi|Android/i.test(navigator.userAgent)) {
-                    saveToPhotosMobileButton.style.display = "block";
-                }
-            }, 1000);
-        });
-
-        saveToPhotosMobileButton.style.display = "block";
-        saveToPhotosMobileButton.addEventListener("click", () => {
-            canvas.toBlob((blob) => {
-                const blobUrl = URL.createObjectURL(blob);
-                navigator.share({
-                    files: [new File([blob], "1989-blue-filtered-image.jpg", { type: "image/jpeg" })],
-                    url: blobUrl,
-                });
-
-                // Clean up the object URL after sharing
-                URL.revokeObjectURL(blobUrl);
-            }, "image/jpeg", 0.8);
-        });
-    };
-                    
-                    function dataURLtoBlob(dataURL) {
-                        const arr = dataURL.split(",");
-                        const mime = arr[0].match(/:(.*?);/)[1];
-                        const byteString = atob(arr[1]);
-                        const arrayBuffer = new ArrayBuffer(byteString.length);
-                        const intArray = new Uint8Array(arrayBuffer);
-                        for (let i = 0; i < byteString.length; i++) {
-                            intArray[i] = byteString.charCodeAt(i);
-                        }
-                        return new Blob([intArray], { type: mime });
+                    const canvas = document.createElement("canvas");
+                    const context = canvas.getContext("2d");
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+    
+                    context.drawImage(img, 0, 0);
+    
+                    const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+                    const data = imageData.data;
+    
+                    const contrastFactor = 2.5;
+                    for (let i = 0; i < data.length; i += 4) {
+                        const average = (data[i] + data[i + 1] + data[i + 2]) / 3;
+                        const contrasted = (average - 128) * contrastFactor + 128;
+                        data[i] = contrasted;
+                        data[i + 1] = contrasted;
+                        data[i + 2] = contrasted;
                     }
+    
+                    applyDuotoneEffect(data, canvas.width, canvas.height);
+    
+                    context.putImageData(imageData, 0, 0);
+    
+                    filteredImage.innerHTML = "";
+                    filteredImage.appendChild(canvas);
+    
+                    downloadButton.style.display = "block";
+    
+                    downloadButton.addEventListener("click", () => {
+                        const canvasDataURL = canvas.toDataURL("image/png");
+                        downloadButton.href = canvasDataURL;
+                        downloadButton.download = "1989-blue-filtered-image.png";
+    
+                        setTimeout(() => {
+                            if (!downloadButton.href.includes("image/png") && /Mobi|Android/i.test(navigator.userAgent)) {
+                                saveToPhotosMobileButton.style.display = "block";
+                            }
+                        }, 1000);
+                    });
+    
+                    saveToPhotosMobileButton.style.display = "block";
+                    saveToPhotosMobileButton.addEventListener("click", () => {
+                        const canvasDataURL = canvas.toDataURL("image/png");
+                        navigator.share({
+                            files: [new File([canvasDataURL], "1989-blue-filtered-image.png", { type: "image/png" })],
+                        });
+                    });
                 };
             };
+    
+            reader.readAsDataURL(file);
+        }
     
         const applyDuotoneEffect = (data, width, height) => {
             const lightColor = { r: 154, g: 184, b: 207 };
