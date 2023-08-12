@@ -203,16 +203,25 @@
                     downloadButton.addEventListener("click", () => {
                         const canvasDataURL = canvas.toDataURL("image/png");
                                         
+                        // Create an image element and set its source to the canvas data URL
+                        const imageElement = document.createElement("img");
+                        imageElement.src = canvasDataURL;
+                                        
                         // Create a temporary link element
                         const downloadLink = document.createElement("a");
                         downloadLink.href = canvasDataURL;
                         downloadLink.download = "1989-blue-filtered-image.png"; // Set the desired download filename
                                         
-                        // Programmatically trigger the click event on the link
+                        // Append the image element to the link element
+                        downloadLink.appendChild(imageElement);
+                                        
+                        // Append the link element to the body and programmatically trigger the click event on it
+                        document.body.appendChild(downloadLink);
                         downloadLink.click();
                                         
-                        // Clean up: remove the temporary link
+                        // Clean up: remove the temporary link and image elements
                         document.body.removeChild(downloadLink);
+                        document.body.removeChild(imageElement);
                     });
     
                     saveToPhotosMobileButton.style.display = "block";
