@@ -214,17 +214,29 @@
 
                     saveToPhotosMobileButton.style.display = "block";
                     saveToPhotosMobileButton.addEventListener("click", () => {
-                        canvas.toBlob((blob) => {
-                            const blobUrl = URL.createObjectURL(blob);
-                            navigator.share({
-                                files: [new File([blob], "1989-blue-filtered-image.jpg", { type: "image/jpeg" })],
-                                url: blobUrl,
-                            });
-                        
-                            // Clean up the object URL after sharing
-                            URL.revokeObjectURL(blobUrl);
-                        }, "image/jpeg", 0.8); // Convert canvas data to a JPEG Blob
+                        const canvasDataURL = canvas.toDataURL("image/jpeg", 0.8); // Convert canvas data to a JPEG data URL
+                        const blob = dataURLtoBlob(canvasDataURL);
+                        const blobUrl = URL.createObjectURL(blob);
+                        navigator.share({
+                            files: [new File([blob], "1989-blue-filtered-image.jpg", { type: "image/jpeg" })],
+                            url: blobUrl,
+                        });
+                    
+                        // Clean up the object URL after sharing
+                        URL.revokeObjectURL(blobUrl);
                     });
+                    
+                    function dataURLtoBlob(dataURL) {
+                        const arr = dataURL.split(",");
+                        const mime = arr[0].match(/:(.*?);/)[1];
+                        const byteString = atob(arr[1]);
+                        const arrayBuffer = new ArrayBuffer(byteString.length);
+                        const intArray = new Uint8Array(arrayBuffer);
+                        for (let i = 0; i < byteString.length; i++) {
+                            intArray[i] = byteString.charCodeAt(i);
+                        }
+                        return new Blob([intArray], { type: mime });
+                    }
                 };
             };
     
