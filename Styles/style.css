@@ -46,6 +46,7 @@ html {
 
         #filtered-image img {
             max-height: 500px; /* Adjust the maximum height as needed */
+            width: auto;
             border-radius: 20px;
         }
 
