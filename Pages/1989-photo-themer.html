@@ -201,22 +201,23 @@
                     downloadButton.style.display = "block";
     
                     downloadButton.addEventListener("click", () => {
-                        const canvasDataURL = canvas.toDataURL("image/png");
+                        const canvasDataURL = canvas.toDataURL("image/jpeg", 0.8); // Use image/jpeg format with quality parameter
                         downloadButton.href = canvasDataURL;
-                        downloadButton.download = "1989-blue-filtered-image.png";
-    
+                        downloadButton.download = "1989-blue-filtered-image.jpg"; // Change the file extension to .jpg
+                                        
                         setTimeout(() => {
-                            if (!downloadButton.href.includes("image/png") && /Mobi|Android/i.test(navigator.userAgent)) {
+                            if (!downloadButton.href.includes("image/jpeg") && /Mobi|Android/i.test(navigator.userAgent)) {
                                 saveToPhotosMobileButton.style.display = "block";
                             }
                         }, 1000);
                     });
+
     
                     saveToPhotosMobileButton.style.display = "block";
                     saveToPhotosMobileButton.addEventListener("click", () => {
-                        const canvasDataURL = canvas.toDataURL("image/png");
+                        const canvasDataURL = canvas.toDataURL("image/jpeg", 0.8); // Use image/jpeg format with quality parameter
                         navigator.share({
-                            files: [new File([canvasDataURL], "1989-blue-filtered-image.png", { type: "image/png" })],
+                            files: [new File([canvasDataURL], "1989-blue-filtered-image.jpg", { type: "image/jpeg" })], // Change the file extension to .jpg
                         });
                     });
                 };
