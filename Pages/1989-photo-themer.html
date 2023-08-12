@@ -98,8 +98,8 @@
             <a id="download-button" class="half-beautiful-box disguise" style="display: none; color: #183058;" download="1989-blue-filtered-image.png">
                 <button>Download</button>
             </a>
-            <a id="save-to-photos-mobile-button" class="half-beautiful-box disguise" style="display: none; color: #183058;">
-                <button>Save to Photos (Mobile)</button>
+            <a class="half-beautiful-box disguise" style="display: none; color: #183058;">
+                <button>Mobile users, if it doesn't download, try holding down on it.</button>
             </a>
         </main>
         <footer>
@@ -131,7 +131,6 @@
         const fileInput = document.getElementById("file-input");
         const filteredImage = document.getElementById("filtered-image");
         const downloadButton = document.getElementById("download-button");
-        const saveToPhotosMobileButton = document.getElementById("save-to-photos-mobile-button");
     
         uploadDropArea.addEventListener("click", () => {
             fileInput.click();
@@ -206,14 +205,7 @@
             downloadButton.style.display = "block";
             downloadButton.href = canvas.toDataURL("image/png"); // Set the data URL for the Download button
             downloadButton.addEventListener("click", (event) => {
-                event.stopPropagation(); // Prevent the "Save to Photos (Mobile)" button from firing
-            });
-
-            saveToPhotosMobileButton.style.display = "block";
-            saveToPhotosMobileButton.addEventListener("click", () => {
-                navigator.share({
-                    files: [new File([imageElement.src], "1989-blue-filtered-image.png", { type: "image/png" })],
-                });
+                event.stopPropagation();
             });
         };
     };
