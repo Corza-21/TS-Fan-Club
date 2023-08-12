@@ -172,24 +172,29 @@
                 img.src = event.target.result;
     
                 img.onload = function () {
-                    const canvas = document.createElement("canvas");
-                    const context = canvas.getContext("2d");
-                    canvas.width = img.width;
-                    canvas.height = img.height;
-    
-                    context.drawImage(img, 0, 0);
-    
-                    const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
-                    const data = imageData.data;
-    
-                    const contrastFactor = 2.5;
-                    for (let i = 0; i < data.length; i += 4) {
-                        const average = (data[i] + data[i + 1] + data[i + 2]) / 3;
-                        const contrasted = (average - 128) * contrastFactor + 128;
-                        data[i] = contrasted;
-                        data[i + 1] = contrasted;
-                        data[i + 2] = contrasted;
-                    }
+                // Create an <img> element to display the filtered image
+                const imgElement = document.createElement("img");
+                imgElement.src = event.target.result;
+                        
+                // Display the image on the page
+                filteredImage.innerHTML = "";
+                filteredImage.appendChild(imgElement);
+                        
+                downloadButton.style.display = "block";
+                        
+                downloadButton.addEventListener("click", () => {
+                    // Use the same canvas data to generate the download link
+                    const canvasDataURL = canvas.toDataURL("image/jpeg", 0.8);
+                    downloadButton.href = canvasDataURL;
+                    downloadButton.download = "1989-blue-filtered-image.jpg";
+                
+                    // Show the "Save to Photos (Mobile)" button for mobile devices
+                    setTimeout(() => {
+                        if (!downloadButton.href.includes("image/jpeg") && /Mobi|Android/i.test(navigator.userAgent)) {
+                            saveToPhotosMobileButton.style.display = "block";
+                        }
+                    }, 1000);
+                });
     
                     applyDuotoneEffect(data, canvas.width, canvas.height);
     
