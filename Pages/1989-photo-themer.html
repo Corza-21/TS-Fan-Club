@@ -165,68 +165,61 @@
         });
     
         function handleImageFile(file) {
-            const reader = new FileReader();
-    
-            reader.onload = function (event) {
-                const img = document.createElement("img");
-                img.src = event.target.result;
-    
-                img.onload = function () {
-                    const canvas = document.createElement("canvas");
-                    const context = canvas.getContext("2d");
-                    canvas.width = img.width;
-                    canvas.height = img.height;
-    
-                    context.drawImage(img, 0, 0);
-    
-                    const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
-                    const data = imageData.data;
-    
-                    const contrastFactor = 2.5;
-                    for (let i = 0; i < data.length; i += 4) {
-                        const average = (data[i] + data[i + 1] + data[i + 2]) / 3;
-                        const contrasted = (average - 128) * contrastFactor + 128;
-                        data[i] = contrasted;
-                        data[i + 1] = contrasted;
-                        data[i + 2] = contrasted;
-                    }
-    
-                    applyDuotoneEffect(data, canvas.width, canvas.height);
-    
-                    context.putImageData(imageData, 0, 0);
-    
-                    filteredImage.innerHTML = "";
-                    filteredImage.appendChild(canvas);
-    
-                    downloadButton.style.display = "block";
-    
-                    downloadButton.addEventListener("click", () => {
-                        const canvasDataURL = canvas.toDataURL("image/png");
-                                        
-                        // Create a temporary link element
-                        const downloadLink = document.createElement("a");
-                        downloadLink.href = canvasDataURL;
-                        downloadLink.download = "1989-blue-filtered-image.png"; // Set the desired download filename
-                                        
-                        // Programmatically trigger the click event on the link
-                        downloadLink.click();
-                                        
-                        // Clean up: remove the temporary link
-                        document.body.removeChild(downloadLink);
-                    });
-    
-                    saveToPhotosMobileButton.style.display = "block";
-                    saveToPhotosMobileButton.addEventListener("click", () => {
-                        const canvasDataURL = canvas.toDataURL("image/png");
-                        navigator.share({
-                            files: [new File([canvasDataURL], "1989-blue-filtered-image.png", { type: "image/png" })],
-                        });
-                    });
-                };
-            };
-    
-            reader.readAsDataURL(file);
-        }
+    const reader = new FileReader();
+
+    reader.onload = function (event) {
+        const img = document.createElement("img");
+        img.src = event.target.result;
+
+        img.onload = function () {
+            const canvas = document.createElement("canvas");
+            const context = canvas.getContext("2d");
+            canvas.width = img.width;
+            canvas.height = img.height;
+
+            context.drawImage(img, 0, 0);
+
+            const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+            const data = imageData.data;
+
+            const contrastFactor = 2.5;
+            for (let i = 0; i < data.length; i += 4) {
+                const average = (data[i] + data[i + 1] + data[i + 2]) / 3;
+                const contrasted = (average - 128) * contrastFactor + 128;
+                data[i] = contrasted;
+                data[i + 1] = contrasted;
+                data[i + 2] = contrasted;
+            }
+
+            applyDuotoneEffect(data, canvas.width, canvas.height);
+
+            context.putImageData(imageData, 0, 0);
+
+            // Convert canvas to an image element
+            const imageElement = document.createElement("img");
+            imageElement.src = canvas.toDataURL("image/png");
+
+            // Replace the canvas element with the image element
+            filteredImage.innerHTML = "";
+            filteredImage.appendChild(imageElement);
+
+            downloadButton.style.display = "block";
+            downloadButton.href = canvas.toDataURL("image/png"); // Set the data URL for the Download button
+            downloadButton.addEventListener("click", (event) => {
+                event.stopPropagation(); // Prevent the "Save to Photos (Mobile)" button from firing
+            });
+
+            saveToPhotosMobileButton.style.display = "block";
+            saveToPhotosMobileButton.addEventListener("click", () => {
+                navigator.share({
+                    files: [new File([imageElement.src], "1989-blue-filtered-image.png", { type: "image/png" })],
+                });
+            });
+        };
+    };
+
+    reader.readAsDataURL(file);
+}
     
         const applyDuotoneEffect = (data, width, height) => {
             const lightColor = { r: 154, g: 184, b: 207 };
