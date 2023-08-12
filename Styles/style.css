@@ -44,7 +44,7 @@ html {
             border-radius: 20px;
         }
 
-        #filtered-image canvas {
+        #filtered-image img {
             max-width: 80%;
             max-height: 500px; /* Adjust the maximum height as needed */
             border-radius: 20px;
