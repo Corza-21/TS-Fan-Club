@@ -212,13 +212,18 @@
                         }, 1000);
                     });
 
-    
                     saveToPhotosMobileButton.style.display = "block";
                     saveToPhotosMobileButton.addEventListener("click", () => {
-                        const canvasDataURL = canvas.toDataURL("image/jpeg", 0.8); // Use image/jpeg format with quality parameter
-                        navigator.share({
-                            files: [new File([canvasDataURL], "1989-blue-filtered-image.jpg", { type: "image/jpeg" })], // Change the file extension to .jpg
-                        });
+                        canvas.toBlob((blob) => {
+                            const blobUrl = URL.createObjectURL(blob);
+                            navigator.share({
+                                files: [new File([blob], "1989-blue-filtered-image.jpg", { type: "image/jpeg" })],
+                                url: blobUrl,
+                            });
+                        
+                            // Clean up the object URL after sharing
+                            URL.revokeObjectURL(blobUrl);
+                        }, "image/jpeg", 0.8); // Convert canvas data to a JPEG Blob
                     });
                 };
             };
