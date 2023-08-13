@@ -621,6 +621,3 @@ RewriteRule ^midnights/hits-different-bridge$ /Audio/Bridges/10-Midnights/21-hit
 RewriteRule ^midnights/snow-on-the-beach-more-lana-bridge$ /Audio/Bridges/10-Midnights/22-snow-on-the-beach-more-lana.mp3 [L]
 RewriteRule ^midnights/karma-remix-bridge$ /Audio/Bridges/10-Midnights/23-karma-remix.mp3 [L]
 RewriteRule ^midnights/youre-losing-me-bridge$ /Audio/Bridges/10-Midnights/24-youre-losing-me.mp3 [L]
-
-# Redirects
-Redirect 301 /red/holy-ground-lv https://youtu.be/S4PuN-IWi2g
