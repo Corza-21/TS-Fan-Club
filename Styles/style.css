@@ -45,7 +45,7 @@ html {
         }
 
         #filtered-image img {
-            max-height: 500px; /* Adjust the maximum height as needed */
+            max-height: 500px;
             width: auto;
             border-radius: 20px;
         }
@@ -1847,6 +1847,11 @@ input[type="radio"]:checked + img {
    }
    .half-beautiful-box {
       width: 34.5%;
+   }
+   #filtered-image img {
+      max-height: auto;
+      width: 90%;
+      border-radius: 20px;
    }
 }
 @media screen and (max-width: 1000px) {
