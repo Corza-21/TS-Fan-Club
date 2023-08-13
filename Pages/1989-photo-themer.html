@@ -98,9 +98,9 @@
             <a id="download-button" class="half-beautiful-box disguise" style="display: none; color: #183058;" download="1989-blue-filtered-image.png">
                 <button>Download</button>
             </a>
-            <a class="half-beautiful-box disguise" style="display: none; color: #183058;">
-                <button>Mobile users, if it doesn't download, try holding down on it.</button>
-            </a>
+            <p id="mobile-message" style="display: none; color: #183058;">
+                Mobile users, if it doesn't download, try holding down on it.
+            </p>
         </main>
         <footer>
             <div class="socials">
@@ -131,6 +131,7 @@
         const fileInput = document.getElementById("file-input");
         const filteredImage = document.getElementById("filtered-image");
         const downloadButton = document.getElementById("download-button");
+        const mobileMessage = document.getElementById("mobile-message");
     
         uploadDropArea.addEventListener("click", () => {
             fileInput.click();
@@ -202,6 +203,7 @@
             filteredImage.innerHTML = "";
             filteredImage.appendChild(imageElement);
 
+            mobileMessage.style.display = "block";
             downloadButton.style.display = "block";
             downloadButton.href = canvas.toDataURL("image/png"); // Set the data URL for the Download button
             downloadButton.addEventListener("click", (event) => {
