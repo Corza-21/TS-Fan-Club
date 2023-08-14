@@ -25,7 +25,7 @@ ExpiresByType text/xml "access plus 1 second"
 ExpiresByType video/mp4 "access plus 1 month"
 ExpiresByType audio/mp3 "access plus 1 month"
 
-# ---------------------------------------------
+# --------------------------------------------- (Rewrite Rules)
 
 RewriteEngine On
 
@@ -621,3 +621,230 @@ RewriteRule ^midnights/hits-different-bridge$ /Audio/Bridges/10-Midnights/21-hit
 RewriteRule ^midnights/snow-on-the-beach-more-lana-bridge$ /Audio/Bridges/10-Midnights/22-snow-on-the-beach-more-lana.mp3 [L]
 RewriteRule ^midnights/karma-remix-bridge$ /Audio/Bridges/10-Midnights/23-karma-remix.mp3 [L]
 RewriteRule ^midnights/youre-losing-me-bridge$ /Audio/Bridges/10-Midnights/24-youre-losing-me.mp3 [L]
+
+# --------------------------------------------- (Redirects)
+
+# this is where the *hostinger* redirects shall go
+
+# Lyric Video Redirects -------------
+
+# Redirects For Taylor Swift (Debut) Lyric Videos
+#Redirect 301 /taylor-swift/tim-mcgraw-lv link
+#Redirect 301 /taylor-swift/picture-to-burn-lv link
+#Redirect 301 /taylor-swift/teardrops-on-my-guitar-lv link
+#Redirect 301 /taylor-swift/a-place-in-this-world-lv link
+#Redirect 301 /taylor-swift/cold-as-you-lv link
+#Redirect 301 /taylor-swift/the-outside-lv link
+#Redirect 301 /taylor-swift/tied-together-with-a-smile-lv link
+#Redirect 301 /taylor-swift/stay-beautiful-lv link
+#Redirect 301 /taylor-swift/shouldve-said-no-lv link
+#Redirect 301 /taylor-swift/marys-song-lv link
+#Redirect 301 /taylor-swift/our-song-lv link
+#Redirect 301 /taylor-swift/im-only-me-when-im-with-you-lv link
+#Redirect 301 /taylor-swift/invisible-lv link
+#Redirect 301 /taylor-swift/a-perfectly-good-heart-lv link
+#Redirect 301 /taylor-swift/teardrops-on-my-guitar-pop-version-lv link
+
+# Redirects For Fearless Lyric Videos
+Redirect 301 /fearless/fearless-lv https://youtu.be/7lLigiVgJsE
+Redirect 301 /fearless/fifteen-lv https://youtu.be/rLCol1C3ouc
+Redirect 301 /fearless/love-story-lv https://youtu.be/aXzVF3XeS8M
+Redirect 301 /fearless/hey-stephen-lv https://youtu.be/tMhiHrL7rPE
+Redirect 301 /fearless/white-horse-lv https://youtu.be/9-rKvhsjwKU
+Redirect 301 /fearless/you-belong-with-me-lv https://youtu.be/vwp8Ur6tO-8
+Redirect 301 /fearless/breathe-lv https://youtu.be/qsUK-BG5OQQ
+Redirect 301 /fearless/tell-me-why-lv https://youtu.be/cwFbq-70EwE
+Redirect 301 /fearless/youre-not-sorry-lv https://youtu.be/DNaSlUYIXBg
+Redirect 301 /fearless/the-way-i-loved-you-lv https://youtu.be/DlexmDDSDZ0
+Redirect 301 /fearless/forever-and-always-lv https://youtu.be/T-41vMWQTUA
+Redirect 301 /fearless/the-best-day-lv https://youtu.be/KZeI9I875Ig
+Redirect 301 /fearless/change-lv https://youtu.be/jwWR1cQTKyw
+Redirect 301 /fearless/jump-then-fall-lv https://youtu.be/vUHDR6Rg3Y4
+Redirect 301 /fearless/untouchable-lv https://youtu.be/8bNlGwnEUAs
+Redirect 301 /fearless/forever-and-always-piano-version-lv https://youtu.be/RcGowZ26sE0
+Redirect 301 /fearless/come-in-with-the-rain-lv https://youtu.be/ePjcjLRHPOo
+Redirect 301 /fearless/superstar-lv https://youtu.be/IsCik8wznlU
+Redirect 301 /fearless/the-other-side-of-the-door-lv https://youtu.be/425n1NoRtgA
+Redirect 301 /fearless/today-was-a-fairytale-lv https://youtu.be/xSWVPqnKcXQ
+Redirect 301 /fearless/you-all-over-me-lv https://youtu.be/XKaMUm7YwZc
+Redirect 301 /fearless/mr-perfectly-fine-lv https://youtu.be/rFjJs6ZjPe8
+Redirect 301 /fearless/we-were-happy-lv https://youtu.be/seU5y5EgIwk
+Redirect 301 /fearless/thats-when-lv https://youtu.be/aOa6D6ku3dM
+Redirect 301 /fearless/dont-you-lv https://youtu.be/dHdAN4FXzmc
+Redirect 301 /fearless/bye-bye-baby-lv https://youtu.be/yuFuwXd-B9E
+
+# Redirects For Speak Now Lyric Videos
+Redirect 301 /speak-now/mine-lv https://youtu.be/oxNLRqMJMZk
+Redirect 301 /speak-now/sparks-fly-lv https://youtu.be/UlFrV5GJA_4
+Redirect 301 /speak-now/back-to-december-lv https://youtu.be/qc2Z-OX9wnc
+Redirect 301 /speak-now/speak-now-lv https://youtu.be/JlZnvyBqceY
+Redirect 301 /speak-now/dear-john-lv https://youtu.be/N-FYySSy0rM
+Redirect 301 /speak-now/mean-lv https://youtu.be/8AR1dKawCi8
+Redirect 301 /speak-now/the-story-of-us-lv https://youtu.be/pRhWAXg4xek
+Redirect 301 /speak-now/never-grow-up-lv https://youtu.be/maEVfpxDB8k
+Redirect 301 /speak-now/enchanted-lv https://youtu.be/igIfiqqVHtA
+Redirect 301 /speak-now/better-than-revenge-lv https://youtu.be/EH70M5OeS4o
+Redirect 301 /speak-now/innocent-lv https://youtu.be/vO6JqQpJboY
+Redirect 301 /speak-now/haunted-lv https://youtu.be/4cC6fw8EqWU
+Redirect 301 /speak-now/last-kiss-lv https://youtu.be/idWma942CUI
+Redirect 301 /speak-now/long-live-lv https://youtu.be/F5TMU6916U8
+Redirect 301 /speak-now/ours-lv https://youtu.be/PH8Uc0Z_KRY
+Redirect 301 /speak-now/superman-lv https://youtu.be/Fn0er7H1Dm0
+Redirect 301 /speak-now/electric-touch-lv https://youtu.be/hMPK2vNXr-E
+Redirect 301 /speak-now/when-emma-falls-in-love-lv https://youtu.be/IYqgVYjN3Go
+Redirect 301 /speak-now/i-can-see-you-lv https://youtu.be/lVkKLf4DCn8
+Redirect 301 /speak-now/castles-crumbling-lv https://youtu.be/V80A8qN4fR8
+Redirect 301 /speak-now/foolish-one-lv https://youtu.be/6-x1AlDudZw
+Redirect 301 /speak-now/timeless-lv https://youtu.be/osmzwWw4RYM
+
+# Redirects For Red Lyric Videos
+Redirect 301 /red/state-of-grace-lv https://youtu.be/-mrC5tRkxrY
+Redirect 301 /red/red-lv https://youtu.be/R_rUYuFtNO4
+Redirect 301 /red/treacherous-lv https://youtu.be/u1D1AgDfreg
+Redirect 301 /red/i-knew-you-were-trouble-lv https://youtu.be/TqAollrUJdA
+Redirect 301 /red/all-too-well-lv https://youtu.be/9OQBDdNHmXo
+Redirect 301 /red/22-lv https://youtu.be/9boiT64sm0Q
+Redirect 301 /red/i-almost-do-lv https://youtu.be/w1AV_35zVwU
+Redirect 301 /red/we-are-never-ever-getting-back-together-lv https://youtu.be/zJFcr1KyFqE
+Redirect 301 /red/stay-stay-stay-lv https://youtu.be/OhJ-S9Nrh7Q
+Redirect 301 /red/the-last-time-lv https://youtu.be/pCH4QrSx2Jg
+Redirect 301 /red/holy-ground-lv https://youtu.be/S4PuN-IWi2g
+Redirect 301 /red/sad-beautiful-tragic-lv https://youtu.be/jQfB4Gahi3I
+Redirect 301 /red/the-lucky-one-lv https://youtu.be/4LtQxA_ooLk
+Redirect 301 /red/everything-has-changed-lv https://youtu.be/eMcMbWl0fDk
+Redirect 301 /red/starlight-lv https://youtu.be/lPvcwgEuKTg
+Redirect 301 /red/begin-again-lv https://youtu.be/dXNZaHuKWNA
+Redirect 301 /red/the-moment-i-knew-lv https://youtu.be/LmXn6BU16e0
+Redirect 301 /red/come-back-be-here-lv https://youtu.be/hHWOAUjnmjQ
+Redirect 301 /red/girl-at-home-lv https://youtu.be/UNckfN9upqo
+Redirect 301 /red/state-of-grace-acoustic-version-lv https://youtu.be/D3mJe28un4M
+Redirect 301 /red/ronan-lv https://youtu.be/kdiBc40gW7s
+Redirect 301 /red/better-man-lv https://youtu.be/PReSQYTFvcs
+Redirect 301 /red/nothing-new-lv https://youtu.be/m3fWCRvz5JA
+Redirect 301 /red/babe-lv https://youtu.be/3pj39qZZYoQ
+Redirect 301 /red/message-in-a-bottle-lv https://youtu.be/cVaG6adE2mA
+Redirect 301 /red/i-bet-you-think-about-me-lv https://youtu.be/AccGdO5XeZY
+Redirect 301 /red/forever-winter-lv https://youtu.be/TkAomsYFsJw
+Redirect 301 /red/run-lv https://youtu.be/flv8AEWrRMI
+Redirect 301 /red/the-very-first-night-lv https://youtu.be/rVuyi-dPMIc
+Redirect 301 /red/all-too-well-10-minute-version-lv https://youtu.be/sRxrwjOtIag
+
+# Redirects For 1989 Lyric Videos
+#Redirect 301 /1989/welcome-to-new-york-lv link
+#Redirect 301 /1989/blank-space-lv link
+#Redirect 301 /1989/style-lv link
+#Redirect 301 /1989/out-of-the-woods-lv link
+#Redirect 301 /1989/all-you-had-to-do-was-stay-lv link
+#Redirect 301 /1989/shake-it-off-lv link
+#Redirect 301 /1989/i-wish-you-would-lv link
+#Redirect 301 /1989/bad-blood-lv link
+#Redirect 301 /1989/wildest-dreams-lv link
+#Redirect 301 /1989/how-you-get-the-girl-lv link
+Redirect 301 /1989/this-love-lv https://youtu.be/mvxQYPR4lmU
+#Redirect 301 /1989/i-know-places-lv link
+#Redirect 301 /1989/clean-lv link
+#Redirect 301 /1989/wonderland-lv link
+#Redirect 301 /1989/you-are-in-love-lv link
+#Redirect 301 /1989/new-romantics-lv link
+#Redirect 301 /1989/vault-1-lv link
+#Redirect 301 /1989/vault-2-lv link
+#Redirect 301 /1989/vault-3-lv link
+#Redirect 301 /1989/vault-4-lv link
+#Redirect 301 /1989/vault-5-lv link
+
+# Redirects For reputation Lyric Videos
+#Redirect 301 /reputation/ready-for-it-lv link
+#Redirect 301 /reputation/end-game-lv link
+#Redirect 301 /reputation/i-did-something-bad-lv link
+#Redirect 301 /reputation/dont-blame-me-lv link
+#Redirect 301 /reputation/delicate-lv link
+#Redirect 301 /reputation/look-what-you-made-me-do-lv link
+#Redirect 301 /reputation/so-it-goes-lv link
+Redirect 301 /reputation/gorgeous-lv https://youtu.be/EUoe7cf0HYw
+#Redirect 301 /reputation/getaway-car-lv link
+#Redirect 301 /reputation/king-of-my-heart-lv link
+#Redirect 301 /reputation/dancing-with-our-hands-tied-lv link
+#Redirect 301 /reputation/dress-lv link
+#Redirect 301 /reputation/this-is-why-we-cant-have-nice-things-lv link
+Redirect 301 /reputation/call-it-what-you-want-lv https://youtu.be/V54CEElTF_U
+#Redirect 301 /reputation/new-years-day-lv link
+
+# Redirects For Lover Lyric Videos
+#Redirect 301 /lover/i-forgot-that-you-existed-lv link
+#Redirect 301 /lover/cruel-summer-lv link
+Redirect 301 /lover/lover-lv https://youtu.be/cvUAzpn48xA
+Redirect 301 /lover/the-man-lv https://youtu.be/tbEekLA7J3Y
+Redirect 301 /lover/the-archer-lv https://youtu.be/8KpKc3C9V3w
+#Redirect 301 /lover/i-think-he-knows-lv link
+#Redirect 301 /lover/miss-americana-and-the-heartbreak-prince-lv link
+#Redirect 301 /lover/paper-rings-lv link
+#Redirect 301 /lover/cornelia-street-lv link
+#Redirect 301 /lover/death-by-a-thousand-cuts-lv link
+#Redirect 301 /lover/london-boy-lv link
+#Redirect 301 /lover/soon-youll-get-better-lv link
+#Redirect 301 /lover/false-god-lv link
+Redirect 301 /lover/you-need-to-calm-down-lv https://youtu.be/GWtfOHBF1_w
+#Redirect 301 /lover/afterglow-lv link
+Redirect 301 /lover/me-lv https://youtu.be/S--WI8PUVVo
+#Redirect 301 /lover/its-nice-to-have-a-friend-lv link
+#Redirect 301 /lover/daylight-lv link
+
+# Redirects For folklore Lyric Videos
+Redirect 301 /folklore/the-1-lv https://youtu.be/KsZ6tROaVOQ
+Redirect 301 /folklore/cardigan-lv https://youtu.be/zLSUp53y-HQ
+Redirect 301 /folklore/the-last-great-american-dynasty-lv https://youtu.be/2s5xdY6MCeI
+Redirect 301 /folklore/exile-lv https://youtu.be/osdoLjUNFnA
+Redirect 301 /folklore/my-tears-ricochet-lv https://youtu.be/OWbDJFtHl3w
+Redirect 301 /folklore/mirrorball-lv https://youtu.be/KaM1bCuG4xo
+Redirect 301 /folklore/seven-lv https://youtu.be/pEY-GPsru_E
+Redirect 301 /folklore/august-lv https://youtu.be/nn_0zPAfyo8
+Redirect 301 /folklore/this-is-me-trying-lv https://youtu.be/9bdLTPNrlEg
+Redirect 301 /folklore/illicit-affairs-lv https://youtu.be/MLV2SJKWk4M
+Redirect 301 /folklore/invisible-string-lv https://youtu.be/OuFnpmGwg5k
+Redirect 301 /folklore/mad-woman-lv https://youtu.be/6DP4q_1EgQQ
+Redirect 301 /folklore/epiphany-lv https://youtu.be/DUnDkI7l9LQ
+Redirect 301 /folklore/betty-lv https://youtu.be/6TAPqXkZW_I
+Redirect 301 /folklore/peace-lv https://youtu.be/HpxX4ZE4KWE
+Redirect 301 /folklore/hoax-lv https://youtu.be/ryLGxpjwAhM
+Redirect 301 /folklore/the-lakes-lv https://youtu.be/tOHcAc3r2kw
+
+# Redirects For evermore Lyric Videos
+Redirect 301 /evermore/willow-lv https://youtu.be/7EvwIw4gIyk
+Redirect 301 /evermore/champagne-problems-lv https://youtu.be/wMpqCRF7TKg
+Redirect 301 /evermore/gold-rush-lv https://youtu.be/Pz-f9mM3Ms8
+Redirect 301 /evermore/tis-the-damn-season-lv https://youtu.be/WuvhOD-mP8M
+Redirect 301 /evermore/tolerate-it-lv https://youtu.be/ukxEKY_7MOc
+Redirect 301 /evermore/no-body-no-crime-lv https://youtu.be/IEPomqor2A8
+Redirect 301 /evermore/happiness-lv https://youtu.be/tP4TTgt4nb0
+Redirect 301 /evermore/dorothea-lv https://youtu.be/zI4DS5GmQWE
+Redirect 301 /evermore/coney-island-lv https://youtu.be/c_p_TBaHvos
+Redirect 301 /evermore/ivy-lv https://youtu.be/9nIOx-ezlzA
+Redirect 301 /evermore/cowboy-like-me-lv https://youtu.be/YPlNBb6I8qU
+Redirect 301 /evermore/long-story-short-lv https://youtu.be/rqQHa2HcGtM
+Redirect 301 /evermore/marjorie-lv https://youtu.be/hP6QpMeSG6s
+Redirect 301 /evermore/closure-lv https://youtu.be/AIFnKqIeEdY
+Redirect 301 /evermore/evermore-lv https://youtu.be/EXLgZZE072g
+Redirect 301 /evermore/right-where-you-left-me-lv https://youtu.be/Ur_wAcYDnuA
+Redirect 301 /evermore/its-time-to-go-lv https://youtu.be/1iRbIYkccgw
+
+# Redirects For Midnights Lyric Videos
+Redirect 301 /midnights/lavender-haze-lv https://youtu.be/mkR_Qwix4Ho
+Redirect 301 /midnights/maroon-lv https://youtu.be/lvHZjvIyqsk
+Redirect 301 /midnights/anti-hero-lv https://youtu.be/XqN2qFvY64U
+Redirect 301 /midnights/snow-on-the-beach-lv https://youtu.be/ycE7bUq3-2k
+Redirect 301 /midnights/youre-on-your-own-kid-lv https://youtu.be/7Gbg6Z70J7E
+Redirect 301 /midnights/midnight-rain-lv https://youtu.be/Odh9ddPUkEY
+Redirect 301 /midnights/question-lv https://youtu.be/xxrf_QBD5DE
+Redirect 301 /midnights/vigilante-shit-lv https://youtu.be/Uoey4W_3bos
+Redirect 301 /midnights/bejeweled-lv https://youtu.be/XzKSPRqFg9E
+Redirect 301 /midnights/labyrinth-lv https://youtu.be/xTXsKMXUi7w
+Redirect 301 /midnights/karma-lv https://youtu.be/rg18Kf4en2o
+Redirect 301 /midnights/sweet-nothing-lv https://youtu.be/rn0brgg2BpI
+Redirect 301 /midnights/mastermind-lv https://youtu.be/Tmz1lz0zcLQ
+Redirect 301 /midnights/the-great-war-lv https://youtu.be/iFX6_9h7th0
+Redirect 301 /midnights/bigger-than-the-whole-sky-lv https://youtu.be/l8Tps3PITx4
+Redirect 301 /midnights/paris-lv https://youtu.be/ySZGZrcqvr4
+Redirect 301 /midnights/high-infidelity-lv https://youtu.be/-qee6dFKlw4
+Redirect 301 /midnights/glitch-lv https://youtu.be/Y2a73EvnZ4s
+Redirect 301 /midnights/wouldve-couldve-shouldve-lv https://youtu.be/B-MfwP_RmHY
+Redirect 301 /midnights/dear-reader-lv https://youtu.be/X0Jti9F-oQA
