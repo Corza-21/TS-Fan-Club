@@ -626,6 +626,10 @@ RewriteRule ^midnights/youre-losing-me-bridge$ /Audio/Bridges/10-Midnights/24-yo
 
 # this is where the *hostinger* redirects shall go
 
+# Song Page Redirects (No Album Title)
+
+# Song Page Redirects (No Album Title & Spaces)
+
 # Lyric Video Redirects -------------
 
 # Redirects For Taylor Swift (Debut) Lyric Videos
