@@ -626,9 +626,234 @@ RewriteRule ^midnights/youre-losing-me-bridge$ /Audio/Bridges/10-Midnights/24-yo
 
 # this is where the *hostinger* redirects shall go
 
-# Song Page Redirects (No Album Title)
+# Song Page Redirects (No Album Title) -------------
 
-# Song Page Redirects (No Album Title & Spaces)
+# Redirects For Taylor Swift (Debut) Song Pages
+Redirect 301 /tim-mcgraw /taylor-swift/tim-mcgraw
+Redirect 301 /picture-to-burn /taylor-swift/picture-to-burn
+Redirect 301 /teardrops-on-my-guitar /taylor-swift/teardrops-on-my-guitar
+Redirect 301 /a-place-in-this-world /taylor-swift/a-place-in-this-world
+Redirect 301 /cold-as-you /taylor-swift/cold-as-you
+Redirect 301 /the-outside /taylor-swift/the-outside
+Redirect 301 /tied-together-with-a-smile /taylor-swift/tied-together-with-a-smile
+Redirect 301 /stay-beautiful /taylor-swift/stay-beautiful
+Redirect 301 /shouldve-said-no /taylor-swift/shouldve-said-no
+Redirect 301 /marys-song /taylor-swift/marys-song
+Redirect 301 /our-song /taylor-swift/our-song
+Redirect 301 /im-only-me-when-im-with-you /taylor-swift/im-only-me-when-im-with-you
+Redirect 301 /invisible /taylor-swift/invisible
+Redirect 301 /a-perfectly-good-heart /taylor-swift/a-perfectly-good-heart
+Redirect 301 /teardrops-on-my-guitar-pop-version /taylor-swift/teardrops-on-my-guitar-pop-version
+
+# Redirects For Fearless Song Pages
+Redirect 301 /fearless-song /fearless/fearless
+Redirect 301 /fifteen /fearless/fifteen
+Redirect 301 /love-story /fearless/love-story
+Redirect 301 /hey-stephen /fearless/hey-stephen
+Redirect 301 /white-horse /fearless/white-horse
+Redirect 301 /you-belong-with-me /fearless/you-belong-with-me
+Redirect 301 /breathe /fearless/breathe
+Redirect 301 /tell-me-why /fearless/tell-me-why
+Redirect 301 /youre-not-sorry /fearless/youre-not-sorry
+Redirect 301 /the-way-i-loved-you /fearless/the-way-i-loved-you
+Redirect 301 /forever-and-always /fearless/forever-and-always
+Redirect 301 /the-best-day /fearless/the-best-day
+Redirect 301 /change /fearless/change
+Redirect 301 /jump-then-fall /fearless/jump-then-fall
+Redirect 301 /untouchable /fearless/untouchable
+Redirect 301 /forever-and-always-piano-version /fearless/forever-and-always-piano-version
+Redirect 301 /come-in-with-the-rain /fearless/come-in-with-the-rain
+Redirect 301 /superstar /fearless/superstar
+Redirect 301 /the-other-side-of-the-door /fearless/the-other-side-of-the-door
+Redirect 301 /today-was-a-fairytale /fearless/today-was-a-fairytale
+Redirect 301 /you-all-over-me /fearless/you-all-over-me
+Redirect 301 /mr-perfectly-fine /fearless/mr-perfectly-fine
+Redirect 301 /we-were-happy /fearless/we-were-happy
+Redirect 301 /thats-when /fearless/thats-when
+Redirect 301 /dont-you /fearless/dont-you
+Redirect 301 /bye-bye-baby /fearless/bye-bye-baby
+Redirect 301 /if-this-was-a-movie /fearless/if-this-was-a-movie
+
+# Redirects For Speak Now Song Pages
+Redirect 301 /mine /speak-now/mine
+Redirect 301 /sparks-fly /speak-now/sparks-fly
+Redirect 301 /back-to-december /speak-now/back-to-december
+Redirect 301 /speak-now-song /speak-now/speak-now
+Redirect 301 /dear-john /speak-now/dear-john
+Redirect 301 /mean /speak-now/mean
+Redirect 301 /the-story-of-us /speak-now/the-story-of-us
+Redirect 301 /never-grow-up /speak-now/never-grow-up
+Redirect 301 /enchanted /speak-now/enchanted
+Redirect 301 /better-than-revenge /speak-now/better-than-revenge
+Redirect 301 /innocent /speak-now/innocent
+Redirect 301 /haunted /speak-now/haunted
+Redirect 301 /last-kiss /speak-now/last-kiss
+Redirect 301 /long-live /speak-now/long-live
+Redirect 301 /ours /speak-now/ours
+Redirect 301 /superman /speak-now/superman
+Redirect 301 /electric-touch /speak-now/electric-touch
+Redirect 301 /when-emma-falls-in-love /speak-now/when-emma-falls-in-love
+Redirect 301 /i-can-see-you /speak-now/i-can-see-you
+Redirect 301 /castles-crumbling /speak-now/castles-crumbling
+Redirect 301 /foolish-one /speak-now/foolish-one
+Redirect 301 /timeless /speak-now/timeless
+
+# Redirects For Red Song Pages
+Redirect 301 /state-of-grace /red/state-of-grace
+Redirect 301 /red-song /red/red
+Redirect 301 /treacherous /red/treacherous
+Redirect 301 /i-knew-you-were-trouble /red/i-knew-you-were-trouble
+Redirect 301 /all-too-well /red/all-too-well
+Redirect 301 /22 /red/22
+Redirect 301 /i-almost-do /red/i-almost-do
+Redirect 301 /we-are-never-ever-getting-back-together /red/we-are-never-ever-getting-back-together
+Redirect 301 /stay-stay-stay /red/stay-stay-stay
+Redirect 301 /the-last-time /red/the-last-time
+Redirect 301 /holy-ground /red/holy-ground
+Redirect 301 /sad-beautiful-tragic /red/sad-beautiful-tragic
+Redirect 301 /the-lucky-one /red/the-lucky-one
+Redirect 301 /everything-has-changed /red/everything-has-changed
+Redirect 301 /starlight /red/starlight
+Redirect 301 /begin-again /red/begin-again
+Redirect 301 /the-moment-i-knew /red/the-moment-i-knew
+Redirect 301 /come-back-be-here /red/come-back-be-here
+Redirect 301 /girl-at-home /red/girl-at-home
+Redirect 301 /state-of-grace-acoustic-version /red/state-of-grace-acoustic-version
+Redirect 301 /ronan /red/ronan
+Redirect 301 /better-man /red/better-man
+Redirect 301 /nothing-new /red/nothing-new
+Redirect 301 /babe /red/babe
+Redirect 301 /message-in-a-bottle /red/message-in-a-bottle
+Redirect 301 /i-bet-you-think-about-me /red/i-bet-you-think-about-me
+Redirect 301 /forever-winter /red/forever-winter
+Redirect 301 /run /red/run
+Redirect 301 /the-very-first-night /red/the-very-first-night
+Redirect 301 /all-too-well-10-minute-version /red/all-too-well-10-minute-version
+Redirect 301 /safe-and-sound /red/safe-and-sound
+Redirect 301 /eyes-open /red/eyes-open
+
+# Redirects For 1989 Song Pages
+Redirect 301 /welcome-to-new-york /1989/welcome-to-new-york
+Redirect 301 /blank-space /1989/blank-space
+Redirect 301 /style /1989/style
+Redirect 301 /out-of-the-woods /1989/out-of-the-woods
+Redirect 301 /all-you-had-to-do-was-stay /1989/all-you-had-to-do-was-stay
+Redirect 301 /shake-it-off /1989/shake-it-off
+Redirect 301 /i-wish-you-would /1989/i-wish-you-would
+Redirect 301 /bad-blood /1989/bad-blood
+Redirect 301 /wildest-dreams /1989/wildest-dreams
+Redirect 301 /how-you-get-the-girl /1989/how-you-get-the-girl
+Redirect 301 /this-love /1989/this-love
+Redirect 301 /i-know-places /1989/i-know-places
+Redirect 301 /clean /1989/clean
+Redirect 301 /wonderland /1989/wonderland
+Redirect 301 /you-are-in-love /1989/you-are-in-love
+Redirect 301 /new-romantics /1989/new-romantics
+
+# Redirects For reputation Song Pages
+Redirect 301 /ready-for-it /reputation/ready-for-it
+Redirect 301 /end-game /reputation/end-game
+Redirect 301 /i-did-something-bad /reputation/i-did-something-bad
+Redirect 301 /dont-blame-me /reputation/dont-blame-me
+Redirect 301 /delicate /reputation/delicate
+Redirect 301 /look-what-you-made-me-do /reputation/look-what-you-made-me-do
+Redirect 301 /so-it-goes /reputation/so-it-goes
+Redirect 301 /gorgeous /reputation/gorgeous
+Redirect 301 /getaway-car /reputation/getaway-car
+Redirect 301 /king-of-my-heart /reputation/king-of-my-heart
+Redirect 301 /dancing-with-our-hands-tied /reputation/dancing-with-our-hands-tied
+Redirect 301 /dress /reputation/dress
+Redirect 301 /this-is-why-we-cant-have-nice-things /reputation/this-is-why-we-cant-have-nice-things
+Redirect 301 /call-it-what-you-want /reputation/call-it-what-you-want
+Redirect 301 /new-years-day /reputation/new-years-day
+
+
+# Redirects For Lover Song Pages
+Redirect 301 /i-forgot-that-you-existed /lover/i-forgot-that-you-existed
+Redirect 301 /cruel-summer /lover/cruel-summer
+Redirect 301 /lover-song /lover/lover
+Redirect 301 /the-man /lover/the-man
+Redirect 301 /the-archer /lover/the-archer
+Redirect 301 /i-think-he-knows /lover/i-think-he-knows
+Redirect 301 /miss-americana-and-the-heartbreak-prince /lover/miss-americana-and-the-heartbreak-prince
+Redirect 301 /paper-rings /lover/paper-rings
+Redirect 301 /cornelia-street /lover/cornelia-street
+Redirect 301 /death-by-a-thousand-cuts /lover/death-by-a-thousand-cuts
+Redirect 301 /london-boy /lover/london-boy
+Redirect 301 /soon-youll-get-better /lover/soon-youll-get-better
+Redirect 301 /false-god /lover/false-god
+Redirect 301 /you-need-to-calm-down /lover/you-need-to-calm-down
+Redirect 301 /afterglow /lover/afterglow
+Redirect 301 /me /lover/me
+Redirect 301 /its-nice-to-have-a-friend /lover/its-nice-to-have-a-friend
+Redirect 301 /daylight /lover/daylight
+Redirect 301 /all-of-the-girls-you-loved-before /lover/all-of-the-girls-you-loved-before
+
+# Redirects For folklore Song Pages
+Redirect 301 /the-1 /folklore/the-1
+Redirect 301 /cardigan /folklore/cardigan
+Redirect 301 /the-last-great-american-dynasty /folklore/the-last-great-american-dynasty
+Redirect 301 /exile /folklore/exile
+Redirect 301 /my-tears-ricochet /folklore/my-tears-ricochet
+Redirect 301 /mirrorball /folklore/mirrorball
+Redirect 301 /seven /folklore/seven
+Redirect 301 /august /folklore/august
+Redirect 301 /this-is-me-trying /folklore/this-is-me-trying
+Redirect 301 /illicit-affairs /folklore/illicit-affairs
+Redirect 301 /invisible-string /folklore/invisible-string
+Redirect 301 /mad-woman /folklore/mad-woman
+Redirect 301 /epiphany /folklore/epiphany
+Redirect 301 /betty /folklore/betty
+Redirect 301 /peace /folklore/peace
+Redirect 301 /hoax /folklore/hoax
+Redirect 301 /the-lakes /folklore/the-lakes
+
+# Redirects For evermore Song Pages
+Redirect 301 /willow /evermore/willow
+Redirect 301 /champagne-problems /evermore/champagne-problems
+Redirect 301 /gold-rush /evermore/gold-rush
+Redirect 301 /tis-the-damn-season /evermore/tis-the-damn-season
+Redirect 301 /tolerate-it /evermore/tolerate-it
+Redirect 301 /no-body-no-crime /evermore/no-body-no-crime
+Redirect 301 /happiness /evermore/happiness
+Redirect 301 /dorothea /evermore/dorothea
+Redirect 301 /coney-island /evermore/coney-island
+Redirect 301 /ivy /evermore/ivy
+Redirect 301 /cowboy-like-me /evermore/cowboy-like-me
+Redirect 301 /long-story-short /evermore/long-story-short
+Redirect 301 /marjorie /evermore/marjorie
+Redirect 301 /closure /evermore/closure
+Redirect 301 /evermore-song /evermore/evermore
+Redirect 301 /right-where-you-left-me /evermore/right-where-you-left-me
+Redirect 301 /its-time-to-go /evermore/its-time-to-go
+
+# Redirects For Midnights Song Pages
+Redirect 301 /lavender-haze /midnights/lavender-haze
+Redirect 301 /maroon /midnights/maroon
+Redirect 301 /anti-hero /midnights/anti-hero
+Redirect 301 /snow-on-the-beach /midnights/snow-on-the-beach
+Redirect 301 /youre-on-your-own-kid /midnights/youre-on-your-own-kid
+Redirect 301 /midnight-rain /midnights/midnight-rain
+Redirect 301 /question /midnights/question
+Redirect 301 /vigilante-shit /midnights/vigilante-shit
+Redirect 301 /bejeweled /midnights/bejeweled
+Redirect 301 /labyrinth /midnights/labyrinth
+Redirect 301 /karma /midnights/karma
+Redirect 301 /sweet-nothing /midnights/sweet-nothing
+Redirect 301 /mastermind /midnights/mastermind
+Redirect 301 /the-great-war /midnights/the-great-war
+Redirect 301 /bigger-than-the-whole-sky /midnights/bigger-than-the-whole-sky
+Redirect 301 /paris /midnights/paris
+Redirect 301 /high-infidelity /midnights/high-infidelity
+Redirect 301 /glitch /midnights/glitch
+Redirect 301 /wouldve-couldve-shouldve /midnights/wouldve-couldve-shouldve
+Redirect 301 /dear-reader /midnights/dear-reader
+Redirect 301 /hits-different /midnights/hits-different
+Redirect 301 /karma-remix /midnights/karma-remix
+Redirect 301 /snow-on-the-beach-more-lana /midnights/snow-on-the-beach-more-lana
+Redirect 301 /youre-losing-me /midnights/youre-losing-me
+
+# Song Page Redirects (No Album Title & Spaces) -------------
 
 # Lyric Video Redirects -------------
 
