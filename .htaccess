@@ -857,6 +857,7 @@ Redirect 301 /youre-losing-me /midnights/youre-losing-me
 
 # Redirects for Canva
 Redirect 301 /eras-tour-ticket-template https://www.canva.com/design/DAFy5mViqTs/SouKQaysmH-xVMPVRrIHAQ/view?utm_content=DAFy5mViqTs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview
+Redirect 301 /ticket-template https://www.canva.com/design/DAFy5mViqTs/SouKQaysmH-xVMPVRrIHAQ/view?utm_content=DAFy5mViqTs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview
 
 # Lyric Video Redirects -------------
 
