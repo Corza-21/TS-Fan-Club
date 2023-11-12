@@ -204,6 +204,12 @@ RewriteRule ^1989/clean$ /Pages/Song-Pages/1989/13-clean.html [L]
 RewriteRule ^1989/wonderland$ /Pages/Song-Pages/1989/14-wonderland.html [L]
 RewriteRule ^1989/you-are-in-love$ /Pages/Song-Pages/1989/15-you-are-in-love.html [L]
 RewriteRule ^1989/new-romantics$ /Pages/Song-Pages/1989/16-new-romantics.html [L]
+RewriteRule ^1989/slut$ /Pages/Song-Pages/1989/17-slut.html [L]
+RewriteRule ^1989/say-dont-go$ /Pages/Song-Pages/1989/18-say-dont-go.html [L]
+RewriteRule ^1989/now-that-we-dont-talk$ /Pages/Song-Pages/1989/19-now-that-we-dont-talk.html [L]
+RewriteRule ^1989/suburban-legends$ /Pages/Song-Pages/1989/20-suburban-legends.html [L]
+RewriteRule ^1989/is-it-over-now$ /Pages/Song-Pages/1989/21-is-it-over-now.html [L]
+RewriteRule ^1989/bad-blood-remix$ /Pages/Song-Pages/1989/22-bad-blood-remix.html [L]
 
 # Rewrite Rules For reputation
 RewriteRule ^reputation/ready-for-it$ /Pages/Song-Pages/reputation/1-ready-for-it.html [L]
@@ -749,6 +755,12 @@ Redirect 301 /clean /1989/clean
 Redirect 301 /wonderland /1989/wonderland
 Redirect 301 /you-are-in-love /1989/you-are-in-love
 Redirect 301 /new-romantics /1989/new-romantics
+Redirect 301 /slut /1989/slut
+Redirect 301 /say-dont-go /1989/say-dont-go
+Redirect 301 /now-that-we-dont-talk /1989/now-that-we-dont-talk
+Redirect 301 /suburban-legends /1989/suburban-legends
+Redirect 301 /is-it-over-now /1989/is-it-over-now
+Redirect 301 /bad-blood-remix /1989/bad-blood-remix
 
 # Redirects For reputation Song Pages
 Redirect 301 /ready-for-it /reputation/ready-for-it
